@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("flaticon96c6.ttf?8a7da0b5662077199cbf2d40f9866276") format("truetype"),
+url("flaticon96c6.woff?8a7da0b5662077199cbf2d40f9866276") format("woff"),
+url("flaticon96c6.woff2?8a7da0b5662077199cbf2d40f9866276") format("woff2"),
+url("flaticon96c6.eot?8a7da0b5662077199cbf2d40f9866276#iefix") format("embedded-opentype"),
+url("flaticon96c6.svg?8a7da0b5662077199cbf2d40f9866276#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, 
+i[class*=" flaticon-"]:before,
+span[class^="flaticon-"]:before, 
+span[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-location:before {
+    content: "\f101";
+}
+.flaticon-phone-call:before {
+    content: "\f102";
+}
+.flaticon-heart:before {
+    content: "\f103";
+}
+.flaticon-shopping-cart:before {
+    content: "\f104";
+}
+.flaticon-menu:before {
+    content: "\f105";
+}
+.flaticon-call:before {
+    content: "\f106";
+}
+.flaticon-phone:before {
+    content: "\f107";
+}
+.flaticon-envelope:before {
+    content: "\f108";
+}
+.flaticon-message:before {
+    content: "\f109";
+}
+.flaticon-clipboard:before {
+    content: "\f10a";
+}
+.flaticon-calendar:before {
+    content: "\f10b";
+}
+.flaticon-event:before {
+    content: "\f10c";
+}
+.flaticon-man:before {
+    content: "\f10d";
+}
+.flaticon-user:before {
+    content: "\f10e";
+}
+.flaticon-group:before {
+    content: "\f10f";
+}
+.flaticon-teamwork:before {
+    content: "\f110";
+}
+.flaticon-team:before {
+    content: "\f111";
+}
+.flaticon-back:before {
+    content: "\f112";
+}
+.flaticon-arrow:before {
+    content: "\f113";
+}
+.flaticon-tick:before {
+    content: "\f114";
+}
+.flaticon-close:before {
+    content: "\f115";
+}
+.flaticon-accept:before {
+    content: "\f116";
+}
+.flaticon-menu-1:before {
+    content: "\f117";
+}
+.flaticon-upload:before {
+    content: "\f118";
+}
+.flaticon-next:before {
+    content: "\f119";
+}
+.flaticon-download:before {
+    content: "\f11a";
+}
+.flaticon-back-1:before {
+    content: "\f11b";
+}
+.flaticon-back-2:before {
+    content: "\f11c";
+}
+.flaticon-airplane:before {
+    content: "\f11d";
+}
+.flaticon-air-freight:before {
+    content: "\f11e";
+}
+.flaticon-home:before {
+    content: "\f11f";
+}
+.flaticon-doctor:before {
+    content: "\f120";
+}
+.flaticon-medicine:before {
+    content: "\f121";
+}
+.flaticon-health-check:before {
+    content: "\f122";
+}
+.flaticon-doctor-1:before {
+    content: "\f123";
+}
+.flaticon-heart-1:before {
+    content: "\f124";
+}
+.flaticon-stethoscope:before {
+    content: "\f125";
+}
+.flaticon-pills:before {
+    content: "\f126";
+}
+.flaticon-medical-record:before {
+    content: "\f127";
+}
+.flaticon-heartbeat:before {
+    content: "\f128";
+}
+.flaticon-pharmacy:before {
+    content: "\f129";
+}
+.flaticon-ambulance:before {
+    content: "\f12a";
+}
+.flaticon-ambulance-1:before {
+    content: "\f12b";
+}
+.flaticon-ambulance-2:before {
+    content: "\f12c";
+}
+.flaticon-hospital:before {
+    content: "\f12d";
+}
+.flaticon-hospital-1:before {
+    content: "\f12e";
+}
+.flaticon-hospital-bed:before {
+    content: "\f12f";
+}
+.flaticon-hospital-2:before {
+    content: "\f130";
+}
+.flaticon-mail:before {
+    content: "\f131";
+}
+.flaticon-teeth:before {
+    content: "\f132";
+}
+.flaticon-eye:before {
+    content: "\f133";
+}
+.flaticon-lungs:before {
+    content: "\f134";
+}

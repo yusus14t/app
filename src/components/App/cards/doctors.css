@@ -1,0 +1,47 @@
+.doctor-card{
+    height: 100px;
+    background-color: bisque;
+    margin: 10px;
+    border-radius: 6px;
+    display: flex;
+    /* border: 1px solid black; */
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.doctor-img-container{
+    display: inline-block;
+    width: 80px;
+    height: 90px;
+    margin: 5px;
+    min-width: 70px;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+}
+.doctor-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.dr-info{
+    /* background-color: #FFFFFF	; */
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+.dr-list{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.specialization{
+    width: max-content;
+    background-color: #71bfff;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.adress{
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}

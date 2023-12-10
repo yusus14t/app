@@ -1,0 +1,44 @@
+.title {
+  font-size: 40px;
+  align-items: center;
+}
+.banner {
+  color: #fff;
+  width: 100%;
+  /* background-color: rgba(238, 130, 238, 0.464); */
+  background-color: #2929;
+}
+.specialization-image {
+  width: 300px;
+  height: 300px;
+  vertical-align: top;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.deatil{
+    display: inline-block;
+    width: calc(98% - 310px);
+    height: 300px;
+    /* border: 2px solid black; */
+    text-align: justify;
+    padding: 5px;
+    margin-left: 10px;
+    width:70%;    
+}
+
+.details-text{
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+
+}
+@media (max-width: 480px){
+
+
+.deatil {
+    width: 100%;
+}
+}

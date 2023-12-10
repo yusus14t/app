@@ -1,0 +1,1108 @@
+
+/* @media (max-width: 360px) {
+  .dr-spelialization {
+    display: none;
+  }
+  body {
+    background-color: rgb(0, 255, 47);
+  }
+} */
+/* Media Query for Mobile Devices */
+@media (min-width: 280px) and (max-width: 480px) {
+  /* body {
+    background-color: red;
+  } */
+  /* .box{
+    height: 75px;
+  } */
+  .waitinglistContainer{
+  margin-top: 112px;
+  position: relative;
+}
+  .mini-menu{
+    position: absolute;
+    top: 115px;
+  }
+  .department-card{
+
+  }
+  .department-card-name{
+    font-size: 16px;
+  }
+.departments-details {
+  margin-left: 5px;
+  width: 110px;
+}
+  .department-card-image{
+    width: 100px;
+    height: 120px;
+  }
+.clinic-title{
+  font-size: 15px;
+}
+  .hospital-specialization{
+    font-size: 10px;
+  }
+.dr-details{
+  margin-left: 10px;
+
+}
+.DRNAME{
+  font-size: 22px;
+}
+  .experience-dr, .dr-qualifiction, .dr-address {
+    font-size: 10px;
+  }
+  .dr-profile-img{
+    width: 90px;
+    height: 140px;
+  }
+  .clinic-specialization{
+    font-size: 12px;
+  }
+  .specialZation-icon{
+  width: 50px;
+  height: 50px;
+  }
+  .spe-circle{
+    width: 50px;
+    height: 50px;
+  }
+  .specialization-image{
+    width: 250px !important;
+  }
+  .title{
+    font-size: 28px !important;
+  }
+  .about-banner-conatiner {
+    width: 100%;
+    height: 200px;
+  }
+  .about-banner {
+    width: 100%;
+    height: 200px;
+  }
+  .mbgl {
+    margin-left: 40px;
+  }
+  .Header-icon1 {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  .about-banner2 {
+    display: none;
+  }
+  .mk-address {
+    font-size: 18px;
+  }
+  .dr-address {
+    width: 110px;
+  }
+  .user-de {
+    margin-left: 15px;
+  }
+  .app-ing {
+    width: 100px;
+    height: 100px;
+  }
+  .search-items {
+  }
+  .cli-time {
+    font-size: 10px;
+    margin: 0;
+  }
+  .deatil {
+    width: 100%;
+  }
+  .search-page {
+    width: 100%;
+  }
+  .mobile-width {
+    width: 15rem !important;
+  }
+  .search-mobile {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .sixe {
+    font-size: 12px;
+  }
+  .specialization-card {
+    width: 100px;
+    height: 110px !important;
+  }
+  .main-ch {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    width: 100% !important;
+  }
+  .seacrh-bar-container {
+    z-index: 2 !important;
+    height: 45px;
+    /* margin-top: 15px; */
+
+  }
+  .search-bar {
+    width: 200px;
+    height: 25px;
+  }
+  .search-bar input{
+    width: 190px;
+  }
+  .search-ico {
+    padding-right: 5px;
+  }
+  /* patient */
+  .pdash {
+    flex-direction: column;
+  }
+  .pdash-right {
+    margin: 5px 0 0 0;
+  }
+
+  /* --home-- */
+  .hero-container {
+    height: 300px;
+    align-items: normal;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+  .hjj {
+    width: 200px;
+    font-size: 15px;
+  }
+  .search-contianer-home {
+    width: 200px;
+    height: 30px;
+  }
+  .hospital-address {
+    width: 110px;
+    padding-right: 5px;
+    font-size: 10px;
+
+  }
+  .clinic-cont{
+    font-size: 12px;
+  }
+  .clinic-phne{
+    font-size: 10px;
+  }
+  .hospital-btn{
+    font-size: 10px;
+  }
+  .hospital-card-timing{
+    font-size: 10px;
+  }
+  .home-search {
+    font-size: 10px;
+    padding: 0;
+    height: 30px;
+    width: 170px;
+  }
+  .home-search-icon {
+    padding-top: 4px;
+    font-size: 14px;
+  }
+  .d-search {
+    width: 100%;
+  }
+  /*loginforn*/
+  .loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .loginform {
+    margin-top: 0;
+    width: 70%;
+    margin-left: 15%;
+  }
+  .loginContainer form {
+    width: 100%;
+  }
+  /* --------gynae-----------*/
+  .hero-banner {
+    height: 200px;
+  }
+  /* .hero-banner-img{
+    width: 100%;
+    height: auto;
+  } */
+  .gynae-button-hero {
+    font-size: 12px;
+    padding: 1px;
+    width: 130px;
+    top: 90%;
+    left: 10px;
+  }
+
+  .gynae-slide {
+    height: 200px;
+    object-fit: cover;
+  }
+  .gynae-services-cards-container {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+  .gynae-services-card {
+    width: 380px;
+    margin-left: 0;
+    padding: 0;
+    margin-right: 0;
+  }
+
+  /*--------hospital-card-----------*/
+  .hospital-title {
+  }
+  .hopsiptal-banner-img {
+    height: 200px;
+  }
+  /* .wating-area-clinic{
+    margin-top: 50px;
+  } */
+  .clinic-address-icon {
+    font-size: 25px;
+    margin: 5px;
+  }
+  .clinic-info-details {
+    margin: auto;
+  }
+  .clinic-address-icon-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* .slide1 {
+    height: 500px !important;
+  } */
+
+  .contact-details-clinic {
+    flex-direction: column;
+    padding: 10px;
+  }
+  /*----------------specialization ---------------*/
+  .category-h {
+    text-align: left;
+    padding: 30px 20px 20px;
+    margin: 35px 0 30px;
+  }
+  /*--------token-list---------*/
+  .token-list {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .token-list-item {
+    height: 60px;
+  }
+  .token-list-img {
+    margin: 3px 0 0 -50px;
+    height: 50px;
+    width: 40px;
+  }
+  
+  .token {
+    margin: 4px 0 0 -35px;
+    height: 50px;
+    width: 50px;
+  }
+  .token-list-number {
+    font-size: 23px;
+    margin-top: 10px;
+  }
+  .token-list-detail {
+    margin-left: -50px;
+    margin-top: 5px;
+    height: 50px;
+  }
+  .list-patient-name {
+    font-size: small;
+  }
+  .list-mobile-no,
+  .list-address {
+    font-size: 10px;
+  }
+  
+  /*-----------end------------*/
+  .patient-profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .patient-profile {
+    width: 100%;
+    margin: auto;
+  }
+  .Dr-container{
+    height: 200px;
+  }
+  /*search bar*/
+  .dsearch-doctor {
+    width: auto;
+  }
+  .dsearch-doctor::placeholder {
+  }
+  /*----end-----*/
+  /*------------Dr Card----------*/
+  .dr-qualifiction {
+    font-size: 10px;
+  }
+  .dr-spelialization {
+    font-size: 12px !important;
+    width: 100px;
+    padding: 2px;
+    border-radius: 3px;
+  }
+  /*---------------card----------*/
+  /*hospital card starts*/
+  .hospitalCard {
+    /* margin-left:45px ; */
+  }
+
+  /*ends*/
+
+  /*----------hospital and clinic signup*/
+  .after-container-child {
+    flex-direction: column !important;
+    margin-top: 20px;
+  }
+  .after-signup-icon {
+    height: 150px;
+    width: 250px;
+    margin-left: 0;
+  }
+  .after-signup {
+    width: 270px;
+    height: 190px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .after-container {
+    height: 80vh;
+  }
+  .hc-signup-container {
+    width: 80% !important;
+  }
+
+  /*--------end----------------*/
+  /*clinic Datails*/
+
+  .clinic-detail-item {
+    font-size: 15px !important;
+  }
+  .waitinglist{
+    margin: 0 16px;
+  }
+  .clinic-detail-timming {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .current-clicnic-token {
+    height: 60px;
+    width: 90px;
+    font-size: 16px;
+    text-align: center;
+    margin: 40px 0 0 35% !important;
+  }
+  .current-clicnic-token h1 {
+    /* margin: 7px !important; */
+    font-size: 40px;
+  }
+  .clinic-detail-mobile {
+    margin-top: 10px !important;
+  }
+  .clinic-detail-des {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+  .clinicbanner {
+    height: 200px;
+    /* margin-top: 80px; */
+    position: absolute;
+    top: 110px;
+  }
+  .clinic-detail-img-container {
+    top: 0px;
+    margin-left: 10px;
+  }
+  .m-text{
+    font-size: 10px;
+  }
+  .clinic-detail-drName {
+    font-size: medium;
+    margin-left: 5px;
+    width: 100px;
+    font-size: 10px;
+  }
+  .fixed,
+  .side-nav.fixed {
+    margin-top: 75px;
+  }
+  .clinic-footer-address {
+    width: 100%;
+  }
+  .clinic-detail-img {
+    height: 100px;
+    width: 80px;
+  }
+  .clinic-detail-name {
+    margin-top: 10px;
+  }
+  .footer-poster {
+    /* width: 100%; */
+  }
+  /*-------------------clinic crad--------------*/
+  .clinic-timming {
+    font-size: 13px;
+    font-weight: 900;
+  }
+  .clinic-btn {
+    font-size: 16px;
+    /* margin: 36px 0 0px 0px; */
+    margin-top: 15px;
+  }
+  .mobi-txt {
+    font-size: 15px;
+  }
+  /*-------------------ends-------------------*/
+  .ml255 {
+    margin-left: 0;
+  }
+  .navbar {
+    height: 75px;
+  }
+  .login_button {
+    display: none;
+  }
+  .side-nav .logo-sn a {
+    padding: 0;
+  }
+  .d-profile {
+    display: none !important;
+  }
+  /*slider*/
+  .loginContainer {
+    min-height: 500px;
+    background-image: none;
+    background-color: rgb(1, 1, 1);
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* body {
+    background-color: yellow;
+  } */
+  .waitinglist {
+    z-index: 1;
+  }
+  .Dr-container{
+    height: 200px;
+  }
+  .about-banner-conatiner {
+    width: 100%;
+    height: 200px;
+  }
+  .about-banner {
+    width: 100%;
+    height: 200px;
+  }
+  .mbgl {
+    margin-left: 40px;
+  }
+  .Header-icon1 {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  .about-banner2 {
+    display: none;
+  }
+  .mk-address {
+    font-size: 18px;
+  }
+  .dr-address {
+    width: 170px;
+  }
+  .user-de {
+    margin-left: 15px;
+  }
+  .app-ing {
+    width: 100px;
+    height: 100px;
+  }
+  .search-items {
+    width: 22rem;
+  }
+  .cli-time {
+    font-size: 10px;
+    margin: 0;
+  }
+  .deatil {
+    width: 100%;
+  }
+  .search-page {
+    width: 100%;
+  }
+  .mobile-width {
+    width: 15rem !important;
+  }
+  .search-mobile {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .sixe {
+    font-size: 12px;
+  }
+  .specialization-card {
+    width: 140px;
+    height: 145px !important;
+  }
+  .main-ch {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    width: 100% !important;
+  }
+  .seacrh-bar-container {
+    z-index: 3 !important;
+    /* margin-top: 15px; */
+  }
+  .search-bar {
+    width: 310px;
+  }
+  .search-ico {
+    padding-right: 5px;
+  }
+  /* patient */
+  .pdash {
+    flex-direction: column;
+  }
+  .pdash-right {
+    margin: 5px 0 0 0;
+  }
+
+  /* --home-- */
+  .hero-container {
+    height: 300px;
+    align-items: normal;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+  .hjj {
+    width: 200px;
+    font-size: 15px;
+  }
+  .search-contianer-home {
+    width: 200px;
+    height: 30px;
+  }
+  .hospital-address {
+    width: 190px;
+    padding-right: 10px;
+  }
+  .home-search {
+    font-size: 10px;
+    padding: 0;
+    height: 30px;
+    width: 170px;
+  }
+  .home-search-icon {
+    padding-top: 4px;
+    font-size: 14px;
+  }
+  .d-search {
+    width: 100%;
+  }
+  /*loginforn*/
+  .loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .loginform {
+    margin-top: 0;
+    width: 70%;
+    margin-left: 15%;
+  }
+  .loginContainer form {
+    width: 100%;
+  }
+  /* --------gynae-----------*/
+  .hero-banner {
+    height: 200px;
+  }
+  /* .hero-banner-img{
+    width: 100%;
+    height: auto;
+  } */
+  .gynae-button-hero {
+    font-size: 12px;
+    padding: 1px;
+    width: 130px;
+    top: 90%;
+    left: 10px;
+  }
+
+  .gynae-slide {
+    height: 200px;
+    object-fit: cover;
+  }
+  .gynae-services-cards-container {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+  .gynae-services-card {
+    width: 380px;
+    margin-left: 0;
+    padding: 0;
+    margin-right: 0;
+  }
+
+  /*--------hospital-card-----------*/
+  .hospital-title {
+  }
+  .hopsiptal-banner-img {
+    height: 200px;
+  }
+  /* .wating-area-clinic{
+    margin-top: 50px;
+  } */
+  .clinic-address-icon {
+    font-size: 25px;
+    margin: 5px;
+  }
+  .clinic-info-details {
+    margin: auto;
+  }
+  .clinic-address-icon-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* .slide1 {
+    height: 500px !important;
+  } */
+
+  .contact-details-clinic {
+    flex-direction: column;
+  }
+  /*----------------specialization ---------------*/
+  .category-h {
+    text-align: left;
+    padding: 30px 20px 20px;
+    margin: 35px 0 30px;
+  }
+  /*--------token-list---------*/
+  .token-list {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .token-list-item {
+    height: 60px;
+  }
+  .token-list-img {
+    margin: 3px 0 0 -50px;
+    height: 50px;
+    width: 40px;
+  }
+  
+  .token {
+    margin: 4px 0 0 -40px;
+    height: 50px;
+    width: 50px;
+  }
+  .token-list-number {
+    font-size: 30px;
+    margin-top: 6px;
+  }
+  .token-list-detail {
+    margin-left: -50px;
+    margin-top: 5px;
+    height: 50px;
+  }
+  .list-patient-name {
+    font-size: small;
+  }
+  .list-mobile-no,
+  .list-address {
+    font-size: 10px;
+  }
+  
+  /*-----------end------------*/
+  .patient-profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .patient-profile {
+    width: 100%;
+    margin: auto;
+  }
+  /*search bar*/
+  .dsearch-doctor {
+    width: auto;
+  }
+  .dsearch-doctor::placeholder {
+  }
+  /*----end-----*/
+  /*------------Dr Card----------*/
+  .dr-qualifiction {
+    font-size: 12px;
+  }
+  .dr-spelialization {
+    font-size: 15px !important;
+    width: 150px;
+    padding: 2px;
+    border-radius: 3px;
+  }
+  /*---------------card----------*/
+  /*hospital card starts*/
+  .hospitalCard {
+    /* margin-left:45px ; */
+  }
+
+  /*ends*/
+
+  /*----------hospital and clinic signup*/
+  .after-container-child {
+    flex-direction: column !important;
+    margin-top: 20px;
+  }
+  .after-signup-icon {
+    height: 150px;
+    width: 250px;
+    margin-left: 0;
+  }
+  .after-signup {
+    width: 270px;
+    height: 190px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .after-container {
+    height: 80vh;
+  }
+  .hc-signup-container {
+    width: 80% !important;
+  }
+
+  /*--------end----------------*/
+  /*clinic Datails*/
+
+  .clinic-detail-item {
+    font-size: 15px !important;
+  }
+  .clinic-detail-timming {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .current-clicnic-token {
+    height: 60px;
+    width: 60px;
+    font-size: 16px;
+    margin: 40px 0 0 90px;
+  }
+  .current-clicnic-token h1 {
+    /* margin: 7px !important; */
+    font-size: 40px;
+  }
+  .clinic-detail-mobile {
+    margin-top: 10px !important;
+  }
+  .clinic-detail-des {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+  .clinicbanner {
+    height: 200px;
+    /* margin-top: 80px; */
+  }
+  .clinic-detail-img-container {
+    top: 0px;
+    margin-left: 10px;
+  }
+  .clinic-detail-drName {
+    font-size: medium;
+    margin-left: 15px;
+    width: 174px;
+    font-size: 10px;
+  }
+  .fixed,
+  .side-nav.fixed {
+    margin-top: 75px;
+  }
+  .clinic-footer-address {
+    width: 200px;
+  }
+  .clinic-detail-img {
+    height: 100px;
+    width: 80px;
+  }
+  .clinic-detail-name {
+    margin-top: 10px;
+  }
+  .footer-poster {
+    /* width: 100%; */
+  }
+  /*-------------------clinic crad--------------*/
+  .clinic-timming {
+    font-size: 13px;
+    font-weight: 900;
+  }
+  .clinic-btn {
+    font-size: 16px;
+    /* margin: 36px 0 0px 0px; */
+    margin-top: 15px;
+  }
+  .mobi-txt {
+    font-size: 15px;
+  }
+  /*-------------------ends-------------------*/
+  .ml255 {
+    margin-left: 0;
+  }
+  .navbar {
+    height: 75px;
+  }
+  .login_button {
+    display: none;
+  }
+  .side-nav .logo-sn a {
+    padding: 0;
+  }
+  .d-profile {
+    display: none !important;
+  }
+  /*slider*/
+  .loginContainer {
+    background-image: none;
+    background-color: rgb(1, 1, 1);
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .list-patient-name{
+    font-size:18px ;
+  }
+  .login_button{
+    display: none;
+  }
+  .gynae-services-card{
+    width: 270px;
+  }
+  .deatil{
+    width: calc(98% - 310px) !important
+  }
+  .search-items {
+    width: 11rem;
+
+  }
+  .current-clicnic-token{
+    margin-left: 20%;
+  }
+  .Dr-container{
+    width: 340px;
+    height: 250px;
+  }
+  .department-card-image {
+    width: 105px;
+    height: 140px;
+  }
+  .mbgl {
+    margin-left: 420px;
+  }
+  .Header-icon1 {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  /* .search-items{
+ width: 18rem;
+} */
+  .clinic-card {
+    width: 350px;
+  }
+  .dr-spelialization {
+    width: 150px;
+  }
+  .dr-address {
+    width: 150px;
+  }
+  .hospitalCard {
+    width: 350px;
+  }
+  .mobi-txt {
+    font-size: 1rem;
+  }
+  .avatar {
+    display: none;
+  }
+  .seacrh-bar-container {
+    z-index: 3 !important;
+  }
+  .token-list-number{
+    font-size: 40px;
+    margin-top: 15px;
+  }
+  .main-ch {
+    width: 100%;
+  }
+  .search-page {
+    width: 90%;
+  }
+  .clinic-detail-drName{
+      width: 200px;
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* body {
+    background-color: green;
+  } */
+
+  
+  
+  .fixed,
+  .side-nav.fixed {
+    margin-top: 58px;
+  }
+
+  .dr-qualifiction {
+    font-size: 10px;
+  }
+  .mini-menu {
+    justify-content: center;
+  }
+  .mbgl {
+    display: none;
+  }
+  .dr-address {
+    width: 150px;
+    font-size: 10px;
+  }
+  .home-search {
+    width: 90%;
+  }
+  .gynae-services-card {
+    width: 270px;
+  }
+  .dr-spelialization {
+    width: 150px;
+    font-size: 10px !important;
+  }
+  .loginContainer {
+    height: auto;
+  }
+  .specialization-card {
+    width: 250px;
+  }
+  .hospital-address {
+    width: 160px;
+  }
+  /* .box {
+    height: 59px;
+  } */
+  .navbar {
+    height: 59px;
+  }
+
+  .city-filter {
+    height: 35px;
+  }
+  .search-bar {
+    height: 35px;
+  }
+  .box {
+    height: 59px;
+  }
+  .clinic-title {
+    font-size: 15px;
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  body {
+    background-color: white;
+  }
+  
+  
+  .clinic-title {
+    font-size: 15px;
+  }
+  .dr-address,
+  .dr-qualifiction,
+  .experience-dr {
+    font-size: 0.8rem;
+  }
+  .mini-menu {
+    display: flex;
+    justify-content: center;
+  }
+  .dr-details {
+    margin-left: 15px;
+  }
+  .DRNAME {
+    font-size: 1.2rem;
+  }
+  .fixed,
+  .side-nav.fixed {
+    margin-top: 58px;
+  }
+
+  .mbgl {
+    display: none !important;
+  }
+  .dr-address {
+    width: 150px;
+  }
+  .home-search {
+    width: 90%;
+  }
+  .gynae-services-card {
+    width: 310px;
+  }
+  .dr-spelialization {
+    font-size: 0.8rem !important;
+    width: 150px;
+  }
+  .specialization-card {
+    width: 250px;
+  }
+  .hospital-address {
+    width: 160px;
+  }
+  /* .box {
+    height: 59px;
+  } */
+  .navbar {
+    height: 59px;
+  }
+
+  .city-filter {
+    height: 35px;
+  }
+  .search-bar {
+    height: 35px;
+  }
+  .box {
+    height: 59px;
+  }
+}

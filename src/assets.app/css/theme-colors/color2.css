@@ -1,0 +1,43 @@
+/* ==========================================================================================
+  Theme Name: Docfind
+  Author: Metropolitanthemes
+  
+  Description: Docfind | MULTIPURPOSE HTML5 Template
+  Version: 1.0
+========================================================================================== */
+
+
+/*-------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    1. Color black
+    2. Color light white
+    3. Color yellow
+    4. Bg black
+    5. Bg yellow
+    6. Bg light white
+    7. Border Yellow
+    8. Border black
+
+
+-------------------------------------------------------*/
+
+:root {
+  --thm-font: "Heebo", sans-serif; /* Headings */
+  --thm-b-font: "Rubik", sans-serif; /* Body font */
+  --thm-base: #99C24D; /* Primary color */
+  --thm-base-hover: #81a341; /* Primary hover */
+  --thm-base-rgb: 153, 194, 77; /* Primary rgb */
+  --thm-base-hue: #f3ffdd; /* Primary low hue */
+  --thm-secondary: #2E4057; /* Secondary */
+  --thm-secondary-hover: #161e29; /* Secondary hover */
+  --thm-secondary-rgb: 46, 64, 87; /* Secondary rgb */
+  --thm-b-text: #686a6f; /* Body text */
+  --thm-b-text-rgb: 104, 106, 111; /* Body text rgb */
+  --thm-border: #EBF2F3; /* Borders */
+  --thm-border-rgb: 225, 225, 225; /* Borders rgb */
+}
+
+
