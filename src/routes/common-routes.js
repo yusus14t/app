@@ -14,7 +14,10 @@ import PricingTable from '../components/common-components/PricingTable'
 import Pricing from "../components/webcomponents/Pricing";
 import AddHead from "../components/seo/AddHead";
 
-const ClinicDetail = lazy(() => import( '../components/webcomponents/Clinic_Details'))
+// const ClinicDetail = lazy(() => import( '../components/webcomponents/Clinic_Details'))
+// const ClinicDetail = lazy(() => import( '../components/App/Pages/ClinicDetails'))
+import ClinicDetail from'../components/App/Pages/ClinicDetails'
+
 const Doctors = lazy(() => import( '../components/webcomponents/doctor/Doctors'))
 const Clinics = lazy(() => import( "../components/webcomponents/Clinics"))
 const Home = lazy(() => import( "../components/webcomponents/Home.js"))

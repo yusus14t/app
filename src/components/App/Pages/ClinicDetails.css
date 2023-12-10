@@ -1,0 +1,38 @@
+.clinic-image {
+    height: 40vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+.mt-35vh {
+    margin-top: 30vh;
+}
+.curved {
+    border-radius: 16px;
+}
+
+.curved-top {
+    border-radius: 16px 16px 0 0;
+}
+.clinic-info-card {
+    padding: 2px 10px;
+}
+.clinic-token {
+    background-color: #5d87c4;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    color: white;
+}
+.notice {
+    border-left: 4px solid red;
+    padding-left: 10px;
+}
+
+.waiting-section {
+
+}
+.waiting-list-active {
+    background-color: #fff;
+    color: black;
+}
