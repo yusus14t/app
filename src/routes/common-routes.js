@@ -26,7 +26,6 @@ const Contact = lazy(() => import('../components/webcomponents/Contact'))
 const DepartmentSignUp = lazy(() => import('../components/authentication/DepartmentSignUp'))
 const AfterSignup = lazy(() => import('../components/process/AfterSignup'))
 const Gynae = lazy(() => import("../components/webcomponents/Gynae"))
-const Detail = lazy(() => import("../components/webcomponents/doctor/Detail"))
 const HospitalDetails = lazy(() => import("../components/webcomponents/Hospital/HospitalDetails"))
 
 const LogIn = lazy(() => import("../components/authentication/LogIn"));
@@ -38,7 +37,6 @@ const getUserType = () => userInfo?.userType;
 
 const COMMON_ROUTE = [
   { path: "/", element: <AddHead seoContent={SEO.HOMEPAGE} > <Home /></AddHead> },
-  { path: "/doctor-detail", element: <Detail /> },
   { path: "/department-login", element: <DepartmentSignUp /> },
   { path: "/doctors", element: <AddHead seoContent={SEO.DOCTORS}><Doctors /></AddHead> },
   { path: "/about", element: <About /> },

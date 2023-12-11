@@ -5736,7 +5736,7 @@ table.data-table7 a:hover {
 .ms-auth-bg {
   position: relative;
   height: 100%;
-  background-image: url('../img/default-login-1000x700.jpg');
+  /* background-image: url('../img/default-login-1000x700.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -5862,7 +5862,7 @@ table.data-table7 a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../img/lock-screen-1920x1080.jpg');
+  /* background-image: url('../img/lock-screen-1920x1080.jpg'); */
   background-size: cover;
   background-position: center center;
   z-index: 2;
@@ -5975,7 +5975,7 @@ table.data-table7 a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../img/lock-screen-1920x1080.jpg');
+  /* background-image: url('../img/lock-screen-1920x1080.jpg'); */
   background-size: cover;
   background-position: center center;
   z-index: 2;
@@ -6023,7 +6023,7 @@ table.data-table7 a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../img/coming-soon-1920x1080.jpg');
+  /* background-image: url('../img/coming-soon-1920x1080.jpg'); */
   background-size: cover;
   background-position: center center;
 }
@@ -6136,7 +6136,7 @@ a.ms-g-plus,
   position: relative;
   display: flex;
   align-items: flex-end;
-  background-image: url('../img/user-profile-bg-1920x400.jpg');
+  /* background-image: url('../img/user-profile-bg-1920x400.jpg'); */
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -8168,29 +8168,6 @@ body:not(.ms-settings-open) .ms-settings-toggle:hover {
   font-size: 22px;
 }
 
-/* Welcome Page */
-/*
-.ms-banner{
-  position: relative;
-  background-image:  url('../img/others/banner.png');
-  background-repeat: no-repeat;
-  background-color: #fff;
-  height: 100%;
-  z-index: 2;
-}
-.ms-banner h2{
-  font-weight: 700;
-}
-.ms-banner-text{
-  margin: 5rem auto 15rem;
-}
-.ms-banner p{
-  font-size: 1rem;
-}
-.ms-banner h1,
-.ms-banner p{
-  color: #fff;
-} */
 .welcome-title {
   font-size: 38px;
 }
