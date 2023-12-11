@@ -70,14 +70,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-<!-- env for local -->
-export const ENVIRONMENT = 'development'
-// export const SERVER_URL = `http://localhost:5000`
-export const SERVER_URL = `http://192.168.1.7:5000`
 
 
-
-// export const ENVIRONMENT = 'production'
-// export const SERVER_URL = window.location.origin
-
-export const BUCKET_URL = 'https://pvdhealth.in/uploads'

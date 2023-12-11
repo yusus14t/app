@@ -18,7 +18,7 @@ export const APP_MENU_ITEM = {
     { title: 'Home', path: '/', icon: <FontAwesomeIcon icon={faHouse} /> },
     // { title: 'Menu', path: '/test', icon: <FontAwesomeIcon icon={faBars} /> },
     { title: 'Appointments', path: '/test', icon: <FontAwesomeIcon icon={faCalendarDays} /> },
-    { title: 'Account', path: '/test2', icon: <FontAwesomeIcon icon={faUser} /> },
+    { title: 'Account', path: '/login', icon: <FontAwesomeIcon icon={faUser} /> },
   ]
 }
 
