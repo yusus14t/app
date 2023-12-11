@@ -4,8 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { getAuthHeader, getFullPath,axiosInstance, convertTo12HourFormat,  } from "../../../constants/utils";
-import clinicPhoto2 from "../../../assets.web/img/home-1/1920x1280-1.jpg";
-import { NUMBER_TO_DAY } from "../../../constants/constant";
+import { HOSPITAL_DEFAUL_IMG, NUMBER_TO_DAY } from "../../../constants/constant";
 import NO_PHOTO from "../../../assets.app/images/no_images/no_clinic.jpg";
 
 
@@ -116,7 +115,7 @@ const SpecializationDetails = () => {
                             src={
                               hospital?.photo
                                 ? getFullPath(hospital.photo)
-                                : clinicPhoto2
+                                : HOSPITAL_DEFAUL_IMG
                             }
                             alt=""
                           />

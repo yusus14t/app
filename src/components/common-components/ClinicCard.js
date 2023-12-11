@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import clinicPhoto2 from "../../assets.web/img/clinic-grid/348x350-1.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { getFullPath } from "../../constants/utils";
+import { CLINIC_DEFAUL_IMG } from "../../constants/constant";
 
 export function ClinicListCard({ clinics }) {
   return (
     <>
-      {console.log(clinics)}
       {clinics.length > 0 &&
         clinics.map((clinic, key) => (
           <div className="col-lg-4 mb-4 col-md-4 mcard mt-4" key={key}>
@@ -18,7 +17,7 @@ export function ClinicListCard({ clinics }) {
                 <img
                   className="clinic-img"
                   src={
-                    clinic?.photo ? getFullPath(clinic?.photo) : clinicPhoto2
+                    clinic?.photo ? getFullPath(clinic?.photo) : CLINIC_DEFAUL_IMG
                   }
                   alt=""
                 />

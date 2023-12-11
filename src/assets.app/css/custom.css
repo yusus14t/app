@@ -474,7 +474,7 @@
   margin-left: 28px;
 }
 .hmbg {
-  background-image: url(../../assets.web/img/home-1/1920x1280-1.jpg);
+  background-image: url(../images/1920x1280-1.jpg); 
 }
 
 .appointment-selected {

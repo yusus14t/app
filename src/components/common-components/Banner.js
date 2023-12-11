@@ -24,9 +24,9 @@ function Banner({ title }) {
                 </ol>
                 </div>
 
-                <img src={SubHeader1} className="br" alt="subheader" />
+                {/* <img src={SubHeader1} className="br" alt="subheader" />
                 <img src={SubHeader2} className="bl" alt="subheader" />
-                <img src={SubHeader3} className="tr" alt="subheader" />
+                <img src={SubHeader3} className="tr" alt="subheader" /> */}
 
             </div>
     );

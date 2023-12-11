@@ -1,5 +1,4 @@
 import React from 'react';
-import Banner_ing from '../../assets.web/img/banner2.jpg';
 
 import PropTypes from 'prop-types';
 
