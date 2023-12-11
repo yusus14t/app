@@ -186,7 +186,7 @@ const Login = () => {
                 <div className="mb-2 mt-4 d-flex flex-column">
                   <label className=" ">Enter Mobile Number</label>
                   <input
-                    className="login-input1 rounded border-0 bg-light p-2"
+                    className="login-input rounded border-0 ls8 text-center bg-light p-2"
                     placeholder="8218397850"
                     type="text"
                     maxLength={10}
@@ -240,7 +240,7 @@ const Login = () => {
                 <div className="mb-2 mt-4 d-flex flex-column">
                   <label className=" ">Enter OTP</label>
                   <input
-                    className="login-input2 rounded border-0 bg-light p-2"
+                    className="login-input text-center ls8 rounded border-0 bg-light p-2"
                     placeholder="XXXX"
                     type="text"
                     maxLength={4}
@@ -281,7 +281,7 @@ const Login = () => {
             <div className="signup-items">
               <div
                 className="signup-item text-center "
-                onClick={() => handleTypes("patient")}
+                onClick={() => handleTypes("clinic")}
               >
                 <div className="signup-icons ">
                   <img className="w-100 h-100" src={clinic} />
@@ -306,11 +306,11 @@ const Login = () => {
           </div>
         )}
 
-        <from>
+        <from className="d-flex justify-content-center w-100" >
           {/* patient */}
           {component === COMPONENTS["3"] && (
-            <div className="d-flex flex-column align-items-center bg-white curved  p-4 parent-div "
-            style={{marginTop:"-35%"}}>
+            <div className=" d-flex flex-column align-items-center bg-white curved  p-4 parent-div "
+            >
               <h4>Fill your datails</h4>
               <div className="mb-2 w-100">
                 <label htmlFor="">Mobile Number</label>
@@ -321,34 +321,34 @@ const Login = () => {
               </div>
               <div>
               <input type="hidden" value={"patient"} {...register("source")} />
-              <div className="w-100 mb-2">
+              <div className="w-100 mb-3">
                 <label>
                   Full Name <span className="text-anger">*</span>
                 </label>{" "}
                 <br />
                 <input
                   type="text"
-                  className="login-input3 w-100 rounded border-1 bg-light p-2"
-                  placeholder="John Dee"
+                  className="login-input w-100 rounded border-0 bg-light p-2"
+                  placeholder="Enter full name"
                   {...register("name", { required: "name is required", })}
                 />
               </div>
-              <div className="d-flex mb-2">
+              <div className="d-flex mb-3">
                 <div className="" >
                   <label>
                     Age <span>*</span>
                   </label>{" "}
                   <br />
-                  <input placeholder="9" 
+                  <input placeholder="Enter age" 
                   {...register("age", {required: "age is required",})}
-                   className="login-input3 rounded border-1 w-100  bg-light p-2 " />
+                   className="login-input rounded border-0 w-100  bg-light p-2 " />
                 </div>
                 <div>
                   <label>
                     Gender <span>*</span>
                   </label>{" "}
                   <br />
-                  <select className="login-input3 rounded border-1 ms-1 bg-light p-2 "
+                  <select className="login-input rounded border-0 ms-1 bg-light p-2 "
                   {...register("gender", { required: "Gender is required" })}
                   style={{width:"105px", height:"39px"}} >
                     <option>Female</option>
@@ -357,31 +357,31 @@ const Login = () => {
                   </select>
                 </div>
               </div>
-              <div className="w-100 mb-2">
+              <div className="w-100 mb-3">
                 <label>
                   Father Name <span className="text-anger">*</span>
                 </label>
                 <br />
                 <input
                   type="text"
-                  className="login-input3 w-100 rounded border-1 bg-light p-2"
-                  placeholder="Ilias"
+                  className="login-input w-100 rounded border-0 bg-light p-2"
+                  placeholder="Enter father name."
                   {...register("fatherName")}
                 />
               </div>
-              <div className="w-100 mb-2">
+              <div className="w-100 mb-4">
                 <label>
-                  Email ID <span className="text-anger">*</span>
+                  Address <span className="text-anger">*</span>
                 </label>{" "}
                 <br />
                 <input
                   type="text"
-                  className="login-input3 w-100 rounded border-1 bg-light p-2"
-                  placeholder="example@gmail.com"
+                  className="login-input w-100 rounded border-0 bg-light p-2"
+                  placeholder="Enter address"
                   {...register("address", { required: "address is required",})}
                 />
               </div>
-              <button className="btn btn-primary" type="submit">Save</button>
+              <button className="btn btn-primary shadow-none  w-100 py-2" type="submit">Save</button>
 
               </div>
               
@@ -395,47 +395,47 @@ const Login = () => {
                    <label htmlFor="">Mobile Number</label>
                    <h4 className="mb-2 text-disabled">
                      +91 {details?.phone?.slice(0, 3)}{details?.phone?.slice(3, 6)}
-                     {details?.phone?.slice(-4)} 8218397850
+                     {details?.phone?.slice(-4)} 
                    </h4>
              </div>
-             <div className="w-100 mb-2">
+             <div className="w-100 mb-3">
                 <label>
                   Registration Number<span className="text-anger">*</span>
                 </label>{" "}
                 <br />
                 <input
                   type="text"
-                  className="login-input1 w-100 rounded border-1 bg-light p-2"
-                  placeholder="John Dee"
-                  {...register("name", { required: "name is required", })}
+                  className="login-input w-100 rounded border-0 bg-light p-2"
+                  placeholder="Enter registration no."
+                  {...register("registrationNo", { required: "Registration number is required", })}
                 />
               </div>
-              <div className="w-100 mb-2">
+              <div className="w-100 mb-3">
                 <label>
                   Clinic / Hospital Name<span className="text-anger">*</span>
                 </label>{" "}
                 <br />
                 <input
                   type="text"
-                  className="login-input3 w-100 rounded border-1 bg-light p-2"
-                  placeholder="John Dee"
+                  className="login-input w-100 rounded border-0 bg-light p-2"
+                  placeholder="Enter name"
                   {...register("name", { required: "name is required", })}
                 />
               </div>
-              <div className="w-100 mb-2">
+              <div className="w-100 mb-3">
                 <label>
                   Email ID <span className="text-anger">*</span>
                 </label>{" "}
                 <br />
                 <input
                   type="text"
-                  className="login-input3 w-100 rounded border-1 bg-light p-2"
-                  placeholder="John Dee"
-                  {...register("name", { required: "name is required", })}
+                  className="login-input w-100 rounded border-0 bg-light p-2"
+                  placeholder="Enter email ID"
+                  {...register("email", { required: "Email is required", })}
                 />
               </div>
               <div className="w-100">
-                <button className="btn btn-primary w-100">Save</button>
+                <button className="btn btn-primary py-2 shadow-none w-100">Save</button>
               </div>
             </div>
           )}

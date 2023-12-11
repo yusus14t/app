@@ -6,25 +6,19 @@
     width: 256px;
    
 }
-.login-input1{
-    letter-spacing: 10px;
-    text-align: center;
+.login-input{
+    letter-spacing: 2px;
 }
-.login-input2{
-    letter-spacing: 20px;
-    text-align: center;
+.ls8{
+    letter-spacing: 8px;
 }
-.login-input3{
-    min-width: 240px;
-    letter-spacing: 5px;
-    text-align: center;
-}
+
 .login-page{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 30%;
+    padding-top: 5vh;
 }
 .parent-div{
     min-width: 240px;
