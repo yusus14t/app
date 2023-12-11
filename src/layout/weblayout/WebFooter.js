@@ -1,5 +1,4 @@
 import React from 'react';
-import Tabs from '../../components/App/Tabs';
 
 
 function WebFooter() {
