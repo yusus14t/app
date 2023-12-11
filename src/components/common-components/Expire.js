@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Dashboard from '../../assets.app/images/Dashboard.jpg'
+import Dashboard from '../../assets/images/Dashboard.jpg'
 import { PLAN } from '../../constants/constant';
 import { axiosInstance, getAuthHeader } from '../../constants/utils';
 import { userInfo } from '../../constants/utils';

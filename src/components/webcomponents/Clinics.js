@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { getFullPath } from "../../constants/utils";
 import { NUMBER_TO_DAY } from "../../constants/constant";
-import NO_PHOTO from "../../assets.app/images/no_images/no_clinic.jpg";
+import NO_PHOTO from "../../assets/images/no_images/no_clinic.jpg";
 import ClinicCard from "../App/cards/ClinicCard";
 
 

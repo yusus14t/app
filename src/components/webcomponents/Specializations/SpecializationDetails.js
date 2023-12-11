@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../../../assets.app/css/specialzation.css";
+import "../../../assets/css/specialzation.css";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { getAuthHeader, getFullPath,axiosInstance, convertTo12HourFormat,  } from "../../../constants/utils";
 import { HOSPITAL_DEFAUL_IMG, NUMBER_TO_DAY } from "../../../constants/constant";
-import NO_PHOTO from "../../../assets.app/images/no_images/no_clinic.jpg";
+import NO_PHOTO from "../../../assets/images/no_images/no_clinic.jpg";
 
 
 

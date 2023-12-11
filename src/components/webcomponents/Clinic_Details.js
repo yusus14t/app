@@ -1,4 +1,4 @@
-import background from "../../assets.app/img/user-profile-bg-1920x400.jpg";
+import background from "../../assets/img/user-profile-bg-1920x400.jpg";
 import { axiosInstance, convertTo12HourFormat, formatPhone, getAuthHeader, getFullPath } from "../../constants/utils";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";

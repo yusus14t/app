@@ -4,7 +4,7 @@ import { DAYS, RADIOLOGIST_DEPARTMENT } from "../../../constants/constant";
 import { NumberFormat, axiosInstance, getAuthHeader, getFullPath } from "../../../constants/utils";
 import useToasty from '../../../hooks/toasty';
 import Select from 'react-select';
-import NO_PHOTO from '../../../assets.app/images/no-photo.png';
+import NO_PHOTO from '../../../assets/images/no-photo.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencil } from '@fortawesome/free-solid-svg-icons'
 import ImgUpload from "../Imgupload";

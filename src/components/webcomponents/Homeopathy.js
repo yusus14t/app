@@ -4,8 +4,8 @@ import { axiosInstance, getAuthHeader, getImages } from '../../constants/utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { getFullPath } from "../../constants/utils";
-import clinicPhoto2 from "../../assets.app/img/backgrounds/hos.jpg";
-import Homeopath from "../../assets.app/img/logo/homeopathy.jpg";
+import clinicPhoto2 from "../../assets/img/backgrounds/hos.jpg";
+import Homeopath from "../../assets/img/logo/homeopathy.jpg";
 import DoctorsList from './doctor/Doctors';
 import { WEBSITE_IMAGE } from '../../constants/constant';
 

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import background from "../../../assets.app/img/user-profile-bg-1920x400.jpg";
 import DepartmentCard from "./DepartmentCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { axiosInstance, convertTo12HourFormat, formatPhone, getFullPath, userInfo } from "../../../constants/utils";
 import { useParams } from "react-router-dom";
-import { FULLDAY } from "../../../constants/constant";
+import { FULLDAY, NO_PHOTO } from "../../../constants/constant";
 
 const HospitalDetails = () => {
   const [ hospital, setHospital] = useState({});
@@ -52,7 +51,7 @@ const HospitalDetails = () => {
       <div className="box"></div>
       <div className="hospital-banner">
         <h4 className="clinic-detail-name">{hospital?.name}</h4>
-        <img className="hopsiptal-banner-img" src={hospital?.photo ? getFullPath(hospital?.photo) : background} alt="" />
+        <img className="hopsiptal-banner-img" src={hospital?.photo ? getFullPath(hospital?.photo) : NO_PHOTO} alt="" />
       </div>
       <div className="p-4">
           {/* <DepartmentCard /> */}

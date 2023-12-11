@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import background from "../../assets.app/img/backgrounds/department.jpg";
+import background from "../../assets/img/backgrounds/department.jpg";
 import { NumberFormat, axiosInstance } from '../../constants/utils';
 import useToasty from '../../hooks/toasty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import '../../assets.app/css/paymentSuccess.css'
-import logo from '../../assets.app/img/logo/logo.jpg'
+import '../../assets/css/paymentSuccess.css'
+import logo from '../../assets/img/logo/logo.jpg'
 import { axiosInstance, userInfo } from '../../constants/utils'
 import { userRoutes } from '../../constants/constant'
 import { useSearchParams } from 'react-router-dom' 

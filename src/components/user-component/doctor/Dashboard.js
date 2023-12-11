@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import image from "../../../assets.app/img/dashboard/doctor-1.jpg"
 import { axiosInstance, getAuthHeader } from '../../../constants/utils';
 import Appointment from '../../common-components/Appointment/Appointment';
 import UserModal from '../../common-components/UserModal';
-import { DoughnutChart, LineChart } from '../../common-components/Chart';
+import { DoughnutChart } from '../../common-components/Chart';
 import useToasty from '../../../hooks/toasty';
 import events from '../../../events';
+import { NO_PHOTO } from '../../../constants/constant';
+
 
 const Dashbaord = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -210,7 +211,7 @@ const Dashbaord = () => {
                             <ul class={`ms-followers ms-list ms-scrollable ps ${appointments?.length == 0 && 'text-center'}`}>
                                 {appointments?.length > 0 ?
                                     appointments.map((appointment, i) => <li class="ms-list-item media">
-                                        <img src={image} class="ms-img-small ms-img-round" alt="people" />
+                                        <img src={NO_PHOTO} class="ms-img-small ms-img-round" alt="people" />
                                         <div class="media-body mt-1 cursor-pointer" onClick={() => { setAppointmentData(appointment); setIsUserModalOpen(true); }}>
                                             <h4>{appointment?.user.name || ""}</h4>
                                             <span class="fs-12">XXXX-XXX-{appointment?.user.phone.slice(7, 10)}</span>
@@ -233,7 +234,7 @@ const Dashbaord = () => {
                             <ul class={`ms-followers ms-list ms-scrollable ps ${unreachedData?.length == 0 && 'text-center'}`}>
                                 {unreachedData?.length > 0 ?
                                     unreachedData.map((appointment, i) => <li class="ms-list-item media">
-                                        <img src={image} class="ms-img-small ms-img-round" alt="people" />
+                                        <img src={NO_PHOTO} class="ms-img-small ms-img-round" alt="people" />
                                         <div class="media-body mt-1 cursor-pointer" onClick={() => { setAppointmentData(appointment); setIsUserModalOpen(true); }}>
                                             <h4>{appointment?.user.name || ""}</h4>
                                             <span class="fs-12">XXXX-XXX-{appointment?.user.phone.slice(7, 10)}</span>

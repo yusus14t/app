@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faPhone, } from "@fortawesome/free-solid-svg-icons";
-import ivf from "../../assets.app/images/ivf.jpg";
-import TEST from "../../assets.app/images/TEST-TUBE-BABY.jpg";
-import surrogacy from "../../assets.app/images/surrogacy.jpg";
-import Gynaecology from "../../assets.app/images/Gynaecology.jpg";
-import NO_PHOTO from "../../assets.app/images/no-photo.png";
+import ivf from "../../assets/images/ivf.jpg";
+import TEST from "../../assets/images/TEST-TUBE-BABY.jpg";
+import surrogacy from "../../assets/images/surrogacy.jpg";
+import Gynaecology from "../../assets/images/Gynaecology.jpg";
+import NO_PHOTO from "../../assets/images/no-photo.png";
 import { NUMBER_TO_DAY } from "../../constants/constant";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader

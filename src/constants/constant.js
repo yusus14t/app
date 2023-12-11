@@ -1,10 +1,10 @@
 
 import { faHouse ,faUser, faCalendarDays} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import doctorimg from '../assets.app/images/no_images/no_doctor.png'
-import clinicimg from '../assets.app/images/no_images/no_clinic.jpg'
-import hospitalimg from '../assets.app/images/no_images/no_hospital.jpg'
-import noimg from '../assets.app/images/no-photo.png'
+import doctorimg from '../assets/images/no_images/no_doctor.png'
+import clinicimg from '../assets/images/no_images/no_clinic.jpg'
+import hospitalimg from '../assets/images/no_images/no_hospital.jpg'
+import noimg from '../assets/images/no-photo.png'
 
 
 export const DOCTOR_DEFAUL_IMG = doctorimg

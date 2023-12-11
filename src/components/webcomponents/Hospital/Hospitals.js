@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { axiosInstance, convertTo12HourFormat } from '../../../constants/utils'
 
 import { Link } from "react-router-dom";
-import NO_PHOTO from "../../../assets.app/images/no_images/no_hospital.jpg";
+import NO_PHOTO from "../../../assets/images/no_images/no_hospital.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { getFullPath } from "../../../constants/utils";

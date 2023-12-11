@@ -1,5 +1,5 @@
 import React from 'react'
-// import '../../assets.app/css/pricingtable.css'
+// import '../../assets/css/pricingtable.css'
 
 const Pricing = () => {
   return (

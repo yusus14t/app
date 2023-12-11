@@ -6,7 +6,7 @@ import {
   getFullPath,
   getImages,
 } from "../../constants/utils";
-import NO_PHOTO from "../../assets.app/images/no-photo.png";
+import NO_PHOTO from "../../assets/images/no-photo.png";
 import {
   RADIOLOGIST_DEPARTMENT,
   WEBSITE_IMAGE,

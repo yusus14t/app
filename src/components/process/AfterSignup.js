@@ -1,7 +1,7 @@
 import React from 'react'
-import clinic from '../../assets.app/img/icons/clinic.png'
-import hospital from "../../assets.app/img/icons/hospital.png";
-import others from "../../assets.app/img/icons/clipboards.png";
+import clinic from '../../assets/img/icons/clinic.png'
+import hospital from "../../assets/img/icons/hospital.png";
+import others from "../../assets/img/icons/clipboards.png";
 import { axiosInstance } from '../../constants/utils';
 
 

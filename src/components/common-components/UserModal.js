@@ -1,9 +1,10 @@
 
 import Modal from './Modal';
-import profile from '../../assets.app/img/doctors-grid/348x350-3.jpg'
 import { axiosInstance, dateFormat } from '../../constants/utils';
 import { useEffect, useState } from 'react';
-import useToasty from '../../hooks/toasty'
+import useToasty from '../../hooks/toasty';
+import { NO_PHOTO } from '../../constants/constant';
+
 
 const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
     const [appointment, setAppointment] = useState({});
@@ -66,7 +67,7 @@ const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
             <div className="row">
               <div className="d-flex flex-row justify-content-between">
                 <div className="user-profile-img-container">
-                  <img className="user-profile-img" src={profile} alt="" />
+                  <img className="user-profile-img" src={NO_PHOTO} alt="" />
                 </div>
                 <div className="user-details m-auto d-flex flex-column">
                   <h6 className="font-weight-bold">

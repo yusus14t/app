@@ -1,9 +1,9 @@
 import { AllRoutes } from './routes';
 import './events/index';
-import "./assets.app/css/bootstrap.min.css";
-import "./assets.app/css/style.css";
-import "./assets.app/css/custom.css";
-import "./assets.app/css/mediaqueries.css"
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/style.css";
+import "./assets/css/custom.css";
+import "./assets/css/mediaqueries.css"
 
 import SnackbarProvider from 'react-simple-snackbar'
 import { BrowserRouter as Router } from 'react-router-dom'

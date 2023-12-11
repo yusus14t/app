@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DrAvatar from "../../assets.app/images/no_images/no_doctor.png";
-import uploadimg from "../../assets.app/images/no_images/upload_img.jpg";
+import DrAvatar from "../../assets/images/no_images/no_doctor.png";
+import uploadimg from "../../assets/images/no_images/upload_img.jpg";
 
 
 

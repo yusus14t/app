@@ -8,12 +8,12 @@ import CreatableSelect from 'react-select/creatable';
 import useToasty from "../../../hooks/toasty";
 import Website from "./Website";
 import { SERVICES } from "../../../constants/constant";
-import logo from '../../../assets.app/img/logo/logo.jpg'
+import logo from '../../../assets/img/logo/logo.jpg'
 import { toPng } from 'html-to-image'
-import phone from "../../../assets.app/img/icons/icons8-phonecall-96.png";
-import whatsapp from "../../../assets.app/img/icons/icons8-whatsapp-96.png";
-import email from "../../../assets.app/img/icons/icons8-email-96.png";
-import twitter from "../../../assets.app/img/icons/icons8-twitter-100.png";
+import phone from "../../../assets/img/icons/icons8-phonecall-96.png";
+import whatsapp from "../../../assets/img/icons/icons8-whatsapp-96.png";
+import email from "../../../assets/img/icons/icons8-email-96.png";
+import twitter from "../../../assets/img/icons/icons8-twitter-100.png";
 import Payment from "./Payment";
 import { SETTING_TABS } from "../../../constants/constant";
 

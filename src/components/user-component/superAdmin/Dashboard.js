@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import NO_PHOTO from "../../../assets.app/images/no-photo.png";
+import NO_PHOTO from "../../../assets/images/no-photo.png";
 import toasty from '../../../hooks/toasty'
 import { axiosInstance, formatPhone, getAuthHeader, getFullPath, userInfo } from '../../../constants/utils';
 import { DoughnutChart, LineChart } from '../../common-components/Chart';

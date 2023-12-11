@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import NO_PHOTO from "../../../assets.app/images/no-photo.png";
+import NO_PHOTO from "../../../assets/images/no-photo.png";
 import { NumberFormat, axiosInstance, formatPhone, getAuthHeader, getFullPath, updateUser } from "../../../constants/utils";
 import Modal from "../../common-components/Modal";
 import { useForm } from "react-hook-form";
 import ImgUpload from "../../common-components/Imgupload";
 import useToasty from '../../../hooks/toasty';
 import { toPng, toBlob } from 'html-to-image'
-import logo from "../../../assets.app/img/logo/logo.jpg"
+import logo from "../../../assets/img/logo/logo.jpg"
 const Dashbaord = () => {
   const userInfo = JSON.parse(localStorage.getItem('user'))
   const [appointments, setAppointments] = useState([])

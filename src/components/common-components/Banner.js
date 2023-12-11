@@ -1,7 +1,4 @@
 import React from 'react';
-import SubHeader1 from '../../assets.web/img/subheader-br.png';
-import SubHeader2 from '../../assets.web/img/subheader-bl.png';
-import SubHeader3 from '../../assets.web/img/subheader-tr.png';
 import PropTypes from 'prop-types';
 
 

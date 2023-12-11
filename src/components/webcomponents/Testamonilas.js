@@ -1,6 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import img from "../../assets.app/img/doctors-list/182x280-2.jpg";
+import img from "../../assets/img/doctors-list/182x280-2.jpg";
 const Testamonilas = () => {
   return (
     <>

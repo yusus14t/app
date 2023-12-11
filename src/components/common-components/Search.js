@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSearch, faXmark } from "@fortawesome/free-solid-svg-icons";
-import filterImage from '../../assets.app/img/icons/filter.png';
+import filterImage from '../../assets/img/icons/filter.png';
 import Select from "react-select";
 import { axiosInstance,  getFullPath } from '../../constants/utils' 
 import { ORGANIZATION_TYPE } from "../../constants/constant";
-import NO_PHOTO from '../../assets.app/images/no-photo.png';
+import NO_PHOTO from '../../assets/images/no-photo.png';
 import { Link } from "react-router-dom";
 
 const Search = () => {

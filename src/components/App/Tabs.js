@@ -5,13 +5,13 @@ import { APP_MENU_ITEM } from '../../constants/constant'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,faXmark } from '@fortawesome/free-solid-svg-icons'
 
-import doctors from "../../assets.app/menuIcons/doctor.png"
-import hospital from "../../assets.app/menuIcons/hospital.png"
-import clinic from "../../assets.app/menuIcons/clinic.png"
-import radiologist from "../../assets.app/menuIcons/ultrasound.jpg"
-import gynae from "../../assets.app/menuIcons/gynae.png"
-import homeo from "../../assets.app/menuIcons/homeo.jpeg"
-import contact from "../../assets.app/menuIcons/contact.png"
+import doctors from "../../assets/menuIcons/doctor.png"
+import hospital from "../../assets/menuIcons/hospital.png"
+import clinic from "../../assets/menuIcons/clinic.png"
+import radiologist from "../../assets/menuIcons/ultrasound.jpg"
+import gynae from "../../assets/menuIcons/gynae.png"
+import homeo from "../../assets/menuIcons/homeo.jpeg"
+import contact from "../../assets/menuIcons/contact.png"
 import OutsideWrapper from '../common-components/OutsideWrapper'
 
 

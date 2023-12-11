@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import NO_PHOTO from '../assets.app/images/no-photo.png'
+import NO_PHOTO from '../assets/images/no-photo.png'
 import { Link, useLocation } from 'react-router-dom';
 import { MODULES, userRoutes } from '../constants/constant';
 import { axiosInstance, getAuthHeader, getFullPath } from '../constants/utils';

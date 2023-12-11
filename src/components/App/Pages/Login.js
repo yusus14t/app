@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./Login.css";
-import loginpaoster from "../../../assets.app/img/logo/logo.jpg";
+import loginpaoster from "../../../assets/img/logo/logo.jpg";
 import Container from "../Layout/Container";
 
 import { useState } from "react";
@@ -21,9 +21,9 @@ import useToasty from "../../../hooks/toasty";
 import { Link, useLocation } from "react-router-dom";
 import { WEBSITE_IMAGE, userRoutes } from "../../../constants/constant";
 import { useForm } from "react-hook-form";
-import background1 from "../../../assets.app/img/backgrounds/department.jpg";
-import clinic from "../../../assets.app/menuIcons/clinic.png";
-import Hospital from "../../../assets.app/menuIcons/hospital.png";
+import background1 from "../../../assets/img/backgrounds/department.jpg";
+import clinic from "../../../assets/menuIcons/clinic.png";
+import Hospital from "../../../assets/menuIcons/hospital.png";
 
 const Login = () => {
   const { state: LocationState } = useLocation();

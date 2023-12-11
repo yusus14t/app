@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import phone from "../../assets.app/img/icons/icons8-phonecall-96.png";
-import whatsapp from "../../assets.app/img/icons/icons8-whatsapp-96.png";
-import email from "../../assets.app/img/icons/icons8-email-96.png";
-import twitter from "../../assets.app/img/icons/icons8-twitter-100.png";
-import location from "../../assets.app/img/icons/location.png";
+import phone from "../../assets/img/icons/icons8-phonecall-96.png";
+import whatsapp from "../../assets/img/icons/icons8-whatsapp-96.png";
+import email from "../../assets/img/icons/icons8-email-96.png";
+import twitter from "../../assets/img/icons/icons8-twitter-100.png";
+import location from "../../assets/img/icons/location.png";
 import { axiosInstance, formatPhone, getAuthHeader } from "../../constants/utils";
 import useToasty from "../../hooks/toasty";
 

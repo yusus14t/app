@@ -147,7 +147,7 @@ export default () => {
 
     return (
         <Container className={'mt-35vh bg-white curved-top shadow'}>
-            <div className='clinic-image' >
+            <div className='clinic-image w-100' >
                 <img src={clinicDetail?.photo ? getFullPath(clinicDetail?.photo) : NO_PHOTO} width={'100%'} height={'100%'} />
             </div>
 
