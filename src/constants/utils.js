@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { SERVER_URL, ENVIRONMENT,BUCKET_URL } from '../configs/env';
 
 export const getAuthHeader = () => {
     let token = JSON.parse(localStorage.getItem('token'))
@@ -8,7 +7,7 @@ export const getAuthHeader = () => {
 
 // axios instance 
 export const axiosInstance = axios.create({
-    baseURL:  `${ SERVER_URL }/api`,
+    baseURL:  `${ process.env.REACT_APP_SERVER_URL }/api`,
     headers: {
         'Access-Control-Allow-Origin': '*',
         'auth-token': getAuthHeader()['headers']['auth-token'],
@@ -42,8 +41,8 @@ export const NumberFormat = ( e ) =>  {
 }
 
 export const getFullPath = (filename) => {
-    if( ENVIRONMENT === 'production' )  return `${BUCKET_URL}/${ filename }`
-    else return `${ SERVER_URL }/images/${ filename }`
+    if( process.env.REACT_APP_ENVIRONMENT === 'production' )  return `${process.env.REACT_APP_BUCKET_URL}/${ filename }`
+    else return `${ process.env.REACT_APP_SERVER_URL }/images/${ filename }`
 }
 
 export const userInfo = localStorage.getItem('user') != 'undefined' ? JSON.parse(localStorage.getItem('user')) : {}

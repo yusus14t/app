@@ -3,7 +3,6 @@ import NO_PHOTO from "../../../assets/images/no-photo.png";
 import { WEBSITE_IMAGE } from '../../../constants/constant';
 import { axiosInstance, getAuthHeader, getFullPath } from '../../../constants/utils';
 import useToasty from '../../../hooks/toasty';
-import Im from "../../../assets/images/no-photo.png";
 
 const Website = () => {
   const [ images, setImages ] = useState([])

@@ -13,8 +13,6 @@ import useToasty from "../../hooks/toasty";
 import { useLocation } from "react-router-dom";
 import { WEBSITE_IMAGE, userRoutes } from "../../constants/constant";
 import { useForm } from "react-hook-form";
-import background1 from '../../assets/img/backgrounds/department.jpg'
-import Container from "../App/Layout/Container"
 import Login from '../App/Pages/Login'
 
 const LogIn = () => {

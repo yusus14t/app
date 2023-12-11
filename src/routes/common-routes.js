@@ -7,7 +7,6 @@ import { userInfo } from "../constants/utils";
 import Privacy from "../components/webcomponents/Privacy";
 import Terms from "../components/webcomponents/Terms";
 import NotFound from "../components/webcomponents/NotFound";
-import NoData from "../components/webcomponents/NoData";
 import Payment_Success from "../components/common-components/Payment_Success";
 import Payment_Failed from "../components/common-components/Payment_Failed";
 import PricingTable from '../components/common-components/PricingTable'
@@ -66,7 +65,6 @@ const COMMON_ROUTE = [
       <LogIn />
     ),
   },
-  { path: "/jjjj", element: <NoData /> },
   { path: "/*", element: <NotFound /> },
 ];
 
