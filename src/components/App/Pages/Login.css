@@ -1,0 +1,68 @@
+.loginc{
+    background-color: #e8f0ff;
+    height: 100vh;
+}
+.login-img-container{
+    width: 256px;
+   
+}
+.login-input1{
+    letter-spacing: 10px;
+    text-align: center;
+}
+.login-input2{
+    letter-spacing: 20px;
+    text-align: center;
+}
+.login-input3{
+    min-width: 240px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.login-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+}
+.parent-div{
+    min-width: 240px;
+    max-width: 400px;
+}
+
+.parent-div2{
+    max-width: 400px;
+}
+.signup-items{
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+}
+.signup-item{
+    max-width: 400px;
+    /* background-color: #1f4791 ; */
+    padding: 10px 7px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.patient{
+    max-width: 400px;
+    width: 240px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.signup-icons{
+    width: 60px;
+    height: 60px;
+}
+.detail{
+    font-size: 10px;
+}
