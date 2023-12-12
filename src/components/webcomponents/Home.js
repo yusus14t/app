@@ -5,6 +5,7 @@ import DoctorsList from "./doctor/Doctors";
 import { getFullPath, getImages } from "../../constants/utils";
 import { useEffect, useState } from "react";
 import { WEBSITE_IMAGE } from "../../constants/constant";
+import SpecializationSlider from "../sliders/SpecializationSlider";
 
 function Home() {
   const [ images, setImages ] = useState([])
@@ -53,7 +54,10 @@ function Home() {
       <div className="mobie">
         <Slider />
       </div>
-
+        <div>
+          <h1>new slider</h1>
+          <SpecializationSlider/>
+        </div>
       {/* <Clinics style={{ margin: "0" }} /> */}
       <div className="">
         <div className="">
