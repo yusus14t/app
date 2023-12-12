@@ -29,7 +29,7 @@ const Tabs = () => {
     const [isMenuActive, setIsMenuActive] = useState(false)
 
   return (
-    <OutsideWrapper callback={() => setIsMenuActive(false)}>
+    <OutsideWrapper style={{zIndex:"2", position:"relative"}}  callback={() => setIsMenuActive(false)}>
         <div className='tabNav d-flex flex-column'>
         {isMenuActive &&<div className='tab-popup '>
             {/* doctors */} 

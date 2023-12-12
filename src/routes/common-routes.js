@@ -12,6 +12,7 @@ import Payment_Failed from "../components/common-components/Payment_Failed";
 import PricingTable from '../components/common-components/PricingTable'
 import Pricing from "../components/webcomponents/Pricing";
 import AddHead from "../components/seo/AddHead";
+import AllSpecialization from '../components/App/Pages/AllSpecialization.js'
 
 // const ClinicDetail = lazy(() => import( '../components/webcomponents/Clinic_Details'))
 // const ClinicDetail = lazy(() => import( '../components/App/Pages/ClinicDetails'))
@@ -25,11 +26,11 @@ const Contact = lazy(() => import('../components/webcomponents/Contact'))
 const DepartmentSignUp = lazy(() => import('../components/authentication/DepartmentSignUp'))
 const AfterSignup = lazy(() => import('../components/process/AfterSignup'))
 const Gynae = lazy(() => import("../components/webcomponents/Gynae"))
-const HospitalDetails = lazy(() => import("../components/webcomponents/Hospital/HospitalDetails"))
+const HospitalDetails = lazy(() => import("../components/App/Pages/HospitalDetails.js"))
 
 const LogIn = lazy(() => import("../components/authentication/LogIn"));
 const Radiologist = lazy(() => import("../components/webcomponents/Radiologist"));
-const SpecializationDetails = lazy(() => import('../components/webcomponents/Specializations/SpecializationDetails'))
+const SpecializationDetails = lazy(() => import('../components/App/Pages/SpecializationDeatils'))
 const Homeopathy =lazy(()=> import('../components/webcomponents/Homeopathy'));
 
 const getUserType = () => userInfo?.userType;
@@ -56,6 +57,7 @@ const COMMON_ROUTE = [
   { path:"/payment-success", element:<Payment_Success />},
   { path:"/payment-failed", element:<Payment_Failed />},
   { path:"/pricing", element:<PricingTable/>},
+  { path:"allspecialization", element:<AllSpecialization/>},
 
   {
     path: "/login",

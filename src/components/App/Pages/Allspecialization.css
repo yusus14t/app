@@ -1,23 +1,11 @@
-.swiper-pagination-bullets {
-    display: none;
-}
-.view-all-btn{
-    padding: 5px 62px;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-
-}
 
 .spicialization-card{
-    z-index: 1;
-    min-width: 5rem;
+    /* min-width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 20px 0px;
+    margin: 10px 0px;
     /* height: 100px; */
     padding: 10px 5px;
     border-radius: 8px;
@@ -40,6 +28,3 @@
 .toh{
     text-overflow: hidden;
 }
-/* .swiper-slide{
-    height: 200px !important;
-} */

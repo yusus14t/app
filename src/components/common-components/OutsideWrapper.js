@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 
-export default ({ callback = () => {}, children }) => {
+export default ({ callback = () => {}, children, ...props }) => {
     const wrapperRef = useRef(null)
 
     const handleOutside = (event) => {
@@ -13,7 +13,7 @@ export default ({ callback = () => {}, children }) => {
     })
 
     return (
-        <div ref={wrapperRef}>
+        <div ref={wrapperRef} {...props}>
             { children }
         </div>
     )

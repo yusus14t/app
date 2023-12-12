@@ -5,7 +5,7 @@ import { getFullPath } from "../../../constants/utils";
 const DepartmentCard = ({ departments }) => {
   return (
     <>
-        <div className="row">
+        <div className="row mx-0">
           {departments?.map(( department, key )=>{
             return (
               <div className="col-lg-6 col-md-10" key={key}>

@@ -1325,7 +1325,7 @@ input::-webkit-inner-spin-button {
 }
 /*------------------------end----------------------------*/
 /*---------------specialization category-----------------*/
-.specialization-card-container {
+/* .specialization-card-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -1351,7 +1351,7 @@ input::-webkit-inner-spin-button {
   height: 85px;
   border: 1px solid grey;
   border-radius: 50%;
-}
+} */
 
 /*-----------------------------end--------------------------*/
 

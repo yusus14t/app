@@ -60,17 +60,17 @@
   .clinic-specialization{
     font-size: 12px;
   }
-  .specialZation-icon{
+  /* .specialZation-icon{
   width: 50px;
   height: 50px;
-  }
-  .spe-circle{
+  } */
+  /* .spe-circle{
     width: 50px;
     height: 50px;
-  }
-  .specialization-image{
+  } */
+  /* .specialization-image{
     width: 250px !important;
-  }
+  } */
   .title{
     font-size: 28px !important;
   }
@@ -126,13 +126,13 @@
     justify-content: center;
     margin-bottom: 8px;
   }
-  .sixe {
+  /* .sixe {
     font-size: 12px;
-  }
-  .specialization-card {
+  } */
+  /* .specialization-card {
     width: 100px;
     height: 110px !important;
-  }
+  } */
   .main-ch {
     padding-left: 5px !important;
     padding-right: 5px !important;

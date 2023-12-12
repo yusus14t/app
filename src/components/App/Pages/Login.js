@@ -45,7 +45,7 @@ const Login = () => {
     3: "PATIENT_FORM",
     4: "ORGANIZATION_FORM",
   };
-  const [component, setComponent] = useState(COMPONENTS["4"]);
+  const [component, setComponent] = useState(COMPONENTS["1"]);
   const [images, setImages] = useState([]);
   const [details, setDetails] = useState({
     name: "",
@@ -209,7 +209,7 @@ const Login = () => {
                 </div>
                 <div className="mt-3">
                   <button
-                    className="btn btn-primary mt-3"
+                    className="btn btn-primary shadow-none mt-3"
                     onClick={() => userValidate(inputRef.current.value)}
                   >
                     Send OTP
@@ -351,9 +351,9 @@ const Login = () => {
                   <select className="login-input rounded border-0 ms-1 bg-light p-2 "
                   {...register("gender", { required: "Gender is required" })}
                   style={{width:"105px", height:"39px"}} >
-                    <option>Female</option>
-                    <option>Male</option>
-                    <option>Other</option>
+                    <option value="Female">Female</option>
+                    <option value=" Male">Male</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
               </div>
