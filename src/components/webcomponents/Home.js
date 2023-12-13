@@ -28,9 +28,9 @@ function Home() {
     <Container>
 
   
-      <div className="box"></div>
+      <div className="box"> <h1>hosptal</h1></div>
       {/* hero section */}
-      <div
+      {/* <div
         className=" hero-container"
         style={{
           background: `url(${findImage(WEBSITE_IMAGE.HOME_BANNER)})`,
@@ -53,10 +53,12 @@ function Home() {
             </h4>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <div className="mobie">
         <Slider />
       </div> */}
+
+      
         
           <SpecializationSlider/>
       <div className="">
