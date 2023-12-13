@@ -5,12 +5,14 @@ import doctorimg from '../assets/images/no_images/no_doctor.png'
 import clinicimg from '../assets/images/no_images/no_clinic.jpg'
 import hospitalimg from '../assets/images/no_images/no_hospital.jpg'
 import noimg from '../assets/images/no-photo.png'
+import logo from '../assets/img/logo/logo.jpg'
 
 
 export const DOCTOR_DEFAUL_IMG = doctorimg
 export const CLINIC_DEFAUL_IMG = clinicimg
 export const HOSPITAL_DEFAUL_IMG = hospitalimg
 export const NO_PHOTO = noimg
+export const LOGO = logo
 
 
 export const APP_MENU_ITEM = {

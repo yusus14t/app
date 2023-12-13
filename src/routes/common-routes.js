@@ -17,10 +17,12 @@ import AllSpecialization from '../components/App/Pages/AllSpecialization.js'
 // const ClinicDetail = lazy(() => import( '../components/webcomponents/Clinic_Details'))
 // const ClinicDetail = lazy(() => import( '../components/App/Pages/ClinicDetails'))
 import ClinicDetail from'../components/App/Pages/ClinicDetails'
+// const Home = lazy(() => import( "../components/webcomponents/Home.js"))
+import Home from "../components/App/Pages/Home"
+
 
 const Doctors = lazy(() => import( '../components/webcomponents/doctor/Doctors'))
 const Clinics = lazy(() => import( "../components/webcomponents/Clinics"))
-const Home = lazy(() => import( "../components/webcomponents/Home.js"))
 const About = lazy(() => import("../components/webcomponents/About.js"))
 const Contact = lazy(() => import('../components/webcomponents/Contact'))
 const DepartmentSignUp = lazy(() => import('../components/authentication/DepartmentSignUp'))

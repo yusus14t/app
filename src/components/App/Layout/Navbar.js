@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
-import './tabs.css'
+import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom'
-import { APP_MENU_ITEM } from '../../constants/constant'
+import { APP_MENU_ITEM } from '../../../constants/constant'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,faXmark } from '@fortawesome/free-solid-svg-icons'
 
-import doctors from "../../assets/menuIcons/doctor.png"
-import hospital from "../../assets/menuIcons/hospital.png"
-import clinic from "../../assets/menuIcons/clinic.png"
-import radiologist from "../../assets/menuIcons/ultrasound.jpg"
-import gynae from "../../assets/menuIcons/gynae.png"
-import homeo from "../../assets/menuIcons/homeo.jpeg"
-import contact from "../../assets/menuIcons/contact.png"
-import OutsideWrapper from '../common-components/OutsideWrapper'
+import doctors from "../../../assets/menuIcons/doctor.png"
+import hospital from "../../../assets/menuIcons/hospital.png"
+import clinic from "../../../assets/menuIcons/clinic.png"
+import radiologist from "../../../assets/menuIcons/ultrasound.jpg"
+import gynae from "../../../assets/menuIcons/gynae.png"
+import homeo from "../../../assets/menuIcons/homeo.jpeg"
+import contact from "../../../assets/menuIcons/contact.png"
 
-
+import OutsideWrapper from '../../common-components/OutsideWrapper'
 
 
 const App_menu_item = ({ item = {}, ...props }) =>
