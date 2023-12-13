@@ -25,7 +25,7 @@ const About = lazy(() => import("../components/webcomponents/About.js"))
 const Contact = lazy(() => import('../components/webcomponents/Contact'))
 const DepartmentSignUp = lazy(() => import('../components/authentication/DepartmentSignUp'))
 const AfterSignup = lazy(() => import('../components/process/AfterSignup'))
-const Gynae = lazy(() => import("../components/webcomponents/Gynae"))
+const Gynae = lazy(() => import("../components/App/Pages/Gynaeclogist"))
 const HospitalDetails = lazy(() => import("../components/App/Pages/HospitalDetails.js"))
 
 const LogIn = lazy(() => import("../components/authentication/LogIn"));

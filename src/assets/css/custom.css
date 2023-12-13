@@ -1277,36 +1277,13 @@ input::-webkit-inner-spin-button {
   outline: none;
 }
 /*gynae sevices card*/
-.gynae-services-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding: 20px;
-}
-.gynae-services-card {
-  height: 300x;
-  width: 350px;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  margin: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+
 .btn-gynae {
   background-color: white;
   width: 200px;
   margin-bottom: 10px;
 }
-.gynae-circle {
-  display: inline-block;
-  width: 85px;
-  height: 85px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-}
-.gynae-services-icon {
-  font-size: 50px;
-  margin-top: 18px;
-}
+
 .gynae-pink-layer {
   /* background: radial-gradient(283px at 1.7% 8.6%, rgba(141, 254, 235, 0.516) 50%, rgba(232, 176, 254, 0.615) 50%); */
   background-color: #ffc1d4d7;
