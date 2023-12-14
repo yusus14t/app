@@ -49,11 +49,7 @@ export const APP_MENU_ITEM = {
   ],
 
   DASHBOARD : [
-<<<<<<< HEAD
     { title: 'Dashboard', path: '/', icon: <FontAwesomeIcon icon={faTableCellsLarge}/>},
-=======
-    { title: 'Home', path: '/', icon: <FontAwesomeIcon icon={faTableCellsLarge}/>},
->>>>>>> main
     { title: 'Appintments', path: '/appointment', icon: <FontAwesomeIcon icon={faCalendarDays} /> },
     { title: 'Setting', path: '/setting', icon: <FontAwesomeIcon icon={faGear} /> },
   ],
