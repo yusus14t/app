@@ -11,6 +11,8 @@ const Navbar = ({ items = [], popItems= [] , source }) => {
     const [isMenuActive, setIsMenuActive] = useState(false)
     const userPath = userRoutes[userInfo?.userType]?.path 
 
+
+
   return (
     <OutsideWrapper
       style={{ zIndex: "2", position: "relative" }}
@@ -20,8 +22,8 @@ const Navbar = ({ items = [], popItems= [] , source }) => {
         {isMenuActive && (
           <div className="tab-popup ">
             {
-                popItems.map( item => 
-                    <NavLink className="pop-items " to={ userPath && source === 'dashboard' ? `${userPath}${item.path}` : item.path } onClick={() => setIsMenuActive(false)} >
+                popItems.filter((item)=> item.access?.includes(userInfo?.userType) || !item.length).map( item => 
+                    <NavLink className="pop-items" to={ userPath && source === 'dashboard' ? `${userPath}${item.path}` : item.path } onClick={() => setIsMenuActive(false)} >
                         <div className="menu-items">
                             <img className="imgh text-center" src={item.icon} />
                         </div>

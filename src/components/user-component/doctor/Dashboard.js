@@ -6,6 +6,7 @@ import { DoughnutChart } from '../../common-components/Chart';
 import useToasty from '../../../hooks/toasty';
 import events from '../../../events';
 import { NO_PHOTO } from '../../../constants/constant';
+import Container from '../../../layout/Container';
 
 
 const Dashbaord = () => {
@@ -105,6 +106,8 @@ const Dashbaord = () => {
     }
 
     return (
+        <Container>
+
         <div className='ms-content-wrapper'>
             <div className='row'>
                 <div class="col-xl-3 col-md-6 col-sm-6">
@@ -271,6 +274,7 @@ const Dashbaord = () => {
                 />
             }
         </div>
+        </Container>
 
     )
 }

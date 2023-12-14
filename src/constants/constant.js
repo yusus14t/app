@@ -18,6 +18,9 @@ import homeo from "../assets/menuIcons/homeo.jpeg"
 import contact from "../assets/menuIcons/contact.png"
 import notification from '../assets/menuIcons/bell.png'
 import mr from '../assets/menuIcons/mr.png'
+import department from '../assets/menuIcons/department.png'
+import patients from '../assets/menuIcons/patients.png'
+
 
 export const DOCTOR_DEFAUL_IMG = doctorimg
 export const CLINIC_DEFAUL_IMG = clinicimg
@@ -52,14 +55,16 @@ export const APP_MENU_ITEM = {
   ],
 
   DASHBOARD_POPUP : [
-    { title: 'Clinics', path: '/clinics', icon: clinic },
-    { title: 'Hospitals', path: '/hospitals', icon: hospital },
-    { title: 'Depatments', path: '/departments', icon: doctors },
-    { title: 'Patients', path: '/patients', icon: doctors },
-    { title: 'MR', path: '/mr', icon: mr },
-    { title: 'Contacts', path: '/contacts', icon: contact },
-    { title: 'Notification', path: '/notification', icon: notification },
-    { title: 'Support', path: '/support', icon: doctors },
+    { title: 'Clinics', path: '/clinics', icon: clinic , access:['AD', 'SA', 'MR'] },
+    { title: 'Hospitals', path: '/hospitals', icon: hospital, access:['AD', 'SA', 'MR']  },
+    { title: 'Depatments', path: '/departments', icon: department ,access:['AD', 'SA', 'MR' , 'HL'] },
+    { title: 'Doctors', path: '/doctors', icon: doctors, access:['AD', 'SA', 'MR', "CL"] },
+    { title: 'Patients', path: '/patients', icon: patients ,access:['AD', 'SA', 'HL', "DP", "CL"] },
+    { title: 'MR', path: '/mr', icon: mr , access:['SA', 'AD']},
+    { title: 'Contacts', path: '/contacts', icon: contact, access:['PT','SA',"AD","MR","HL", "CL"] },
+    { title: 'Notification', path: '/notification', icon: notification, access:['PT','SA',"AD","MR","HL", "CL"] },
+    { title: 'Support', path: '/support', icon: doctors,access:['PT','SA',"AD","MR","HL", "CL"] },
+
 
 
 
