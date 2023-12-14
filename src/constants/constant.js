@@ -49,8 +49,8 @@ export const APP_MENU_ITEM = {
   ],
 
   DASHBOARD : [
-    { title: 'Home', path: '/', icon: <FontAwesomeIcon icon={faTableCellsLarge}/>},
-    { title: 'Appintments', path: '/appoinments', icon: <FontAwesomeIcon icon={faCalendarDays} /> },
+    { title: 'Dashboard', path: '/', icon: <FontAwesomeIcon icon={faTableCellsLarge}/>},
+    { title: 'Appintments', path: '/appointment', icon: <FontAwesomeIcon icon={faCalendarDays} /> },
     { title: 'Setting', path: '/setting', icon: <FontAwesomeIcon icon={faGear} /> },
   ],
 

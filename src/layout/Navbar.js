@@ -22,7 +22,7 @@ const Navbar = ({ items = [], popItems= [] , source }) => {
         {isMenuActive && (
           <div className="tab-popup ">
             {
-                popItems.filter((item)=> item.access?.includes(userInfo?.userType) || !item.length).map( item => 
+                popItems.filter((item)=> item.access?.includes(userInfo?.userType) ).map( item => 
                     <NavLink className="pop-items" to={ userPath && source === 'dashboard' ? `${userPath}${item.path}` : item.path } onClick={() => setIsMenuActive(false)} >
                         <div className="menu-items">
                             <img className="imgh text-center" src={item.icon} />
