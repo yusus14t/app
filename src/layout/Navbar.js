@@ -9,11 +9,7 @@ import { userRoutes } from '../constants/constant'
 
 const Navbar = ({ items = [], popItems= [] , source }) => {
     const [isMenuActive, setIsMenuActive] = useState(false)
-<<<<<<< HEAD
-    const userPath = userRoutes[userInfo?.userType]?.path
-=======
     const userPath = userRoutes[userInfo?.userType]?.path 
->>>>>>> 9c1f4862f71cafe084109c7575a5c045dea6db11
 
   return (
     <OutsideWrapper
