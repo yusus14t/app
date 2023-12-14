@@ -13,7 +13,7 @@ import {
 
 export default ({ clinic = {} }) => {
   return (
-    <div className="col-lg-3 col-md-6 mx-0 px-0 ">
+    <div className="col-lg-4 mxil col-md-6 mx-0 px-0 ">
       <Link to={`/clinic-detail/${clinic?._id}`}>
         <div className=" clinic-app-card">
           <p className="head-clinic  text-dark">CLINIC</p>

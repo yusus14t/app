@@ -77,14 +77,10 @@ const SpecializationDetails = () => {
   return (
     <>
       <Container>
-        <div className=" text-center mt-2">
-          <h3 className="text-center text-success head-title title ">
-            {specialization?.name}
-          </h3>
-        </div>
+        
 
         {
-          <div className="splz-deatial container mt-3">
+          <div className="splz-deatial  ">
             <div
               style={{
                 display: "flex",
@@ -92,19 +88,25 @@ const SpecializationDetails = () => {
                 justifyContent: "space-between",
               }}
             >
-              <div className="mb-3 col-12 w-100 ">
+              <div className="mb-3 col-12  specialization-image-container w-100 ">
                 <img
                   className="specialization-image"
                   src={specialization?.image}
                   alt=""
                 />
               </div>
+              
+            </div>
+            <div className=" text-center mt-2">
+          <h3 className="text-center text-success head-title title ">
+            {specialization?.name}
+          </h3>
+        </div>
               <div className="deatil  mb-3 ">
                 <p className="details-text">{specialization?.description}</p>
               </div>
-            </div>
 
-            <section className="waiting-section  mt-3 p-3">
+            <section className="waiting-section  mt-3 py-3">
               <div className="d-flex mt-3 bg-light p-2 rounded text-light">
                 <h6
                   onClick={() => handleTabClick(0)}
@@ -128,7 +130,7 @@ const SpecializationDetails = () => {
             </section>
             {activeTab === 1 && (
               
-                <div className="row">
+                <div className="row mx-0">
                   {hospitals?.length > 0 ?
                     hospitals.map((hospital) => {
                       return <HospitaCard hospital={hospital} />;
@@ -137,7 +139,7 @@ const SpecializationDetails = () => {
             ) }
 
             {activeTab === 0 && (
-                <div className="row">
+                <div className="row mx-0">
                   {clinics.length > 0 ?
                     clinics
                       .filter((e, i) => i < 3)

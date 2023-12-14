@@ -1,11 +1,22 @@
 
-import { faHouse ,faUser, faCalendarDays} from '@fortawesome/free-solid-svg-icons'
+import { faHouse ,faUser, faCalendarDays, faGear, faTableCellsLarge} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import doctorimg from '../assets/images/no_images/no_doctor.png'
 import clinicimg from '../assets/images/no_images/no_clinic.jpg'
 import hospitalimg from '../assets/images/no_images/no_hospital.jpg'
 import noimg from '../assets/images/no-photo.png'
 import logo from '../assets/img/logo/logo.jpg'
+
+// Icon Image
+import doctors from "../assets/menuIcons/doctor.png"
+import hospital from "../assets/menuIcons/hospital.png"
+import clinic from "../assets/menuIcons/clinic.png"
+import radiologist from "../assets/menuIcons/ultrasound.jpg"
+import gynae from "../assets/menuIcons/gynae.png"
+import homeo from "../assets/menuIcons/homeo.jpeg"
+import contact from "../assets/menuIcons/contact.png"
+import dashicon from '../assets/menuIcons/dash.png'
 
 
 export const DOCTOR_DEFAUL_IMG = doctorimg
@@ -14,15 +25,47 @@ export const HOSPITAL_DEFAUL_IMG = hospitalimg
 export const NO_PHOTO = noimg
 export const LOGO = logo
 
+  
 
 export const APP_MENU_ITEM = {
   APP: [
     { title: 'Home', path: '/', icon: <FontAwesomeIcon icon={faHouse} /> },
-    // { title: 'Menu', path: '/test', icon: <FontAwesomeIcon icon={faBars} /> },
     { title: 'Appointments', path: '/test', icon: <FontAwesomeIcon icon={faCalendarDays} /> },
     { title: 'Account', path: '/login', icon: <FontAwesomeIcon icon={faUser} /> },
+  ],
+
+  APP_POPUP: [
+    { title: 'Doctors', path: '/doctors', icon: doctors },
+    { title: 'Pvt. Hospitals', path: '/hospitals', icon: hospital },
+    { title: 'Govt. Hospitals', path: '/hospitals', icon: hospital },
+    { title: 'Clinics', path: '/clinics', icon: clinic },
+    { title: 'Gynaeclogist', path: '/gynae', icon: gynae },
+    { title: 'Radiologist', path: '/radiologist', icon: radiologist },
+    { title: 'Homeopathy', path: '/homeopathy', icon: homeo },
+    { title: 'Contact', path: '/contact', icon: contact },
+  ],
+
+  DASHBOARD : [
+    { title: 'Home', path: '/', icon: <FontAwesomeIcon icon={faTableCellsLarge}/>},
+    { title: 'Appintments', path: '/appoinments', icon: <FontAwesomeIcon icon={faCalendarDays} /> },
+    { title: 'Setting', path: '/setting', icon: <FontAwesomeIcon icon={faGear} /> },
+  ],
+
+  DASHBOARD_POPUP : [
+    { title: 'Clinics', path: '/clinics', icon: clinic },
+    { title: 'Hospitals', path: '/hospitals', icon: hospital },
+    { title: 'Depatments', path: '/departments', icon: doctors },
+    { title: 'MR', path: '/mr', icon: doctors },
+    { title: 'Contacts', path: '/contacts', icon: contact },
+    { title: 'Notification', path: '/notification', icon: doctors },
+    { title: 'Support', path: '/support', icon: doctors },
+    { title: 'Patients', path: '/patients', icon: doctors },
+
+
+
   ]
 }
+
 
 export const userRoutes = {
     PT: {path: '/patient', title: 'Patient'},

@@ -180,7 +180,7 @@ export default () => {
           {clinicDetail?.hospital?.name || clinicDetail.name}
         </h4>
 
-        <div className="bg-light p-3 curved">
+        <div className="bg-light p-3 curved light-shadow">
 
           <div className="d-flex justify-content-between align-items-center mb-3">
             <div>
@@ -216,7 +216,7 @@ export default () => {
                 ))}
           </div>
           <h6 className="mt-3">Important Notice</h6>
-          <div className="bg-white curved p-3">
+          <div className="bg-white light-shadow curved p-3">
             {notices?.length > 0 ? (
               notices.map((notice) => (
                 <div className="notice my-2">
@@ -240,7 +240,7 @@ export default () => {
             onClick={() => handleTabClick(0)}
             className={
               "w-50 text-center py-2 mb-0 curved " +
-              (activeTab === 0 && "waiting-list-active text-dark")
+              (activeTab === 0 && "waiting-list-active shadow text-dark")
             }
           >
             Waiting List
@@ -261,7 +261,7 @@ export default () => {
               waitingList.map((list, key) => (
                 <div
                   className={
-                    "d-flex align-items-center m-2 curved " +
+                    "d-flex align-items-center m-2 curved light-shadow " +
                     (list.token === token ? "token-active-app" : "bg-light")
                   }
                   key={key}
@@ -286,10 +286,10 @@ export default () => {
           ) : unreachedList.length ? (
             unreachedList.map((list, key) => (
               <div
-                className="bg-light d-flex align-items-center m-2 curved"
+                className="bg-light d-flex align-items-center light-shadow m-2 curved"
                 key={key}
               >
-                <div className="p-3 m-2 bg-white curved">
+                <div className="p-3 m-2 c-token bg-white curved">
                   <h4 className="mb-0">{list?.token}</h4>
                 </div>
                 <div className="ms-2">

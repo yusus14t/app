@@ -7,11 +7,13 @@
     /* background-color: rgba(238, 130, 238, 0.464); */
     background-color: #2929;
   }
+  .specialization-image-container{
+    height: 250px !important;
+
+  }
   .specialization-image {
     width: 100%;
     height: 100%;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .deatil{
       display: inline-block;
@@ -25,6 +27,7 @@
       overflow: scroll;
   }
   .head-title{
+    background-color: #cecece;
     padding: 5px 62px;
     margin-bottom: 10px;
     border-radius: 12px;

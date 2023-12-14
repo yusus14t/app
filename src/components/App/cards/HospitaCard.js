@@ -10,7 +10,7 @@ import { faIndianRupeeSign, faLocationDot, faSquarePhone } from '@fortawesome/fr
 
 const HospitaCard = ( { hospital = {}}) => {
   return (
-    <div className="col-lg-3 col-md-6 mx-0 px-0 " >
+    <div className="col-lg-4 col-md-6 mxil mx-0 px-0 " >
             <Link to={`/hospital-detail/${hospital?._id}`}>
                 <div className=" clinic-app-card ">
                     <p className='head-hos  text-dark'>HOSPITAL</p>

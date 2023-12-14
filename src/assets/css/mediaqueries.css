@@ -1,12 +1,4 @@
 
-/* @media (max-width: 360px) {
-  .dr-spelialization {
-    display: none;
-  }
-  body {
-    background-color: rgb(0, 255, 47);
-  }
-} */
 /* Media Query for Mobile Devices */
 @media (min-width: 280px) and (max-width: 480px) {
   /* body {
@@ -631,6 +623,9 @@
     align-items: center;
     padding-top: 0;
   }
+  
+    
+
   .loginform {
     margin-top: 0;
     width: 70%;
@@ -894,7 +889,14 @@
     background-image: none;
     background-color: rgb(1, 1, 1);
   }
+  .mxil{
+    width: 50%;
+
+  }
 }
+
+
+/* 481px to 767px ends here */
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
