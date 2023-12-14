@@ -15,7 +15,7 @@ export default ({ slides = [], view = 1 }) => {
                 disableOnInteraction: false,
             }}
             modules={[Pagination, Autoplay]}
-            className="mySwiper px-2"
+            className="mySwiper"
         >
             {
                 slides.map(slide =>

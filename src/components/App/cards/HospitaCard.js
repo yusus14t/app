@@ -12,7 +12,7 @@ const HospitaCard = ( { hospital = {}}) => {
   return (
     <div className="col-lg-4 col-md-6 mxil mx-0 px-0 " >
             <Link to={`/hospital-detail/${hospital?._id}`}>
-                <div className=" clinic-app-card ">
+                <div className=" clinic-app-card bg-white ">
                     <p className='head-hos  text-dark'>HOSPITAL</p>
                     <div className='d-flex overflow-hidden'>
                         <div className="clinic-img-container">
