@@ -150,8 +150,6 @@
   box-shadow: 0px 10px 24px rgb(0 0 0 / 4%);
 }
 .main-content {
-  display: flex;
-  flex-direction: row;
   height: 100vh;
 }
 .profile-image {

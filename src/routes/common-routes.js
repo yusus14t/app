@@ -14,10 +14,7 @@ import Pricing from "../components/webcomponents/Pricing";
 import AddHead from "../components/seo/AddHead";
 import AllSpecialization from '../components/App/Pages/AllSpecialization.js'
 
-// const ClinicDetail = lazy(() => import( '../components/webcomponents/Clinic_Details'))
-// const ClinicDetail = lazy(() => import( '../components/App/Pages/ClinicDetails'))
 import ClinicDetail from'../components/App/Pages/ClinicDetails'
-// const Home = lazy(() => import( "../components/webcomponents/Home.js"))
 import Home from "../components/App/Pages/Home"
 
 
@@ -30,7 +27,7 @@ const AfterSignup = lazy(() => import('../components/process/AfterSignup'))
 const Gynae = lazy(() => import("../components/App/Pages/Gynaeclogist"))
 const HospitalDetails = lazy(() => import("../components/App/Pages/HospitalDetails.js"))
 
-const LogIn = lazy(() => import("../components/authentication/LogIn"));
+const LogIn = lazy(() => import("../components/App/Pages/Login"));
 const Radiologist = lazy(() => import("../components/webcomponents/Radiologist"));
 const SpecializationDetails = lazy(() => import('../components/App/Pages/SpecializationDeatils'))
 const Homeopathy =lazy(()=> import('../components/webcomponents/Homeopathy'));

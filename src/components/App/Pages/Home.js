@@ -8,7 +8,6 @@ import Eraham from '../../../assets/images/Borcelle.png'
 import FeaturesImg from '../../../assets/images/features.png'
 import JNMC from '../../../assets/images/promo/JNMC Aligarh.png'
 import SpecializationSlider from '../../sliders/SpecializationSlider';
-import Container from '../Layout/Container';
 import { Link } from 'react-router-dom';
 import Slider from '../../sliders/Slider';
 import DoctorCard from '../cards/DoctorCard';
@@ -17,6 +16,7 @@ import { useEffect, useState } from 'react';
 import ClinicCard from '../cards/ClinicCard';
 import { HOSPITAL_DEFAUL_IMG } from '../../../constants/constant';
 import HospitaCard from '../cards/HospitaCard';
+import Container from '../../../layout/Container';
 
 export default () => {
     const [doctors, setDoctors] = useState([]);

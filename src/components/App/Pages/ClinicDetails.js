@@ -16,12 +16,11 @@ import {
   faCalendarPlus,
   faEnvelope,
   faLocationDot,
-  faMapMarker,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FULLDAY, NO_PHOTO } from "../../../constants/constant";
-import Container from "../Layout/Container";
 import DoctorCard from "../cards/DoctorCard";
+import Container from "../../../layout/Container";
 
 export default () => {
   const params = useParams();

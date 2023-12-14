@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { axiosInstance, getAuthHeader } from "../../../constants/utils";
 import { Navigate } from "react-router-dom";
 import DoctorCard from "../../App/cards/DoctorCard";
-import Container from "../../App/Layout/Container";
+import Container from "../../Layout/Container";
 
 function DoctorsList({ source, filter }) {
   const [doctors, setDoctors] = useState([]);

@@ -1,23 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./SpecializationDetails.css";
-import Container from "../Layout/Container";
-import { Link, useParams } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
-import {
-  getAuthHeader,
-  getFullPath,
-  axiosInstance,
-  convertTo12HourFormat,
-} from "../../../constants/utils";
-import {
-  HOSPITAL_DEFAUL_IMG,
-  NUMBER_TO_DAY,
-} from "../../../constants/constant";
-import NO_PHOTO from "../../../assets/images/no_images/no_clinic.jpg";
+import {  useParams } from "react-router-dom";
+import { getAuthHeader, axiosInstance } from "../../../constants/utils";
 import HospitaCard from "../cards/HospitaCard";
 import ClinicCard from "../cards/ClinicCard";
-import Modal from "../../common-components/Modal";
+import Container from "../../../layout/Container";
 
 const SpecializationDetails = () => {
   const params = useParams();
@@ -77,8 +64,6 @@ const SpecializationDetails = () => {
   return (
     <>
       <Container>
-        
-
         {
           <div className="splz-deatial  ">
             <div
