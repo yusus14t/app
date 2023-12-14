@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../../common-components/Modal";
 import NO_PHOTO from '../../../assets/images/no-photo.png';
+import Container from "../../../layout/Container";
 
 const Clinics = () => {
     const [departments, setDepartments] = useState([])
@@ -32,7 +33,8 @@ const Clinics = () => {
     }
 
     return (
-        <div className="ms-content-wrapper mx-2">
+        <Container>
+            <div className="ms-content-wrapper mx-2">
             <div class="ms-panel-header ms-panel-custome d-flex justify-space-between mb-2">
                 <div><h6>Clinics</h6></div>
                 <div class="ms-form-group my-0 mb-0 has-icon fs-14 d-flex justify-content-center">
@@ -79,6 +81,7 @@ const Clinics = () => {
             </Modal>}
 
         </div>
+        </Container>
     )
 }
 export default Clinics;

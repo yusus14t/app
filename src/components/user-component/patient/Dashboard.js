@@ -7,6 +7,7 @@ import ImgUpload from "../../common-components/Imgupload";
 import useToasty from '../../../hooks/toasty';
 import { toPng, toBlob } from 'html-to-image'
 import logo from "../../../assets/img/logo/logo.jpg"
+import Container from "../../../layout/Container";
 const Dashbaord = () => {
   const userInfo = JSON.parse(localStorage.getItem('user'))
   const [appointments, setAppointments] = useState([])
@@ -96,7 +97,8 @@ const Dashbaord = () => {
   }
 
   return (
-    <div style={{ background: "#f2f2f2" }} className="">
+    <Container>
+      <div style={{ background: "#f2f2f2" }} className="">
       <div className="pdash">
         <div className="pdash-left d-flex justify-content-center">
           <div className="patient-profile-container ">
@@ -357,6 +359,7 @@ const Dashbaord = () => {
         <button className="btn btn-primary mt-1 rounded shadow-none mx-2" onClick={() => share(appointment)}>Share</button>
       </Modal>}
     </div>
+    </Container>
   );
 };
 export default Dashbaord;

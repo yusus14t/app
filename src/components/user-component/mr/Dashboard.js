@@ -4,6 +4,7 @@ import NO_PHOTO from "../../../assets/images/no-photo.png";
 import { Link } from 'react-router-dom';
 import { LineChart, DoughnutChart } from '../../common-components/Chart';
 import { axiosInstance, formatPhone, getAuthHeader, getFullPath } from '../../../constants/utils'
+import Container from '../../../layout/Container';
 
 const Dashbaord = () => {
     const [isWeekChart, setIsWeekChart] = useState(true) 
@@ -89,7 +90,8 @@ const Dashbaord = () => {
     } 
 
     return (
-        <div className='ms-content-wrapper '>
+        <Container>
+            <div className='ms-content-wrapper '>
             <div class="ms-panel-header ms-panel-custome d-flex justify-space-between mb-2">
                 <div>
                     <h6>Dashboard</h6>
@@ -238,6 +240,7 @@ const Dashbaord = () => {
                 </div>
             </div>
         </div>
+        </Container>
 
     )
 }

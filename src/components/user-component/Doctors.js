@@ -8,6 +8,7 @@ import useToasty from '../../hooks/toasty';
 import DoctorRegistration from "../common-components/registration/DoctorRegistration";
 import ImgUpload from "../common-components/Imgupload";
 import Select from "react-select";
+import Container from "../../layout/Container";
 
 
 const DoctorsList = () => {
@@ -74,7 +75,7 @@ const DoctorsList = () => {
     }
 
     return (
-        <>
+        <Container>
             <div className="ms-content-wrapper mx-2">
                 <div class="ms-panel-header ms-panel-custome d-flex justify-space-between mb-2">
                     <div><h6>Doctors</h6></div>
@@ -254,7 +255,8 @@ const DoctorsList = () => {
                     />
                 </Modal>
             }
-        </>
+
+        </Container>
     )
 }
 export default DoctorsList;

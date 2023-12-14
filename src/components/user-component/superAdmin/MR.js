@@ -6,6 +6,7 @@ import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../../common-components/Modal";
 import Profile from "../../common-components/Settings/Profile";
 import useToasty from '../../../hooks/toasty'
+import Container from "../../../layout/Container";
 
 
 const MR = () => {
@@ -38,7 +39,8 @@ const MR = () => {
     }
 
     return (
-        <div className="ms-content-wrapper mx-2">
+        <Container>
+            <div className="ms-content-wrapper mx-2">
             <div class="ms-panel-header ms-panel-custome d-flex justify-space-between mb-2">
                 <div><h6>MRs</h6></div>
                 <div class="ms-form-group my-0 mb-0 has-icon fs-14 d-flex justify-content-center">
@@ -95,6 +97,7 @@ const MR = () => {
             </Modal>}
 
         </div>
+        </Container>
     )
 }
 export default MR;
