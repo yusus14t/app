@@ -3,16 +3,9 @@ import './Navbar.css'
 import { NavLink, } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,faXmark } from '@fortawesome/free-solid-svg-icons'
-import { userInfo } from '../../../constants/utils'
-
-
-import OutsideWrapper from '../../common-components/OutsideWrapper'
-import { userRoutes } from '../../../constants/constant'
-
-
-
- 
-
+import { userInfo } from '../constants/utils'
+import OutsideWrapper from '../components/common-components/OutsideWrapper'
+import { userRoutes } from '../constants/constant'
 
 const Navbar = ({ items = [], popItems= [] , source }) => {
     const [isMenuActive, setIsMenuActive] = useState(false)

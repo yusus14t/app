@@ -661,6 +661,11 @@ p {
   font-size: 14px;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, .p {
+  margin-bottom: 0;
+
+}
+
 p,
 span,
 .ms-dark-theme .driver-highlighted-element p,
@@ -840,7 +845,9 @@ button > .material-icons{
 /* Body Content */
 .body-content {
   position: relative;
-  background: #F1F5FC;
+  /* background: #F1F5FC; */
+  background-color: #fff;
+
   -webkit-transition: padding 0.3s;
   transition: padding 0.3s;
   min-height: 100vh;

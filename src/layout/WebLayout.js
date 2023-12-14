@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from '../../components/App/Layout/Navbar';
-import { APP_MENU_ITEM } from "../../constants/constant";
+import { APP_MENU_ITEM } from "../constants/constant";
+import Navbar from "./Navbar";
 
 
 const WebLayout = () => {

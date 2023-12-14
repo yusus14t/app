@@ -6,7 +6,7 @@ import { axiosInstance, convertTo12HourFormat, formatPhone, getFullPath, userInf
 import { useParams } from "react-router-dom";
 import { FULLDAY, NO_PHOTO } from "../../../constants/constant";
 import './ClinicDetails.css'
-import Container from '../Layout/Container'
+import Container from "../../../layout/Container";
 
 const HospitalDetails = () => {
     const [ hospital, setHospital] = useState({});

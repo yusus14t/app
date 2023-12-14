@@ -11,8 +11,10 @@ import MR from "./mr-routes";
 import COMMON_ROUTE from "./common-routes";
 import Loader from "../layout/Loader";
 
-import WebLayout from  "../layout/weblayout/WebLayout";
-import AppLayout from "../layout/Index";
+// Layouts
+import WebLayout from  "../layout/WebLayout";
+import AppLayout from "../layout/AppLayout";
+
 import { userInfo } from "../constants/utils";
 import Expire from "../components/common-components/Expire";
 

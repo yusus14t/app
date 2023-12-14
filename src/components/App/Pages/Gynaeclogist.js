@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Gynaeclogist.css";
-import Container from "../Layout/Container";
 import HospitaCard from "../cards/HospitaCard";
 import ClinicCard from "../cards/ClinicCard";
 import ivf from "../../../assets/images/ivf.jpg";
@@ -10,7 +9,6 @@ import Gynaecology from "../../../assets/images/Gynaecology.jpg";
 import Homeimg1 from '../../../assets/images/1920x1280-1.jpg'
 import Homeimg2 from '../../../assets/images/1920x1280-2.jpg'
 import Homeimg3 from '../../../assets/images/1920x1280-3.jpg'
-import Eraham from '../../../assets/images/Borcelle.png'
 import {
   axiosInstance,
   getAuthHeader,
@@ -20,6 +18,7 @@ import {
 import { Link } from "react-router-dom";
 import Modal from "../../common-components/Modal";
 import Slider from "../../sliders/Slider";
+import Container from "../../../layout/Container";
 
 const Gynaeclogist = () => {
   const [activeTab, setActiveTab] = useState(0);

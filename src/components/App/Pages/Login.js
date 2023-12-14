@@ -1,13 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import "./Login.css";
 import loginpaoster from "../../../assets/img/logo/logo.jpg";
-import Container from "../Layout/Container";
 
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEdit,
-  faHospital,
   faHospitalUser,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -19,11 +17,11 @@ import {
 } from "../../../constants/utils";
 import useToasty from "../../../hooks/toasty";
 import { Link, useLocation } from "react-router-dom";
-import { WEBSITE_IMAGE, userRoutes } from "../../../constants/constant";
+import { userRoutes } from "../../../constants/constant";
 import { useForm } from "react-hook-form";
-import background1 from "../../../assets/img/backgrounds/department.jpg";
 import clinic from "../../../assets/menuIcons/clinic.png";
 import Hospital from "../../../assets/menuIcons/hospital.png";
+import Container from "../../../layout/Container";
 
 const Login = () => {
   const { state: LocationState } = useLocation();

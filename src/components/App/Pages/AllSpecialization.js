@@ -3,7 +3,7 @@ import { axiosInstance, truncate } from "../../../constants/utils";
 import { Link } from "react-router-dom";
 import m from "../../../assets/images/1920x1280-1.jpg";
 import "./Allspecialization.css";
-import Container from "../Layout/Container";
+import Container from "../../../layout/Container";
 
 const AllSpecialization = () => {
   const [specializations, setSpecializations] = useState([]);
