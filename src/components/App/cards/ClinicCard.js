@@ -13,7 +13,7 @@ import {
 
 export default ({ clinic = {} }) => {
   return (
-    <div className="col-lg-4 mxil col-md-6 mx-0 px-0 ">
+    <div className="col-lg-4 mxil col-md-6 mx-0 px-2 ">
       <Link to={`/clinic-detail/${clinic?._id}`}>
         <div className=" clinic-app-card bg-white">
           <p className="head-clinic  text-dark">CLINIC</p>
@@ -66,7 +66,7 @@ export default ({ clinic = {} }) => {
             </div>
             <div className="mb-1 address fs-12">
               {" "}
-              {truncate(clinic.address || "-", 70)}
+              {truncate(clinic.address || "-", 50)}
             </div>
           </div>
           {/* <div className="services-clinic d-flex">

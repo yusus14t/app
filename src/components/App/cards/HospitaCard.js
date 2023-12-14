@@ -10,7 +10,7 @@ import { faIndianRupeeSign, faLocationDot, faSquarePhone } from '@fortawesome/fr
 
 const HospitaCard = ( { hospital = {}}) => {
   return (
-    <div className="col-lg-4 col-md-6 mxil mx-0 px-0 " >
+    <div className="col-lg-4 col-md-6 mxil mx-0 px-1 " >
             <Link to={`/hospital-detail/${hospital?._id}`}>
                 <div className=" clinic-app-card bg-white ">
                     <p className='head-hos  text-dark'>HOSPITAL</p>
@@ -33,7 +33,7 @@ const HospitaCard = ( { hospital = {}}) => {
                     </div>
                     <div className='d-flex'>
                         <div><FontAwesomeIcon className='mx-2' icon={faLocationDot} /></div>
-                        <div className="mb-1 address fs-12">  {truncate(hospital.address || '-', 70)}</div>
+                        <div className="mb-1 address fs-12">  {truncate(hospital.address || '-', 50)}</div>
                     </div>
                     {/* <div className='services-clinic d-flex'>
                        {hospital?.services.map((service)=> <div className='mb-0 service-cap'>{hospital?.name}</div>)} 

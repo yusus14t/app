@@ -16,8 +16,8 @@ import radiologist from "../assets/menuIcons/ultrasound.jpg"
 import gynae from "../assets/menuIcons/gynae.png"
 import homeo from "../assets/menuIcons/homeo.jpeg"
 import contact from "../assets/menuIcons/contact.png"
-import dashicon from '../assets/menuIcons/dash.png'
-
+import notification from '../assets/menuIcons/bell.png'
+import mr from '../assets/menuIcons/mr.png'
 
 export const DOCTOR_DEFAUL_IMG = doctorimg
 export const CLINIC_DEFAUL_IMG = clinicimg
@@ -55,11 +55,11 @@ export const APP_MENU_ITEM = {
     { title: 'Clinics', path: '/clinics', icon: clinic },
     { title: 'Hospitals', path: '/hospitals', icon: hospital },
     { title: 'Depatments', path: '/departments', icon: doctors },
-    { title: 'MR', path: '/mr', icon: doctors },
-    { title: 'Contacts', path: '/contacts', icon: contact },
-    { title: 'Notification', path: '/notification', icon: doctors },
-    { title: 'Support', path: '/support', icon: doctors },
     { title: 'Patients', path: '/patients', icon: doctors },
+    { title: 'MR', path: '/mr', icon: mr },
+    { title: 'Contacts', path: '/contacts', icon: contact },
+    { title: 'Notification', path: '/notification', icon: notification },
+    { title: 'Support', path: '/support', icon: doctors },
 
 
 
