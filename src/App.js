@@ -6,7 +6,7 @@ import "./assets/css/custom.css";
 import "./assets/css/mediaqueries.css"
 
 import SnackbarProvider from 'react-simple-snackbar'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, useLocation } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import store from './redux/Store'; 
 
