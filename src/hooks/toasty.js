@@ -9,7 +9,8 @@ const Toastify = () => {
         style: {
             color:'black',
             background: color[type],
-            borderLeft:`6px solid ${border[type]}`
+            borderLeft:`6px solid ${border[type]}`,
+            marginBottom: '12vh'
         },
         closeStyle: {
             color:'black'

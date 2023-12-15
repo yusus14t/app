@@ -149,9 +149,9 @@
   background-color: #dfdede;
   box-shadow: 0px 10px 24px rgb(0 0 0 / 4%);
 }
-.main-content {
+/* .main-content {
   height: 100vh;
-}
+} */
 .profile-image {
   border-radius: 50%;
   height: 5rem;

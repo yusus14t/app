@@ -128,33 +128,30 @@ const Login = () => {
 
   const submit = async (formdata) => {
     try {
+
       formdata["phone"] = user.phone;
       if (["hospital", "clinic"].includes(formdata.source)) {
+
         formdata.isLogin = true;
-        let { data } = await axiosInstance.post(
-          "common/create-hospital",
-          formdata,
-          getAuthHeader()
-        );
+        let { data } = await axiosInstance.post( "common/create-hospital", formdata,  getAuthHeader() );
+
         if (data?.isActive) {
           localStorage.setItem("user", JSON.stringify(data?.organization));
           window.location.reload();
         }
+
       } else if (formdata.source === "patient") {
+
         formdata["_id"] = user?._id;
-        let { data } = await axiosInstance.post(
-          "/patient/patient-details",
-          formdata,
-          getAuthHeader()
-        );
+        let { data } = await axiosInstance.post( "/patient/patient-details", formdata,  getAuthHeader());
 
         if (data?.isActive) {
           localStorage.setItem("user", JSON.stringify(data?.user));
 
-          if (LocationState?.redirectTo)
-            window.location.replace(LocationState.redirectTo);
+          if (LocationState?.redirectTo) window.location.replace(LocationState.redirectTo);
           else window.location.replace("/patient");
         }
+
       }
     } catch (error) {
       console.error(error);
@@ -304,7 +301,7 @@ const Login = () => {
           </div>
         )}
 
-        <from className="d-flex justify-content-center w-100" >
+        <form className="d-flex justify-content-center w-100" onSubmit={handleSubmit(submit)} >
           {/* patient */}
           {component === COMPONENTS["3"] && (
             <div className=" d-flex flex-column align-items-center bg-white curved  p-4 parent-div "
@@ -437,7 +434,7 @@ const Login = () => {
               </div>
             </div>
           )}
-        </from>
+        </form>
       </Container>
     </div>
   );

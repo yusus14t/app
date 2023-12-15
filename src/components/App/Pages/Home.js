@@ -55,7 +55,7 @@ export default () => {
         try {
         let { data } = await axiosInstance.get("/hospitals");
         setHospitals(data?.organization);
-        setPromo(data?.organization?.find( hos => hos._id === '654bc57f7879a9d12e8d990b' ))
+        setPromo(data?.organization?.find( hos => hos._id === '654bc57f7879a9d12e8d990b' ) || {})
         } catch (error) {
         console.error(error);
         }
@@ -125,17 +125,17 @@ export default () => {
             </section>
 
             {/* JNMC ALIGARH */}
-            <section>
+            {promo._id && <section>
                 <div className=''>
                     <img src={JNMC} width={'100%'} height={'100%'} />
                 </div>
                 <div className='promo-card p-3'>
                     <div className='d-flex justify-content-start py-3'>
                         <div className='promo-card-img me-3 '>
-                            <img src={promo.photo ? getFullPath(promo.photo) : HOSPITAL_DEFAUL_IMG} className='curved' width={'100%'} height={'100%'} />
+                            <img src={promo?.photo ? getFullPath(promo.photo) : HOSPITAL_DEFAUL_IMG} className='curved' width={'100%'} height={'100%'} />
                         </div>
                         <div>
-                            <h5>{promo.name}</h5>
+                            <h5>{promo?.name}</h5>
                             <p className='text-light'>{ promo.address }</p>
                             <div className='my-2'>
                                 <Link to={`/hospital-detail/${ promo._id }`} className='btn bg-warning curved px-3 py-1 shadow-none '>Book Appointment</Link>
@@ -143,7 +143,7 @@ export default () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>}
 
             <section className='px-2 my-4 py-3 hospital-gradient' >
                 <div className='d-flex justify-content-between align-items-center'>
