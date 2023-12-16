@@ -24,7 +24,6 @@ const Patients = () => {
   return (
     <Container>
       <div className="ms-content-wrapper ">
-        {console.log(patients)}
         <div className="row">
           <div className="col-md-12">
             <div
@@ -51,13 +50,13 @@ const Patients = () => {
                         >
                           <thead>
                             <tr role="row">
-                              <th style={{ width: "50px" }}>S.No</th>
-                              <th style={{ width: "84px" }}>Name</th>
-                              <th style={{ width: "102px" }}>Phone</th>
-                              <th style={{ width: "44px" }}>Age</th>
-                              <th style={{ width: "44px" }}>gender</th>
-                              <th style={{ width: "200px" }}>Address</th>
-                              <th style={{ width: "150px" }}>Date</th>
+                              <th style={{ minWidth: "50px" }}>S.No</th>
+                              <th style={{ minWidth: "100px" }}>Name</th>
+                              <th style={{ minWidth: "200px" }}>Phone</th>
+                              <th style={{ minWidth: "40px" }}>Age</th>
+                              <th style={{ minWidth: "100px" }}>gender</th>
+                              <th style={{ minWidth: "250px" }}>Address</th>
+                              <th style={{ minWidth: "200px" }}>Date</th>
                             </tr>
                           </thead>
                           <tbody>

@@ -45,7 +45,7 @@ const Website = () => {
       <div className="row">
         { Object.keys(WEBSITE_IMAGE).map( imageId => <div className="col-sm-4 p-2">
           <label htmlFor={`upload-${imageId}`} className='cursor-pointer w-100'>
-            <img style={{ width: "100%", height: '150px' }} src={ findImage(imageId)?.id ? getFullPath(findImage(imageId)?.image) : NO_PHOTO} alt="" />
+            <img style={{ width: "100%", height: '150px', objectFit: 'contain' }} src={ findImage(imageId)?.id ? getFullPath(findImage(imageId)?.image) : NO_PHOTO} alt="" />
           </label>
           <input
             type="file"

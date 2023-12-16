@@ -11,11 +11,6 @@ const Dashbaord = () => {
     const [ clinics, setClinics ] = useState([])
     const [ patients, setPatients ] = useState([])
 
-    const [ data, setData ] = useState({
-        week: ['6', '3', '6', '4', '8', '3', '6'],
-        month: ['5', '2', '4', '7', '8', '9', '6', '5', '4', '2', '4', '4']
-    })
-
     useEffect(() => {
         analytics()
         getHospitals()
@@ -133,32 +128,12 @@ const Dashbaord = () => {
                     <div class="ms-panel">
                         <div class="ms-panel-header">
                             <div>
-                                <h6>Genders</h6>
+                                <h6>Users</h6>
                             </div>
                         </div>
-                        <div class="ms-panel-body ">
-                            <div className='h4'>
-                                Users
-                            </div>
-                            <div className='text-center' style={{ height: '14rem', width: '14rem' }}>
-                                {  <DoughnutChart labelName={'Patient'} chartData={analyticsData.total_users} />}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
-                    <div class="ms-panel h-100">
-                        <div class="ms-panel-header">
-                            <div>
-                                <h6>Status</h6>
-                            </div>
-                        </div>
-                        <div class="ms-panel-body ">
-                            <div className='h5'>
-                                Appointment Status
-                            </div>
-                            <div className='text-center' style={{ height: '14rem', width: '14rem' }}>
-                                { <DoughnutChart labelName={'Patient'} chartData={[]} />}
+                        <div class="ms-panel-body p-0">
+                            <div className='d-flex justify-content-center' >
+                                {  <DoughnutChart labelName={'Patient'} chartData={analyticsData.total_users?.filter( usr => [ 'CL', 'HL', 'MR' ].includes(usr._id))} />}
                             </div>
                         </div>
                     </div>

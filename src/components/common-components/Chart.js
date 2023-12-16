@@ -54,7 +54,7 @@ export const DoughnutChart = ({ chartData }) => {
         plugins: {
             legend: {
                 display: true,
-                position: 'bottom',
+                position: 'right',
                 labels: {
                     font: {
                         size: 16,

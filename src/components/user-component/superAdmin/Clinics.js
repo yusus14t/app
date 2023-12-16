@@ -42,10 +42,10 @@ const Clinics = () => {
 
 
             </div>
-            <div className="row">
+            <div className="row overflow-auto" style={{ height: '80vh'}}>
                 { departments?.length > 0 && departments.map((department, index) => (
                     <div key={index} className="col-lg-4 col-md-3  col-sm-6">
-                        <div className="ms-card">
+                        <div className="ms-card mb-3 shadow">
                             <div className="ms-card-body" style={{ borderLeft: '5px solid #112c2f'}}>
                                 <div className="media mb-0 fs-14">
                                     <div className="me-2 align-self-center">

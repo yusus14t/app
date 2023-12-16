@@ -228,13 +228,13 @@ const Settings = () => {
     <div className="ms-content-wrapper">
       <div className="row mr-0">
         <div className="col-xl-12 col-md-12">
-          <div className="ms-panel mb-0 inner-content-height">
+          <div className="ms-panel mb-0 pb-2">
             <div className="ms-panel-header ms-panel-custome">
               <div style={{ display: "flex", overflow: "auto"}}>
                 {SETTING_TABS.filter( tab => tab.access.includes(userInfo.userType)).map(( stab, key ) => <span className={`btn btn-md mx-3 ${ tab === stab.id ? 'btn-light' : 'btn-info' }`} key={key} onClick={() => setTab(stab.id)}>{ stab.name }</span> )}
               </div>
             </div>
-            <div className="ms-panel-body p-0 content-height">
+            <div className="ms-panel-body p-0 overflow-auto" style={{ height: '78vh' }}>
               {tab === "SPECIALIZATION" && (
                 <>
                   <div className="d-flex justify-content-between p-3">
@@ -413,24 +413,24 @@ const Settings = () => {
                       <div className="input-group">
                         <input type="text"
                           ref={inputRef}
-                          className={`form-control `}
+                          className={`form-control w-100 my-1`}
                           placeholder={isEdit.type}
                           onChange={(e) => setIsEdit({ ...isEdit, value: e.target.value })}
                         />
-                        <button className="btn btn-primary btn-sm shadow-none mx-2" onClick={() => save()}> Save </button>
-                        <button className="btn btn-light btn-sm shadow-none" onClick={() => setIsEdit({ })}> Cancel </button>
+                        <button className="btn btn-primary btn-sm shadow-none mx-2 py-3 my-1 rounded" onClick={() => save()}> Save </button>
+                        <button className="btn btn-light btn-sm shadow-none py-3 my-1 rounded" onClick={() => setIsEdit({ })}> Cancel </button>
                       </div>
                     </div>}
                     <div className="d-flex flex-wrap">
-                          <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center">
-                            <div className="contact-icon-container contact-kk">
+                          <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
+                            <div className="contact-icon-container contact-kk ">
                               <img className="contact-icons" src={phone} alt="" />
                             </div>
                             {contact?.phone}
                             <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('phone', contact?.phone)} />
 
                           </div>
-                          <div className=" col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center">
+                          <div className=" col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
                             <div className="contact-icon-container contact-kk">
                               <img className="contact-icons" src={whatsapp} alt=""  />
                             </div>
@@ -438,7 +438,7 @@ const Settings = () => {
                             <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('whatsapp', contact?.whatsapp)}  />
 
                           </div>
-                          <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center">
+                          <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
                             <div className="contact-icon-container contact-kk">
                               <img className="contact-icons " src={email} alt="" />
                             </div>
@@ -446,7 +446,7 @@ const Settings = () => {
                             <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('email', contact?.email)} />
 
                           </div>
-                          <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around ml-5 align-items-center">
+                          <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around ml-5 align-items-center w-100">
                             <div className="contact-icon-container contact-kk">
                               <img src={twitter} className="contact-icons" alt="" />
                             </div>

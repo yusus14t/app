@@ -89,14 +89,14 @@ const Payment = () => {
                     <h4>Patient</h4>
                 </div>
                 <div className="row my-2 align-items-end py-2" >
-                    <div className="col-md-3">
+                    <div className="col-md-3 mb-1">
                         <h6>Fee</h6>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 mb-1">
                         <label>Price</label>
                         <input className="form-control" value={price} onChange={(e) => setPrice(e.target.value)} />
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 mt-1">
                         <button className="btn btn-info shadow-none" onClick={() => savePatientPrice()}>Save</button>
                     </div>
                 </div>
@@ -113,10 +113,10 @@ const Payment = () => {
                     </div>
                     { plans?.clinic && Object.entries(plans?.clinic).map( ([type, values], i) => (
                         <div className="row my-2 align-items-center py-2" key={i}>
-                            <div className="col-md-3">
-                                <h6>{ type }</h6>
+                            <div className="col-md-3 mb-2">
+                                <h4>{ type }</h4>
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 mb-2">
                                 <label>Price</label>
                                 <input 
                                     className="form-control"
@@ -125,7 +125,7 @@ const Payment = () => {
                                     })} 
                                 />
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 mb-2">
                                 <label>Discount</label>
                                 <input 
                                     className="form-control"
@@ -134,7 +134,7 @@ const Payment = () => {
                                     })} 
                                 />
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 mb-2">
                                 <label>Total</label>
                                 <h5>₹{ +watch(`clinic.${type}.price`) - +watch(`clinic.${type}.discount`) }
                                 { !JSON.parse(values.isDefault) && <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close" onClick={() => deletePlan(values._id)}><span aria-hidden="true">&times;</span></button>}
@@ -158,10 +158,10 @@ const Payment = () => {
                     </div>
                     {  plans?.hospital && Object.entries(plans?.hospital).map( ([type, values], i) => (
                         <div className="row my-2 align-items-center py-2" key={i}>
-                            <div className="col-md-3">
-                                <h6>{ type }</h6>
+                            <div className="col-md-3 mb-2">
+                                <h4>{ type }</h4>
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 mb-2">
                                 <label>Price</label>
                                 <input 
                                     className="form-control"
@@ -170,7 +170,7 @@ const Payment = () => {
                                     })} 
                                 />
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 mb-2">
                                 <label>Discount</label>
                                 <input 
                                     className="form-control"
@@ -179,7 +179,7 @@ const Payment = () => {
                                     })} 
                                 />
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 mb-2">
                                 <label>Total</label>
                                 <h5>₹{ +watch(`hospital.${type}.price`) - +watch(`hospital.${type}.discount`) }
                                     { !JSON.parse(values.isDefault) && <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close" onClick={() => deletePlan(values._id)} ><span aria-hidden="true">&times;</span></button>}

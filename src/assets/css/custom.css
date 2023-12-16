@@ -601,7 +601,7 @@
 .clinic-profile {
   width: 100% !important;
   position: relative;
-  height: 230px !important;
+  height: 130px !important;
   object-fit: contain;
   border: 2px dotted #00000038;
   display: flex;

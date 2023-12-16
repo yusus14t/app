@@ -56,7 +56,7 @@ export const APP_MENU_ITEM = {
 
   DASHBOARD_POPUP : [
     { title: 'Clinics', path: '/clinics', icon: clinic , access:['AD', 'SA', 'MR'] },
-    { title: 'Hospitals', path: '/hospitals', icon: hospital, access:['AD', 'SA', 'MR']  },
+    { title: 'Hospitals', path: '/hospitals', icon: hospital, access:['MR']  },
     { title: 'Depatments', path: '/departments', icon: department ,access:['AD', 'SA', 'MR' , 'HL'] },
     { title: 'Doctors', path: '/doctors', icon: doctors, access:['AD', 'SA', 'MR', "CL"] },
     { title: 'Patients', path: '/patients', icon: patients ,access:['AD', 'SA', 'HL', "DP", "CL"] },
