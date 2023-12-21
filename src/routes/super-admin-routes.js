@@ -14,8 +14,6 @@ import Contacts from "../components/user-component/superAdmin/Contacts";
 
 const SUPER_ADMIN = [
     { path: "/super-admin", element: <Dashboard /> },
-    { path: "/super-admin/profile", element: <h1>Profile</h1> },
-    { path: "/super-admin/user", element: <h1>user</h1> },
     { path: "/super-admin/doctors", element: <Doctors /> },
     { path: "/super-admin/patients", element: <Patients /> },
     { path: "/super-admin/departments", element: <Departments /> },

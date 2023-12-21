@@ -75,3 +75,9 @@ export const truncate = (str,length)=>{
     if(str.length <= length) return str
     return str.substring(0,length) + "..."
 }
+
+
+export const Logout = () => {
+    localStorage.clear()
+    window.location.replace('/login')
+}

@@ -142,19 +142,6 @@ const Appointment = ({ isOpen, setIsOpen, departmentId = null, refresh = () => {
                                 </select>
                             </div>
                         </div>
-                        {/* <div className="col-6 mb-3">
-                            <label className=''>Blood Group</label>
-                            <div className="input-group">
-                                <select className={`form-control ${errors?.bloodGroup ? 'border-danger' : ''}`} {...register('bloodGroup', { required: 'Gender is required' })}>
-                                    {['A', 'B', 'AB', 'O'].map(e =>
-                                        <>
-                                            <option value={`${e}+`} >{e}+</option>
-                                            <option value={`${e}+`} >{e}-</option>
-                                        </>
-                                    )}
-                                </select>
-                            </div>
-                        </div> */}
                         <div className="col-12 mb-3">
                             <label className=''>Guardian Name (optional)</label>
                             <div className="input-group">
@@ -265,9 +252,13 @@ const Appointment = ({ isOpen, setIsOpen, departmentId = null, refresh = () => {
                     </>
 
                 }
-                <button type="button" className="btn btn-light" data-bs-dismiss="modal" onClick={() => setIsOpen(false)}>Cancel</button>
-                <button type="submit" className="btn btn-primary shadow-none mx-2">{userInfo.userType === 'PT' ? 'Pay Now' : 'Save'}</button>
-                { ['CL', 'DP', 'HL'].includes(userInfo.userType) && <button className="btn btn-primary shadow-none mx-2" onClick={() => addAnonymous()}>Add Anonymous</button>}
+                <div className='w-100'>
+                    { ['CL', 'DP', 'HL'].includes(userInfo.userType) && <button className="btn btn-primary py-2 shadow-none m-2 w-100" onClick={() => addAnonymous()}>Add Anonymous</button>}
+                </div>
+                <div className='d-flex justify-content-between'>
+                    <button type="button" className="btn btn-light m-2 w-100" data-bs-dismiss="modal" onClick={() => setIsOpen(false)}>Cancel</button>
+                    <button type="submit" className="btn btn-primary shadow-none m-2 w-100">{userInfo.userType === 'PT' ? 'Pay Now' : 'Save'}</button>
+                </div>
             </form>
         </Modal>
     )

@@ -115,7 +115,7 @@ export default () => {
                                     key={key}
                                     
                                 >
-                                    <div className="p-3 m-2 bg-white curved light-shadow">
+                                    <div className="p-3 m-2 bg-white curved light-shadow text-center" style={{ minWidth: '4rem'}}>
                                         <h4 className="mb-0">{list?.token || 0}</h4>
                                     </div>
                                     <div className="ms-2">

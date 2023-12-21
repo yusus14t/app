@@ -4,7 +4,6 @@ import Dashbaord from "../components/user-component/doctor/Dashboard";
 import Doctors from "../components/user-component/Doctors";
 import Notification from "../components/common-components/Notification/Notification";
 import Support from "../components/common-components/Support/Support";
-// import AppointmentList from "../components/common-components/Appointment/AppointmentList";
 import Appointments from "../components/App//Dashboard/Appointments";
 import Settings from "../components/common-components/Settings/Settings";
 

@@ -59,21 +59,6 @@
   background-color: #112C2F !important;
 }
 
-/* .ms-main-aside {
-  height: 25rem;
-} */
-
-/* .main-content{
-
-    
-    position: relative;
-    width: 83%;
-    margin: 0 260px;
-}
-*/
-.dropdown-menu {
-  padding-bottom: 0px !important;
-}
 
 .dropdown-menu-active:hover {
   background: #00000012;
