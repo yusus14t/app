@@ -14,22 +14,19 @@ const AllSpecialization = () => {
 
   const getSpecialization = async () => {
     let { data } = await axiosInstance.get("/get-specializations");
-    setSpecializations(data?.specializations);
+    setSpecializations(data?.specializations?.slice(0,20));
   };
   return (
 
     <Container>
+      <h4 className="bg-light text-center text-success p-2 my-3"> All Specializations</h4>
       <div className="d-flex flex-wrap container">
         {specializations.map((specialisation) => (
           <div className="col-6 px-2 m-0">
             <Link to={`/specialization/${specialisation?.id}`}>
               <div className="spicialization-card">
                 <div className="specialization-icon">
-                  <img
-                    className="spe-icon"
-                    src={specialisation?.icon || m}
-                    // src={m}
-                  />
+                  <img className="spe-icon"  src={specialisation?.icon} />
                 </div>
                 <div className="">
                   <strong className="mb-1 fs-12 text-center">

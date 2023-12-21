@@ -30,7 +30,8 @@ const HospitalDetails = lazy(() => import("../components/App/Pages/HospitalDetai
 const LogIn = lazy(() => import("../components/App/Pages/Login"));
 const Radiologist = lazy(() => import("../components/webcomponents/Radiologist"));
 const SpecializationDetails = lazy(() => import('../components/App/Pages/SpecializationDeatils'))
-const Homeopathy =lazy(()=> import('../components/webcomponents/Homeopathy'));
+// const Homeopathy =lazy(()=> import('../components/webcomponents/Homeopathy'));
+const Homeopathy =lazy(()=> import('../components/App/Pages/Homeopathy'));
 
 const getUserType = () => userInfo?.userType;
 

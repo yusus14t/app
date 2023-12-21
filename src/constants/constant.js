@@ -1,5 +1,5 @@
 
-import { faHouse ,faUser, faCalendarDays, faGear, faTableCellsLarge, faHeadset, faBell} from '@fortawesome/free-solid-svg-icons'
+import { faHouse ,faUser, faCalendarDays, faGear, faTableCellsLarge, faHeadset, faBell, faLayerGroup} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import doctorimg from '../assets/images/no_images/no_doctor.png'
@@ -34,7 +34,7 @@ export const LOGO = logo
 export const APP_MENU_ITEM = {
   APP: [
     { title: 'Home', path: '/', icon: <FontAwesomeIcon icon={faHouse} /> },
-    { title: 'Appointments', path: '/test', icon: <FontAwesomeIcon icon={faCalendarDays} /> },
+    { title: 'Specializations', path: '/allspecialization', icon: <FontAwesomeIcon icon={faLayerGroup} /> },
     { title: 'Account', path: '/login', icon: <FontAwesomeIcon icon={faUser} /> },
   ],
 

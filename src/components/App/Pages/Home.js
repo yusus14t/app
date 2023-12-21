@@ -75,15 +75,15 @@ export default () => {
             </section>
             <section>
                 <Slider slides={[
-                    <div className='w-100' style={{ height: '18rem' }}>
+                    <div className='w-100 banner-height'>
                         <img src={Homeimg1} width={'100%'} height={'100%'} alt='home-slider' />
                     </div>,
 
-                    <div className='w-100' style={{ height: '18rem' }}>
+                    <div className='w-100 banner-height'>
                         <img src={Homeimg2} width={'100%'} height={'100%'} alt='home-slider' />
                     </div>,
 
-                    <div className='w-100' style={{ height: '18rem' }}>
+                    <div className='w-100 banner-height'>
                         <img src={Homeimg3} width={'100%'} height={'100%'} alt='home-slider' />
                     </div>
 

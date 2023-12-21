@@ -1517,5 +1517,8 @@ input::-webkit-inner-spin-button {
   border: 3px solid #34a0ff;
 }
 
+.banner-height {
+  height: 20rem;
+}
 
 /*==================*************************media queries*******************==========================*/

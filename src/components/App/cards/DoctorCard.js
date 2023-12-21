@@ -4,9 +4,9 @@ import { getFullPath, truncate } from '../../../constants/utils'
 import { Link } from 'react-router-dom'
 import { DOCTOR_DEFAUL_IMG } from '../../../constants/constant'
 
-export default ({doctor = {}}) => {
+export default ({doctor = {}, ...props }) => {
     return (
-        <div className="col-lg-4 mxil col-md-6 px-0" >
+        <div className="col-lg-4 mxil col-md-6 px-0" {...props} >
             <Link to={`/clinic-detail/${doctor?.organizationId}`}>
                 <div className=" doctor-card">
                     <div className="doctor-img-container">
