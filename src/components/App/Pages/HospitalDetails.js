@@ -54,29 +54,32 @@ const HospitalDetails = () => {
                 <img src={hospital?.photo ? getFullPath(hospital?.photo) : NO_PHOTO} width={'100%'} height={'100%'} />
             </div>
 
-            <section className='clinic-info-card'>
+            <section className='clinic-info-card '>
                 <h4 className='my-3'>{hospital?.name}</h4>
+                <div className='bg-light p-3 curved light-shadow'>
+                    <h6 className="my-3">Consultation Fee: <span className='text-success'>&nbsp;&nbsp;₹{hospital?.fee}</span></h6>
+                    <h6 className="my-3">Specialization</h6>
+                    <div className='bg-white curved light-shadow mb-3'>
+                        <div className="d-flex flex-wrap p-2">
 
-                <div className='bg-light p-3 curved'>
-                        <h6>Specialization</h6>
-                    <div className='d-flex justify-content-between align-items-center mb-3'>
-                        <div className="d-flex flex-wrap">
-
-                            {hospital?.specialization?.map((spe) => <div className="service-tube m-1 text-success bg-white">{spe.name}</div>) || "Specialization"}
+                            {hospital?.specialization?.map((spe) => <div className="service-tube m-1 text-success bg-light">{spe.name}</div>) || "Specialization"}
                         </div>
                     </div>
-                    <h6>Consultation Fee: <span className='text-success'>&nbsp;&nbsp;₹{hospital?.fee}</span></h6>
-                    <h6>Services</h6>
-                    <div class="d-flex flex-wrap">
-                        {hospital?.services?.length > 0
-                            && hospital?.services?.map((serv) => (
-                                <div class="service-tube m-1 bg-white">{serv?.name}</div>
-                            ))
-                            
-                        }
+                    
+                    <h6 className="my-3">Services</h6>
+                    <div className='bg-white curved light-shadow mb-3 p-3'>
+                       <div class="d-flex flex-wrap ">
+                            {hospital?.services?.length > 0
+                                ? hospital?.services?.map((serv) => (
+                                    <div class="service-tube m-1 bg-white">{serv?.name}</div>
+                                ))
+                                : <div><h6 className='text-muted'>No Services</h6></div>
+                                
+                            }
+                        </div>
                     </div>
-                    <h6 className='mt-3'>Important Notice</h6>
-                    <div className='bg-white curved p-3'>
+                    <h6 className='my-3'>Important Notice</h6>
+                    <div className='bg-white curved light-shadow p-3'>
                         {notices?.length > 0 ?
                             notices.map((notice) => (
                                 <div className='notice my-2'>
@@ -90,10 +93,11 @@ const HospitalDetails = () => {
                 </div>
             </section>
 
-            <section className="row mx-0">
-            <div className="col-md-8 px-0">
-              {departments.length > 0 && <DepartmentCard departments={departments} />}
-            </div>
+            <section className="row mx-0 my-3">
+                <h4 className='my-3 text-muted'>Departments</h4>
+                <div className="col-md-8 px-0">
+                    {departments.length > 0 && <DepartmentCard departments={departments} />}
+                </div>
             </section>
             
             <section className="text-center m-2">

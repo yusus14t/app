@@ -79,44 +79,44 @@ const Gynaeclogist = () => {
     <Container className={{backgroundColor:"#f28bc2"}}>
       <Slider
         slides={[
-          <div className="w-100" style={{ height: "30vh" }}>
+          <div className="w-100 banner-height" >
             <img src={Homeimg1} width={"100%"} height={"100%"} />
           </div>,
 
-          <div className="w-100" style={{ height: "30vh" }}>
+          <div className="w-100 banner-height" >
             <img src={Homeimg2} width={"100%"} height={"100%"} />
           </div>,
 
-          <div className="w-100" style={{ height: "30vh" }}>
+          <div className="w-100 banner-height" >
             <img src={Homeimg3} width={"100%"} height={"100%"} />
           </div>,
         ]}
       />
-      <div className="row mx-0">
-        <div className="col-6 p-1 mx-0 my-1">
-          <div className="gynae-services-cards ">
+      <div className=" d-flex flex-wrap  mx-0">
+        <div className=" w-50 p-1  my-1">
+          <div className="gynae-services-cards mx-2">
             <div className=" gynae-services-icon">
               <img className="gynae-services-icon-img " src={Gynaecology} />
             </div>
-            <strong className="fs-12 pb-0">Gynaecology Process</strong>
-            <p className=" mb-0 pb-0 fs-12 text-center">
+            <strong className=" pb-0 ">Gynaecology Process</strong>
+            <p className=" m-2 text-center">
               A gynecologist plays a crucial role in the care of pregnant women.
             </p>
             <span
               onClick={() => setIsOpen3(true)}
               className="gynae-button  bg-light"
             >
-              <p className="mb-0">Check It</p>
+              <p className="p-1">Check It</p>
             </span>
           </div>
         </div>
-        <div className="col-6 p-1  mx-0 my-1">
-          <div className="gynae-services-cards ">
+        <div className=" w-50 p-1   my-1">
+          <div className="gynae-services-cards mx-2">
             <div className=" gynae-services-icon">
               <img className="gynae-services-icon-img " src={surrogacy} />
             </div>
-            <strong className="fs-12 pb-0">Surrogacy</strong>
-            <p className=" mb-0 pb-0 fs-12 text-center">
+            <strong className=" pb-0">Surrogacy</strong>
+            <p className="m-2 text-center">
               Surrogacy is a complex and sensitive topic that raises many
               ethical and legal questions.
             </p>
@@ -124,34 +124,34 @@ const Gynaeclogist = () => {
               onClick={() => setIsOpen(true)}
               className="gynae-button  bg-light"
             >
-              <p className="mb-0">Check It</p>
+              <p className="p-1">Check It</p>
             </span>
           </div>
         </div>
-        <div className="col-6 p-1 mx-0 my-1">
-          <div className="gynae-services-cards ">
+        <div className=" w-50 p-1  my-1">
+          <div className="gynae-services-cards mx-2 ">
             <div className=" gynae-services-icon">
               <img className="gynae-services-icon-img " src={TEST} />
             </div>
-            <strong className="fs-12 pb-0">Text Tube</strong>
-            <p className=" mb-0 pb-0 fs-12 text-center">
+            <strong className="pb-0">Text Tube</strong>
+            <p className=" m-2 text-center">
               Test tube baby, also known as in vitro fertilization (IVF).
             </p>
             <span
               onClick={() => setIsOpen1(true)}
               className="gynae-button  bg-light"
             >
-              <p className="mb-0">Check It</p>
+              <p className="p-1">Check It</p>
             </span>
           </div>
         </div>
-        <div className="col-6 p-1  mx-0 my-1">
-          <div className="gynae-services-cards ">
+        <div className=" w-50 p-1   my-1">
+          <div className="gynae-services-cards mx-2">
             <div className=" gynae-services-icon">
               <img className="gynae-services-icon-img " src={ivf} />
             </div>
-            <strong className="fs-12 pb-0">IVF</strong>
-            <p className=" mb-0 pb-0 fs-12 text-center">
+            <strong className="pb-0">IVF</strong>
+            <p className=" m-2 text-center">
               In vitro fertilization (IVF) is a type of assisted reproductive
               technology
             </p>
@@ -159,7 +159,7 @@ const Gynaeclogist = () => {
               onClick={() => setIsOpen2(true)}
               className="gynae-button  bg-light"
             >
-              <p className="mb-0">Check It</p>
+              <p className="p-1">Check It</p>
             </span>
           </div>
         </div>

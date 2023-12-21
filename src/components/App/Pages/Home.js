@@ -75,16 +75,16 @@ export default () => {
             </section>
             <section>
                 <Slider slides={[
-                    <div className='w-100' style={{ height: '35vh' }}>
-                        <img src={Homeimg1} width={'100%'} height={'100%'} />
+                    <div className='w-100 banner-height'>
+                        <img src={Homeimg1} width={'100%'} height={'100%'} alt='home-slider' />
                     </div>,
 
-                    <div className='w-100' style={{ height: '30vh' }}>
-                        <img src={Homeimg2} width={'100%'} height={'100%'} />
+                    <div className='w-100 banner-height'>
+                        <img src={Homeimg2} width={'100%'} height={'100%'} alt='home-slider' />
                     </div>,
 
-                    <div className='w-100' style={{ height: '30vh' }}>
-                        <img src={Homeimg3} width={'100%'} height={'100%'} />
+                    <div className='w-100 banner-height'>
+                        <img src={Homeimg3} width={'100%'} height={'100%'} alt='home-slider' />
                     </div>
 
                 ]} />
@@ -111,13 +111,13 @@ export default () => {
             </section>
 
             <section className='my-4' >
-                <img src={Eraham} width={'100%'} height={'100%'} />
+                <img src={Eraham} width={'100%'} height={'100%'} alt='section-image' />
             </section>
 
             <section className='px-2 my-4 py-3 clinic-gradient' >
                 <div className='d-flex justify-content-between align-items-center'>
                     <h4>Clinics</h4>
-                    <Link to={'/doctors'} >
+                    <Link to={'/clinics'} >
                         <span>View All <FontAwesomeIcon icon={faAngleRight} /></span>
                     </Link >
                 </div>
@@ -127,12 +127,12 @@ export default () => {
             {/* JNMC ALIGARH */}
             {promo._id && <section>
                 <div className=''>
-                    <img src={JNMC} width={'100%'} height={'100%'} />
+                    <img src={JNMC} width={'100%'} height={'100%'} alt='promo-image' />
                 </div>
                 <div className='promo-card p-3'>
                     <div className='d-flex justify-content-start py-3'>
                         <div className='promo-card-img me-3 '>
-                            <img src={promo?.photo ? getFullPath(promo.photo) : HOSPITAL_DEFAUL_IMG} className='curved' width={'100%'} height={'100%'} />
+                            <img src={promo?.photo ? getFullPath(promo.photo) : HOSPITAL_DEFAUL_IMG} className='curved' width={'100%'} height={'100%'} alt='promo-img' />
                         </div>
                         <div>
                             <h5>{promo?.name}</h5>
@@ -156,7 +156,7 @@ export default () => {
             </section>
 
             <section className='my-4' >
-                <img src={FeaturesImg} width={'100%'} height={'100%'} />
+                <img src={FeaturesImg} width={'100%'} height={'100%'} alt='features' />
             </section>
 
         </Container>

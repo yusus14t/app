@@ -190,32 +190,38 @@ export default () => {
               <h4 className="my-1">{token}</h4>
             </div>
           </div>
-          <h6>Specialization</h6>
-              <div className="d-flex flex-wrap mb-2">
-                {clinicDetail?.specialization?.map((spe) => (
-                  <div className="service-tube m-1 text-success bg-white">
-                    {spe.name}
-                  </div>
-                )) || "Specialization"}
-              </div>{" "}
-          <h6>
+          <h6 className="my-3">
             Consultation Fee:{" "}
             <span className="text-success">
               &nbsp;&nbsp;₹{clinicDetail?.fee}
             </span>
           </h6>
-          <h6>Services</h6>
-          <div class="d-flex flex-wrap">
-            {clinicDetail?.services?.length > 0
-              ? clinicDetail?.services?.map((serv) => (
-                  <div class="service-tube m-1 bg-white">{serv?.name}</div>
-                ))
-              : clinicDetail?.hospital?.services?.map((serv) => (
-                  <div class="service-tube m-1 bg-white">{serv?.name}</div>
-                ))}
+          <h6 className="my-3">Specialization</h6>
+          <div  className="curved bg-white p-3 light-shadow">
+            <div className="d-flex flex-wrap mb-2">
+              {clinicDetail?.specialization?.map((spe) => (
+                <div className="service-tube m-1 text-success bg-light ">
+                  {spe.name}
+                </div>
+              )) || "Specialization"}
+            </div>
+
+          </div>
+          
+          <h6 className="my-3">Services</h6>
+          <div  className="curved bg-white p-3 light-shadow">
+            <div class="d-flex flex-wrap">
+              {clinicDetail?.services?.length > 0
+                ? clinicDetail?.services?.map((serv) => (
+                    <div class="service-tube m-1 bg-light ">{serv?.name}</div>
+                  ))
+                : clinicDetail?.hospital?.services?.map((serv) => (
+                    <div class="service-tube m-1 bg-light ">{serv?.name}</div>
+                  ))}
+            </div>
           </div>
           <h6 className="mt-3">Important Notice</h6>
-          <div className="bg-white light-shadow curved p-3">
+          <div className="bg-white light-shadow curved p-3 mt-2">
             {notices?.length > 0 ? (
               notices.map((notice) => (
                 <div className="notice my-2">
@@ -232,9 +238,9 @@ export default () => {
         </div>
       </section>
 
-      <section className="waiting-section  mt-3 p-3">
-        <h5>Token List</h5>
-        <div className="d-flex mt-3 bg-primary p-2 rounded text-light">
+      <section className="waiting-section  mt-5">
+        <h5 className="px-3">Token List</h5>
+        <div className="d-flex mt-3 bg-primary p-2 text-light">
           <h6
             onClick={() => handleTabClick(0)}
             className={
@@ -254,7 +260,7 @@ export default () => {
             Unreached List
           </h6>
         </div>
-        <div className="overflow-auto" style={{ height: "60vh" }}>
+        <div className="overflow-auto mx-2" style={{ height: "60vh" }}>
           {activeTab === 0 ? (
             waitingList.length ? (
               waitingList.map((list, key) => (
@@ -265,7 +271,7 @@ export default () => {
                   }
                   key={key}
                 >
-                  <div className="p-3 m-2 bg-white curved">
+                  <div className="p-3 m-2 bg-white curved text-center light-shadow" style={{ width: '4rem' }}>
                     <h4 className="mb-0">{list?.token}</h4>
                   </div>
                   <div className="ms-2">

@@ -1,12 +1,13 @@
 
-import { faHouse ,faUser, faCalendarDays, faGear, faTableCellsLarge} from '@fortawesome/free-solid-svg-icons'
+import { faHouse ,faUser, faCalendarDays, faGear, faTableCellsLarge, faHeadset, faBell, faLayerGroup} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import doctorimg from '../assets/images/no_images/no_doctor.png'
 import clinicimg from '../assets/images/no_images/no_clinic.jpg'
 import hospitalimg from '../assets/images/no_images/no_hospital.jpg'
 import noimg from '../assets/images/no-photo.png'
-import logo from '../assets/img/logo/logo.jpg'
+import logo from '../assets/img/logo/logo-trans.png'
+// import logo from '../assets/img/logo/logo.jpg'
 
 // Icon Image
 import doctors from "../assets/menuIcons/doctor.png"
@@ -33,7 +34,7 @@ export const LOGO = logo
 export const APP_MENU_ITEM = {
   APP: [
     { title: 'Home', path: '/', icon: <FontAwesomeIcon icon={faHouse} /> },
-    { title: 'Appointments', path: '/test', icon: <FontAwesomeIcon icon={faCalendarDays} /> },
+    { title: 'Specializations', path: '/allspecialization', icon: <FontAwesomeIcon icon={faLayerGroup} /> },
     { title: 'Account', path: '/login', icon: <FontAwesomeIcon icon={faUser} /> },
   ],
 
@@ -64,10 +65,6 @@ export const APP_MENU_ITEM = {
     { title: 'Contacts', path: '/contacts', icon: contact, access:['PT','SA',"AD","MR","HL", "CL"] },
     { title: 'Notification', path: '/notification', icon: notification, access:['PT','SA',"AD","MR","HL", "CL"] },
     { title: 'Support', path: '/support', icon: doctors,access:['PT','SA',"AD","MR","HL", "CL"] },
-
-
-
-
   ]
 }
 

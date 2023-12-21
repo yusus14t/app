@@ -1096,10 +1096,9 @@ body:not(.ms-aside-left-open) .ms-aside-toggler .ms-toggler-bar {
   vertical-align: middle;
 }
 .active{
-  background-color: yellow;
   padding: 10px 3px 10px 3px;
   border-radius: 6px;
-  background-color: #093c;
+  background-color: #acacac5e;
 }
 .menu_item a{
   padding:  1.1rem 15px;
@@ -1951,7 +1950,7 @@ a.ms-confirm-trigger:hover {
 }
 
 .user-dropdown.dropdown-menu {
-  min-width: 280px;
+  min-width: 200px;
 }
 
 .dropdown-menu .media img {

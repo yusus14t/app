@@ -7,6 +7,7 @@ import useToasty from "../../../hooks/toasty";
 import events from "../../../events";
 import { NO_PHOTO } from "../../../constants/constant";
 import Container from "../../../layout/Container";
+import AppHeader from "../../../layout/AppHeader";
 
 const Dashbaord = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -79,6 +80,7 @@ const Dashbaord = () => {
 
   return (
     <Container>
+      <AppHeader />
       <div className="ms-content-wrapper">
         <div className="row">
           <div class="col-xl-3 col-md-6 col-sm-6">

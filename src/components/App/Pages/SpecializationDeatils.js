@@ -83,11 +83,11 @@ const SpecializationDetails = () => {
               
             </div>
             <div className=" text-center mt-2">
-          <h3 className="text-center text-success head-title title ">
-            {specialization?.name}
-          </h3>
+            <h4 className="text-center bg-light p-2 text-success">
+              {specialization?.name}
+            </h4>
         </div>
-              <div className="deatil  mb-3 ">
+              <div className="mb-3 overflow-auto m-3 " style={{ height: '15rem'}}>
                 <p className="details-text">{specialization?.description}</p>
               </div>
 

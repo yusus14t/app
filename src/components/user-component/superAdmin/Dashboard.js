@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import NO_PHOTO from "../../../assets/images/no-photo.png";
 import toasty from '../../../hooks/toasty'
 import { axiosInstance, formatPhone, getAuthHeader, getFullPath, userInfo } from '../../../constants/utils';
-import { DoughnutChart, LineChart } from '../../common-components/Chart';
+import { DoughnutChart } from '../../common-components/Chart';
 import Container from '../../../layout/Container';
+import AppHeader from '../../../layout/AppHeader';
 
 const Dashbaord = () => {
     const [ analyticsData, setAnalyticsData ] = useState({});
@@ -53,6 +54,7 @@ const Dashbaord = () => {
 
     return (
         <Container>
+            <AppHeader />
             <div className='ms-content-wrapper'>
             <div class="ms-panel-header ms-panel-custome d-flex justify-space-between mb-2">
                 <div>
@@ -132,7 +134,7 @@ const Dashbaord = () => {
                             </div>
                         </div>
                         <div class="ms-panel-body p-0">
-                            <div className='d-flex justify-content-center' >
+                            <div className='d-flex justify-content-center px-5' >
                                 {  <DoughnutChart labelName={'Patient'} chartData={analyticsData.total_users?.filter( usr => [ 'CL', 'HL', 'MR' ].includes(usr._id))} />}
                             </div>
                         </div>
