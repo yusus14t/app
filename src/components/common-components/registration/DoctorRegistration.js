@@ -140,15 +140,16 @@ const DoctorRegistration = ({ tab, setTab, organization = {}, source='', setModa
 
     setTab('FINAL')
   }
-const Finish = () => {
-  localStorage.removeItem("RID");
-  window.location.reload();
-};
+
+  const Finish = () => {
+    localStorage.removeItem("RID");
+    window.location.reload();
+  };
+
   const handleEdit = (doctor) => {
     setEditImage(getFullPath(doctor?.photo))
     reset(doctor)
   }
-
 
   return (
     <div className='row'>
@@ -304,7 +305,7 @@ const Finish = () => {
             </div>
             <div className="actions btn-submit mb-2">
               <button type="submit" className="btn btn-primary shadow-none mx-2" >Save Doctor</button>
-                          <button onClick={Finish} className="btn btn-primary btn-md">Finish</button>
+              { source !== 'modal' && <button onClick={Finish} className="btn btn-primary btn-md">Finish</button>}
 
             </div>
           </div>

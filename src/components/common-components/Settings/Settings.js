@@ -27,7 +27,6 @@ const Settings = () => {
 
   const [isOpen, setIsOpen] = useState(false)
   const [isServiceOpen, setIsServiceOpen] = useState(false)
-  const [isTimming,setTimming] = useState(false)
   const [specialization, setSpecialization] = useState({ name: null, error: null })
   const [specializations, setSpecializations] = useState([])
   const [allSpecializations, setAllSpecializations] = useState([])
@@ -235,359 +234,345 @@ const Settings = () => {
 
   return (
     <Container>
-      <div className="ms-content-wrapper">
-        <div className="row mr-0">
-          <div className="col-xl-12 col-md-12">
-            <div className="ms-panel mb-0 pb-2">
-              <div className="ms-panel-header ms-panel-custome">
-                <div style={{ display: "flex", overflow: "auto"}}>
-                  {SETTING_TABS.filter( tab => tab.access.includes(userInfo.userType)).map(( stab, key ) => <span className={`btn btn-md mx-3 ${ tab === stab.id ? 'btn-light' : 'btn-info' }`} key={key} onClick={() => setTab(stab.id)}>{ stab.name }</span> )}
-                </div>
-              </div>
-              <div className="ms-panel-body p-0 overflow-auto" style={{ height: '78vh' }}>
-                {tab === "SPECIALIZATION" && (
-                  <>
-                    <div className="d-flex justify-content-between p-3">
-                      <div>
-                        <h4>Specialization</h4>
-                      </div>
-                      <div>
-                        <button
-                          className="btn btn-primary btn-md shadow-none"
-                          onClick={() => setIsOpen(true)}
-                        >
-                          Add Specialization
-                        </button>
-                      </div>
-                    </div>
-                    <div className="ms-panel-body py-0 ">
-                      <div className="table-responsive">
-                        <table className="table table-hover  thead-primary">
-                          <thead style={{ backgroundColor: "#A2A2A252" }}>
-                            <tr>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Id
-                              </th>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Name
-                              </th>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Delete
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {specializations?.length > 0 &&
-                              specializations.map((specialization) => (
-                                <tr>
-                                  <td className="ms-table-f-w">
-                                    {specialization.id}
-                                  </td>
-                                  <td>{specialization.name}</td>
-                                  <td>
-                                    <FontAwesomeIcon
-                                      style={{ marginLeft: "8px" }}
-                                      className="cursor-pointer"
-                                      icon={faTrash}
-                                      onClick={() =>
-                                        deleteSpecialization(specialization.id)
-                                      }
-                                    ></FontAwesomeIcon>
-                                  </td>
-                                </tr>
-                              ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </>
-                )}
-                {tab === "SERVICES" && (
-                  <>
-                    <div className="d-flex justify-content-between p-3">
-                      <div>
-                        <h4>Services</h4>
-                      </div>
-                      <div>
-                        <button
-                          className="btn btn-primary btn-md shadow-none"
-                          onClick={() => setIsServiceOpen(true)}
-                        >
-                          Add Services
-                        </button>
-                      </div>
-                    </div>
-                    <div class="ms-panel-body py-0 ">
-                      <div class="table-responsive">
-                        <table class="table table-hover  thead-primary">
-                          <thead style={{ backgroundColor: "#A2A2A252" }}>
-                            <tr>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Id
-                              </th>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Name
-                              </th>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Delete
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {organizationServices?.length > 0 &&
-                              organizationServices.map((service) => (
-                                <tr>
-                                  <td class="ms-table-f-w">{service.id}</td>
-                                  <td>{service.name}</td>
-                                  <td>
-                                    <FontAwesomeIcon
-                                      style={{ marginLeft: "8px" }}
-                                      className="cursor-pointer"
-                                      onClick={() => deleteService(service.id)}
-                                      icon={faTrash}
-                                    ></FontAwesomeIcon>
-                                  </td>
-                                </tr>
-                              ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </>
-                )}
-                {tab === "PROFILE" && <Profile />}
-                {tab === "WEBSITE" && <Website />}
-                {tab === "QRCODE" && (
-                  <div>
-                    <div style={{ marginLeft: "auto", display:'flex', justifyContent:'center' }} className=""  >
-                      <div style={{ display:'flex', flexDirection:'column'}}>
-                        <div style={{ width: "500px", border: "2px solid black",  background:'#fff', marginTop:"20px" }} ref={QRCodeRef}>
-                          <div style={{ display: "flex", marginTop:'10px', alignItems:'center' }}>
-                            <img
-                              style={{ width: "200px", padding: "0px 20px 0 50px" }}
-                              src={logo}
-                              alt=""
-                            />
-                            <h4 style={{ textAlign: "center" }}>{hospitalName ? hospitalName : userInfo?.organizationId?.name }</h4>
-                          </div>
-                          {hospitalName && <p className="text-center">({ userInfo?.organizationId?.name})</p>}
-                          <hr />
-                          <div style={{ margin: "auto", width: "430px", height: "400px" }}>
-                            <h5 style={{ textAlign: "center" }}>
-                              Scan QR code to book Appointment
-                            </h5>
-                            <img
-                              src={ getFullPath(userInfo?.organizationId?.qrCode) }
-                              style={{ width: "400px", height: "400px" }}
-                              alt=""
-                            />
-                          </div>
-                          <p style={{textAlign: "center"}}>Or visit Doctortime.in</p>
-                          <div style={{ marginTop: "30px", marginBottom:"30px" }}>
-                            <p style={{ textAlign: "center"}}>
-                              Don't Waste Your Time Be Samart.
-                              <br />
-                              Come Here Just Before Your Turn.
-                              <br />
-                              Book Appointment from Doctor Time and Track Live Appointment
-                              Number
-                            </p>
-                          </div>
-                        </div>
-                        <div style={{ display:'flex', justifyContent: 'center', marginTop: '1.5rem', marginBottom: "3rem"}}>
-                          <div>
-                            <button
-                              className="btn btn-primary"
-                              onClick={() =>
-                                download()
-                              }
-                            >
-                              Download QR Code
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {tab === "CONTACT" && (
-                  <>
-                    <div className="d-flex justify-content-between p-3">
-                      <div>
-                        <h4>Contact Info</h4>
-                      </div>
-                    </div>
-                    <div className="">
-                      { isEdit.open && <div className="col-md-6 m-3">
-                        <label className=''>{ isEdit.type }</label>
-                        <div className="input-group">
-                          <input type="text"
-                            ref={inputRef}
-                            className={`form-control w-100 my-1`}
-                            placeholder={isEdit.type}
-                            onChange={(e) => setIsEdit({ ...isEdit, value: e.target.value })}
-                          />
-                          <button className="btn btn-primary btn-sm shadow-none mx-2 py-3 my-1 rounded" onClick={() => save()}> Save </button>
-                          <button className="btn btn-light btn-sm shadow-none py-3 my-1 rounded" onClick={() => setIsEdit({ })}> Cancel </button>
-                        </div>
-                      </div>}
-                      <div className="d-flex flex-wrap">
-                            <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
-                              <div className="contact-icon-container contact-kk ">
-                                <img className="contact-icons" src={phone} alt="" />
-                              </div>
-                              {contact?.phone}
-                              <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('phone', contact?.phone)} />
-
-                            </div>
-                            <div className=" col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
-                              <div className="contact-icon-container contact-kk">
-                                <img className="contact-icons" src={whatsapp} alt=""  />
-                              </div>
-                              {contact?.whatsapp}
-                              <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('whatsapp', contact?.whatsapp)}  />
-
-                            </div>
-                            <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
-                              <div className="contact-icon-container contact-kk">
-                                <img className="contact-icons " src={email} alt="" />
-                              </div>
-                              {contact?.email}
-                              <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('email', contact?.email)} />
-
-                            </div>
-                            <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around ml-5 align-items-center w-100">
-                              <div className="contact-icon-container contact-kk">
-                                <img src={twitter} className="contact-icons" alt="" />
-                              </div>
-                              @{contact?.twitter}
-                              <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('twitter', contact?.twitter)} />
-
-                            </div>
-                      </div>
-                    </div>
-                  </>
-                )}
-                {tab === "PAYMENT" && <Payment />}
-                { tab === "CUSTOM_SPECIALIZATION" &&    <>
-                    <div className="row m-2">
-                      <div className="col-md-8 col-sm-12">
-                        <h4>Specialization</h4>
-                      </div>
-                      <div className="col-md-4 col-sm-8">
-                        <div className="d-flex">
-                          <input className="form-control" placeholder="Custom Specialization" value={customSpecialization} onChange={(e) => setCustomSpecialization(e.target.value)} />
-                          <button className="btn btn-primary shadow-none btn-md mx-3" onClick={() => createCustomSpecialization()}>Save</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="ms-panel-body py-0 ">
-                      <div className="table-responsive">
-                        <table className="table table-hover  thead-primary">
-                          <thead style={{ backgroundColor: "#A2A2A252" }}>
-                            <tr>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Id
-                              </th>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Name
-                              </th>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Delete
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {specializations?.length > 0 &&
-                              specializations.map((specialization) => (
-                                <tr>
-                                  <td className="ms-table-f-w">
-                                    {specialization.id}
-                                  </td>
-                                  <td>{specialization.name}</td>
-                                  <td>
-                                    <FontAwesomeIcon
-                                      style={{ marginLeft: "8px" }}
-                                      className="cursor-pointer"
-                                      icon={faTrash}
-                                      onClick={() =>
-                                        deleteCustomSpecialization(specialization.id)
-                                      }
-                                    ></FontAwesomeIcon>
-                                  </td>
-                                </tr>
-                              ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </>}
-                { tab === "CUSTOM_SERVICES" &&    <>
-                    <div className="row m-2">
-                      <div className="col-md-8 col-sm-12">
-                        <h4>Service</h4>
-                      </div>
-                      <div className="col-md-4 col-sm-8">
-                        <div className="d-flex">
-                          <input className="form-control" placeholder="Custom Service" value={customServices} onChange={(e) => setCustomServices(e.target.value)} />
-                          <button className="btn btn-primary shadow-none btn-md mx-3" onClick={() => createCustomService()}>Save</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="ms-panel-body py-0 ">
-                      <div className="table-responsive">
-                        <table className="table table-hover  thead-primary">
-                          <thead style={{ backgroundColor: "#A2A2A252" }}>
-                            <tr>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Id
-                              </th>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Name
-                              </th>
-                              <th scope="col" style={{ color: "#000" }}>
-                                Delete
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {organizationServices?.length > 0 &&
-                              organizationServices.map((service) => (
-                                <tr>
-                                  <td className="ms-table-f-w">
-                                    {service.id}
-                                  </td>
-                                  <td>{service.name}</td>
-                                  <td>
-                                    <FontAwesomeIcon
-                                      style={{ marginLeft: "8px" }}
-                                      className="cursor-pointer"
-                                      icon={faTrash}
-                                      onClick={() =>
-                                        deleteCustomService(service.id)
-                                      }
-                                    ></FontAwesomeIcon>
-                                  </td>
-                                </tr>
-                              ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </>}
-              </div>
+        <div className="mb-0 pb-2">
+          <div className="ms-panel-header ms-panel-custome py-3" style={{ borderRadius: '0px'}}>
+            <div style={{ display: "flex", overflow: "auto"}}>
+              {SETTING_TABS.filter( tab => tab.access.includes(userInfo.userType)).map(( stab, key ) => <span className={`btn btn-md mx-3 ${ tab === stab.id ? 'btn-light' : 'btn-info' }`} key={key} onClick={() => setTab(stab.id)}>{ stab.name }</span> )}
             </div>
           </div>
+          <div className="ms-panel-body p-0 overflow-auto" style={{ height: 'calc(100vh - 6rem)' }}>
+            {tab === "SPECIALIZATION" && (
+              <>
+                <div className="d-flex justify-content-between p-3">
+                  <div>
+                    <h4>Specialization</h4>
+                  </div>
+                  <div>
+                    <button
+                      className="btn btn-primary btn-md shadow-none"
+                      onClick={() => setIsOpen(true)}
+                    >
+                      Add Specialization
+                    </button>
+                  </div>
+                </div>
+                <div className="ms-panel-body p-0 ">
+                  <div className="table-responsive">
+                    <table className="table table-hover  thead-primary">
+                      <thead style={{ backgroundColor: "#A2A2A252" }}>
+                        <tr>
+                          <th scope="col" style={{ color: "#000" }}>
+                            Id
+                          </th>
+                          <th scope="col" style={{ color: "#000" }}>
+                            Name
+                          </th>
+                          <th scope="col" style={{ color: "#000" }}>
+                            Delete
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {specializations?.length > 0 &&
+                          specializations.map((specialization) => (
+                            <tr>
+                              <td className="ms-table-f-w">
+                                {specialization.id}
+                              </td>
+                              <td>{specialization.name}</td>
+                              <td>
+                                <FontAwesomeIcon
+                                  style={{ marginLeft: "8px" }}
+                                  className="cursor-pointer"
+                                  icon={faTrash}
+                                  onClick={() =>
+                                    deleteSpecialization(specialization.id)
+                                  }
+                                ></FontAwesomeIcon>
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </>
+            )}
+            {tab === "SERVICES" && (
+              <>
+                <div className="d-flex justify-content-between p-3">
+                  <div>
+                    <h4>Services</h4>
+                  </div>
+                  <div>
+                    <button
+                      className="btn btn-primary btn-md shadow-none"
+                      onClick={() => setIsServiceOpen(true)}
+                    >
+                      Add Services
+                    </button>
+                  </div>
+                </div>
+                <div class="ms-panel-body p-0 ">
+                  <div class="table-responsive">
+                    <table class="table table-hover  thead-primary">
+                      <thead style={{ backgroundColor: "#A2A2A252" }}>
+                        <tr>
+                          <th scope="col" style={{ color: "#000" }}>
+                            Id
+                          </th>
+                          <th scope="col" style={{ color: "#000" }}>
+                            Name
+                          </th>
+                          <th scope="col" style={{ color: "#000" }}>
+                            Delete
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {organizationServices?.length > 0 &&
+                          organizationServices.map((service) => (
+                            <tr>
+                              <td class="ms-table-f-w">{service.id}</td>
+                              <td>{service.name}</td>
+                              <td>
+                                <FontAwesomeIcon
+                                  style={{ marginLeft: "8px" }}
+                                  className="cursor-pointer"
+                                  onClick={() => deleteService(service.id)}
+                                  icon={faTrash}
+                                ></FontAwesomeIcon>
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </>
+            )}
+            {tab === "PROFILE" && <Profile />}
+            {tab === "WEBSITE" && <Website />}
+            {tab === "QRCODE" && (
+              <div className="p-2">
+                <div style={{ width: "100%", border: "2px solid black", background: '#fff', marginTop: "20px" }} ref={QRCodeRef}>
+                  <div style={{ display: "flex", marginTop: '10px', alignItems: 'center', margin: '1rem 0' }}>
+                    <img style={{ width: "200px", padding: "0px 20px 0 50px" }} src={logo} alt="" />
+
+                    <h4 style={{ textAlign: "center" }}>{hospitalName ? hospitalName : userInfo?.organizationId?.name}</h4>
+                  </div>
+                  {hospitalName && <p className="text-center">({userInfo?.organizationId?.name})</p>}
+                  <hr />
+
+                  <h5 style={{ textAlign: "center", margin: '1rem 0px' }}> Scan QR code to book Appointment </h5>
+                  <div style={{ height: '300px', margin: '1rem' }}>
+                    <img  src={getFullPath(userInfo?.organizationId?.qrCode)}  style={{ width: "100%", height: "100%" }} alt="" />
+                  </div>
+
+                  <p style={{ textAlign: "center" }}>Or visit Doctortime.in</p>
+                  <div style={{ marginTop: "30px", marginBottom: "30px" }}>
+                    <p style={{ textAlign: "center" }}>
+                      Don't Waste Your Time Be Samart.
+                      <br />
+                      Come Here Just Before Your Turn.
+                      <br />
+                      Book Appointment from Doctor Time and Track Live Appointment
+                      Number
+                    </p>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-center my-4">
+                  <div>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() =>
+                        download()
+                      }
+                    >
+                      Download QR Code
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+            {tab === "CONTACT" && (
+              <>
+                <div className="d-flex justify-content-between p-3">
+                  <div>
+                    <h4>Contact Info</h4>
+                  </div>
+                </div>
+                <div className="">
+                  { isEdit.open && <div className="col-md-6 m-3">
+                    <label className=''>{ isEdit.type }</label>
+                    <div className="input-group">
+                      <input type="text"
+                        ref={inputRef}
+                        className={`form-control w-100 my-1`}
+                        placeholder={isEdit.type}
+                        onChange={(e) => setIsEdit({ ...isEdit, value: e.target.value })}
+                      />
+                      <button className="btn btn-primary btn-sm shadow-none mx-2 py-3 my-1 rounded" onClick={() => save()}> Save </button>
+                      <button className="btn btn-light btn-sm shadow-none py-3 my-1 rounded" onClick={() => setIsEdit({ })}> Cancel </button>
+                    </div>
+                  </div>}
+                  <div className="d-flex flex-wrap">
+                        <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
+                          <div className="contact-icon-container contact-kk ">
+                            <img className="contact-icons" src={phone} alt="" />
+                          </div>
+                          {contact?.phone}
+                          <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('phone', contact?.phone)} />
+
+                        </div>
+                        <div className=" col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
+                          <div className="contact-icon-container contact-kk">
+                            <img className="contact-icons" src={whatsapp} alt=""  />
+                          </div>
+                          {contact?.whatsapp}
+                          <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('whatsapp', contact?.whatsapp)}  />
+
+                        </div>
+                        <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around align-items-center w-100">
+                          <div className="contact-icon-container contact-kk">
+                            <img className="contact-icons " src={email} alt="" />
+                          </div>
+                          {contact?.email}
+                          <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('email', contact?.email)} />
+
+                        </div>
+                        <div className="col-md-3 contact-list-item mx-2 mb-3 d-flex flex-row justify-content-around ml-5 align-items-center w-100">
+                          <div className="contact-icon-container contact-kk">
+                            <img src={twitter} className="contact-icons" alt="" />
+                          </div>
+                          @{contact?.twitter}
+                          <FontAwesomeIcon className=' cursor-pointer' icon={faEdit} onClick={() => edit('twitter', contact?.twitter)} />
+
+                        </div>
+                  </div>
+                </div>
+              </>
+            )}
+            {tab === "PAYMENT" && <Payment />}
+            { tab === "CUSTOM_SPECIALIZATION" &&    <>
+                <div className="row m-2">
+                  <div className="col-md-8 col-sm-12">
+                    <h4>Specialization</h4>
+                  </div>
+                  <div className="col-md-4 col-sm-8">
+                    <div className="d-flex">
+                      <input className="form-control" placeholder="Custom Specialization" value={customSpecialization} onChange={(e) => setCustomSpecialization(e.target.value)} />
+                      <button className="btn btn-primary shadow-none btn-md mx-3" onClick={() => createCustomSpecialization()}>Save</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="ms-panel-body p-0 ">
+                  <div className="table-responsive">
+                    <table className="table table-hover  thead-primary">
+                      <thead >
+                        <tr>
+                          <th scope="col" >
+                            Id
+                          </th>
+                          <th scope="col" >
+                            Name
+                          </th>
+                          <th scope="col" >
+                            Delete
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {specializations?.length > 0 &&
+                          specializations.map((specialization) => (
+                            <tr>
+                              <td className="ms-table-f-w">
+                                {specialization.id}
+                              </td>
+                              <td>{specialization.name}</td>
+                              <td>
+                                <FontAwesomeIcon
+                                  style={{ marginLeft: "8px" }}
+                                  className="cursor-pointer"
+                                  icon={faTrash}
+                                  onClick={() =>
+                                    deleteCustomSpecialization(specialization.id)
+                                  }
+                                ></FontAwesomeIcon>
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </>}
+            { tab === "CUSTOM_SERVICES" &&    <>
+                <div className="row m-2">
+                  <div className="col-md-8 col-sm-12 p-0">
+                    <h4>Service</h4>
+                  </div>
+                  <div className="col-md-4 col-sm-8">
+                    <div className="d-flex">
+                      <input className="form-control" placeholder="Custom Service" value={customServices} onChange={(e) => setCustomServices(e.target.value)} />
+                      <button className="btn btn-primary shadow-none btn-md mx-3" onClick={() => createCustomService()}>Save</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="ms-panel-body p-0 ">
+                  <div className="table-responsive">
+                    <table className="table table-hover  thead-primary">
+                      <thead>
+                        <tr>
+                          <th scope="col text-primary">
+                            Id
+                          </th>
+                          <th scope="col text-primary">
+                            Name
+                          </th>
+                          <th scope="col text-primary">
+                            Delete
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {organizationServices?.length > 0 &&
+                          organizationServices.map((service) => (
+                            <tr>
+                              <td className="ms-table-f-w">
+                                {service.id}
+                              </td>
+                              <td>{service.name}</td>
+                              <td>
+                                <FontAwesomeIcon
+                                  style={{ marginLeft: "8px" }}
+                                  className="cursor-pointer"
+                                  icon={faTrash}
+                                  onClick={() =>
+                                    deleteCustomService(service.id)
+                                  }
+                                ></FontAwesomeIcon>
+                              </td>
+                            </tr>
+                          ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </>}
+          </div>
         </div>
-        {isOpen && (
-          <Modal
+
+
+
+        {isOpen && (<Modal
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             title={"Add Specialization"}
             data={specialization}
             callback={(data) => {
               submitSpecialization(data);
-            }}
+            }} 
           >
             <div className="row">
               <div className="col-12">
@@ -596,9 +581,7 @@ const Settings = () => {
                   <CreatableSelect
                     isMulti={true}
                     options={allSpecializations}
-                    onChange={(e) => {
-                      setSpecialization(e);
-                    }}
+                    onChange={(e) => {  setSpecialization(e) }}
                     className={`form-control p-0`}
                     classNamePrefix="select"
                   />
@@ -639,17 +622,7 @@ const Settings = () => {
             </div>
           </Modal>
         )}
-        {isTimming && (
-          <Modal
-            isOpen={isTimming}
-            setIsOpen={setTimming}
-            title={"Add Timming"}
-          
-          >
-            <span>lkhbkhblkljk</span>
-          </Modal>
-        )}
-      </div>
+
     </Container>
   );
 }

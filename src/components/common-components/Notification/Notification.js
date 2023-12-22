@@ -85,37 +85,25 @@ const Notification = () => {
                                     <span className="text-light">fghjk</span>
                                 </div> */}
                             </div>
-                            <div className="mx-4 mt-6  " style={{height:"65vh", marginTop:"50px"}}>
+                            <div className="mx-2 mt-6 " style={{height:"65vh", marginTop:"50px"}}>
 
-                            {notifications.map(( notification , i) =>
-                                 <div className="row dropdown-menu-active  pt-2 ">
-                                    <div className="col  ">
-                                    <span className="text-dark align-middle"> {i + 1} </span>
-                                </div>
-                                <div className="col  ">
-                                    <span className="text-dark align-middle"> {notification.title.slice(0,20)}{ notification.title.length > 20 ? '...' : ''} </span>
-                                </div>
-                                <div className="col ">
-                                    <span className="text-dark">{notification.message.slice(0,30)}{ notification.message.length > 30 ? '...' : ''}</span>
-                                </div>                                
-                                {/* <div className="col ">  
-                                    {notification.assigneeIds.filter( assignee => userInfo.userType === 'SA' ||  assignee._id.toString() == userInfo._id.toString() ).map( assignee => <span className="text-dark">{assignee.firstName} {assignee.lastName},</span> )}
-                                </div>                                 */}
-                                <div className="col ">
-                                    <span class={`badge badge-gradient-${PRIORITY_COLORS[notification.priority]}`}>{notification.priority}</span>
-                                </div>  
-                                <div className="col ">
-                                    <div className='row'>
-                                        {/* <div className='col-6'>
-                                            <span className="text-dark ">{notification.status}</span>
-                                        </div> */}
-                                        { ["SA", "MR","DP","CL","HL"].includes(userInfo.userType) && <div className='col-6'>
-                                            <FontAwesomeIcon className='ms-text-dark cursor-pointer' icon={faTrash} onClick={() => handleDelete(notification._id)}  />
-                                            <FontAwesomeIcon className='ms-text-dark cursor-pointer mx-3' icon={faEye} onClick={() => handleViewNotification(notification)}  />
+                                {notifications.map((notification, i) =>
+                                    <div className="pt-2 d-flex">
+                                        <div className="w-25">
+                                            <span className="text-dark align-middle"> {i + 1} </span>
+                                        </div>
+                                        <div className="mx-2" style={{ minWidth: '6rem'}}>
+                                            <p className="text-dark align-middle"> {notification.title.slice(0, 20)}{notification.title.length > 20 ? '...' : ''} </p>
+                                        </div>
+                                        <div className="mx-2" style={{ minWidth: '6rem'}}>
+                                            <span className="text-dark">{notification.message.slice(0, 30)}{notification.message.length > 30 ? '...' : ''}</span>
+                                        </div>
+
+                                        {["SA", "MR", "DP", "CL", "HL"].includes(userInfo.userType) && <div className='w-25 mx-2 d-flex align-items-center'>
+                                            <FontAwesomeIcon className='ms-text-dark cursor-pointer' icon={faTrash} onClick={() => handleDelete(notification._id)} />
+                                            <FontAwesomeIcon className='ms-text-dark cursor-pointer mx-3' icon={faEye} onClick={() => handleViewNotification(notification)} />
                                         </div>}
-                                    </div>
-                                </div>                                
-                            </div>)}
+                                    </div>)}
                             </div>
                             
                         </div>

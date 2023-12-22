@@ -1521,4 +1521,11 @@ input::-webkit-inner-spin-button {
   height: 20rem;
 }
 
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3;
+}
+
 /*==================*************************media queries*******************==========================*/

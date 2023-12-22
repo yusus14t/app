@@ -92,6 +92,23 @@ const Gynaeclogist = () => {
           </div>,
         ]}
       />
+      {/* <Slider
+        slides={[
+
+            WEBSITE_IMAGE.GYNAE_SLIDER_1,
+            WEBSITE_IMAGE.GYNAE_SLIDER_2,
+            WEBSITE_IMAGE.GYNAE_SLIDER_3,
+            WEBSITE_IMAGE.GYNAE_SLIDER_4
+
+          ].map( slide =>
+
+            <div className="w-100 banner-height" >
+              <img src={findImage(slide)} width={"100%"} height={"100%"} alt={slide} />
+            </div>
+
+          )
+        }
+      /> */}
       <div className=" d-flex flex-wrap  mx-0">
         <div className=" w-50 p-1  my-1">
           <div className="gynae-services-cards mx-2">

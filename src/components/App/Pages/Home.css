@@ -20,12 +20,6 @@
     background: linear-gradient(184deg, #e2efff, transparent);
 }
 
-.sticky {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 3;
-}
 
 .promo-card {
     background-color: #1a232b;

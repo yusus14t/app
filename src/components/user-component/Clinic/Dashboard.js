@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { axiosInstance, getAuthHeader } from '../../../constants/utils';
-import Appointment from '../../common-components/Appointment/Appointment';
+import Appointment from '../../common-components/Appointment';
 import UserModal from '../../common-components/UserModal';
 import { DoughnutChart } from '../../common-components/Chart';
 import useToasty from '../../../hooks/toasty';

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { axiosInstance, formatDate, formatPhone } from '../../../constants/utils';
+import { axiosInstance,  formatPhone } from '../../../constants/utils';
 import Container from '../../../layout/Container';
 
 const Contacts = () => {
-    const userInfo = JSON.parse(localStorage.getItem('user'))
     const [contacts, setContacts] = useState([])
 
     useEffect(() => {

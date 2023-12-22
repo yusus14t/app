@@ -1,10 +1,8 @@
 
 import Modal from './Modal';
-import { axiosInstance, dateFormat } from '../../constants/utils';
+import { axiosInstance, dateFormat, formatPhone } from '../../constants/utils';
 import { useEffect, useState } from 'react';
 import useToasty from '../../hooks/toasty';
-import { NO_PHOTO } from '../../constants/constant';
-
 
 const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
     const [appointment, setAppointment] = useState({});
@@ -55,58 +53,43 @@ const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
         setIsOpen={setIsOpen} 
         closeButton={false}
         submitButton={false}
-        title="Appointment Card">
-        <div className="Appointment-header">
-          <div>
-            <h4 className="text-center mb-2 m-0 fw-800">{appointment?.departmentId?.name || ""}</h4>
-            <div className="d-flex flex-row justify-content-between">
-              
-              <p className="mt-2 mb-0">Date : {dateFormat(new Date(appointment?.createdAt))}</p>
-            </div>
-            <hr />
-            <div className="row">
-              <div className="d-flex flex-row justify-content-between">
-                <div className="user-profile-img-container">
-                  <img className="user-profile-img" src={NO_PHOTO} alt="" />
-                </div>
-                <div className="user-details m-auto d-flex flex-column">
-                  <h6 className="font-weight-bold">
-                    <span className="m-0 text-dark">Name : </span>
-                    { appointment?.userId?.name || ""}
-                  </h6>
-
-                  <h6 className="font-weight-bold">
-                    <span className="m-0 text-dark">Age : </span>
-                    {appointment?.userId?.age || " - "}
-                  </h6>
-
-                  <h6 className="font-weight-bold">
-                    <span className="m-0 text-dark">Gender : </span>
-                    {appointment?.userId?.gender || " - " }
-                  </h6>
-                </div>
-                <div className="user-token m-auto ">
-                  <h3 className="text-center ">{appointment?.token}</h3>
-                </div>
-              </div>
-
-              <hr className="mt-2" />
-            </div>
-          </div>
-          <div className="basic-details">
-            <h2 className="font-weight-bold">Basic Details</h2>
-            {appointment?.userId?.phone && <p className="mb-0 text-dark">Guardian Name : {appointment?.userId?.gardianName}</p>}
-            <p className="mb-0 text-dark">Mobile Number : +91 {appointment?.userId?.phone || '-'}</p>
-            <p className="mb-0 text-dark">Address : { appointment?.userId?.address || '-'}</p>
-           
-          </div>
-          <hr />
-          { appointment.status !== 'unreached' ? <div className='d-flex float-right' >
-            <button type="button" className="btn btn-danger shadow-none mx-2"  onClick={() => patientStatus('unreached')}>Unreached</button>
-            <button type="button" className="btn btn-primary shadow-none mx-2" onClick={() => patientStatus('reached')}>Reached</button>
-          </div> : <button type="button" className="btn btn-primary shadow-none mx-2" onClick={() => reAppointment()}>Reached</button>
-          }
+        title="Appointment Card"
+      >
+        <div className='bg-primary p-2 mb-3 rounded '>
+          <h4 className=' text-light text-center '> {appointment?.departmentId?.name || ""} </h4>
+          <p className='text-light text-center '> {dateFormat(new Date(appointment?.createdAt))} </p>
         </div>
+        <section className='d-flex align-items-start justify-content-between border-bottom py-3'>
+            <div>
+              <h3>{ appointment?.userId?.name || "Anonymous"}</h3>
+              <h5>{ formatPhone(appointment?.userId?.phone) || '-'}</h5>
+            </div>
+            <div >
+              <h3 className='bg-primary text-light p-3 curved text-center' style={{ minWidth: '4rem' }}>{appointment?.token}</h3>
+            </div>
+        </section>
+        <section className=' border-bottom py-3'>
+          <p> Age: {appointment?.userId?.age || " - "} </p>
+          <p> Gender: {appointment?.userId?.gender || " - " } </p>
+          <p> Address: { appointment?.userId?.address || '-'} </p>
+        </section>
+
+        <section className='my-3 pb-3 d-flex justify-content-between align-items-center'>
+          {appointment.status !== 'unreached' ? <>
+            <div className='bg-danger text-light text-center w-100 mx-2 p-2 rounded' onClick={() => patientStatus('unreached')} >
+              <h5>Unreached</h5>
+            </div>
+            <div className='bg-primary text-light w-100 text-center mx-2 p-2 rounded' onClick={() => patientStatus('reached')}>
+              <h5>Reached</h5>
+            </div>
+          </>
+            :
+            <div className='bg-primary text-light  w-100 text-center mx-2 p-2 rounded ' onClick={() => reAppointment()}>
+              <h5>Reached</h5>
+            </div>
+          }
+        </section>
+
       </Modal>
     );
 }

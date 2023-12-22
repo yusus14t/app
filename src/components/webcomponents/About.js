@@ -2,10 +2,6 @@ import React, { useEffect, useState } from "react";
 import { WEBSITE_IMAGE } from "../../constants/constant";
 import { getFullPath, getImages } from "../../constants/utils";
 
-
-
-
-
 const About = () => {
   const [ images, setImages ] = useState([])
 

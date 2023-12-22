@@ -22,13 +22,13 @@ function Clinics({  }) {
 
   return (
     <Container>
-
-    <div className="row mx-0 px-0">
-      {clinics.length && clinics.map((clinic, key)=> {
-
-      return <ClinicCard clinic={clinic} key={key}/>
-      })}
-    </div>
+      <div className="row mx-0 px-0">
+        { clinics.length &&
+          clinics.map((clinic, key) =>
+            <ClinicCard clinic={clinic} key={key} />
+          )
+        }
+      </div>
     </Container>
   );
 }

@@ -6,20 +6,16 @@ import "./assets/css/custom.css";
 import "./assets/css/mediaqueries.css"
 
 import SnackbarProvider from 'react-simple-snackbar'
-import { BrowserRouter as Router, useLocation } from 'react-router-dom'
-import { Provider } from 'react-redux';
-import store from './redux/Store'; 
+import { BrowserRouter as Router } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <Provider store={store}>
         <SnackbarProvider>
           <Router>
             <AllRoutes />
           </Router>
         </SnackbarProvider>
-      </Provider>
     </div>
   );
 }

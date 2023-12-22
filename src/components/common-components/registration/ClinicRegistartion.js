@@ -1,10 +1,9 @@
 import React, {  useEffect, useState } from 'react';
-import DoctorRegistration from '../common-components/registration/DoctorRegistration';
-import CLiniRegistration2 from '../common-components/registration/ClinicRegistration2';
-import DealRegistration from '../common-components/registration/DealRegistration';
-import useToasty from '../../hooks/toasty';
+import DoctorRegistration from './DoctorRegistration';
+import CLiniRegistration2 from './ClinicRegistration2';
+import useToasty from '../../../hooks/toasty';
 import { useForm } from 'react-hook-form';
-import { NumberFormat, axiosInstance, getAuthHeader } from '../../constants/utils';
+import { NumberFormat, axiosInstance, getAuthHeader } from '../../../constants/utils';
 
 const ClinicRegistartion = ({ isSelfCreated, source }) => {
     const [tab, setTab] = useState(isSelfCreated ? "STEP2" : 'STEP1')
@@ -74,7 +73,6 @@ const ClinicRegistartion = ({ isSelfCreated, source }) => {
               { !isSelfCreated && <li style={{marginTop:"15px"}} role="tab" className={`${tab === "STEP1" ? "current" : "disabled"} cursor-pointer`} aria-disabled="false" aria-selected="False"><span className="current-info audible tabName ">Registration</span></li>}
               <li style={{marginTop:"15px"}} role="tab" className={`${tab === "STEP2" ? "current" : "disabled"} cursor-pointer`} aria-disabled="true"> <span className='tabName'>Details</span> </li>
               <li style={{marginTop:"15px"}} role="tab" className={`${tab === "STEP3" ? "current" : "disabled"} cursor-pointer`} aria-disabled="true"><span className='tabName'>Doctors</span></li>
-              {/* <li style={{marginTop:"15px"}} role="tab" className={`${tab === "FINAL" ? "current" : "disabled"} cursor-pointer`} aria-disabled="true"><span className='tabName'>Final</span></li> */}
             </ul>
           </div>
           { tab !== 'STEP1' && <div className='d-flex justify-content-end mb-2'>
@@ -148,7 +146,6 @@ const ClinicRegistartion = ({ isSelfCreated, source }) => {
             }
             {tab === "STEP2" && <CLiniRegistration2 tab={tab} setTab={setTab} source={source || 'Clinic' } organization={organization} /> }
             {tab === "STEP3" && <DoctorRegistration tab={tab} setTab={setTab} source={source || 'Clinic' } organization={organization} /> }
-            {/* {tab === "FINAL" && <DealRegistration tab={tab} source={source || 'Clinic' } setTab={setTab} organization={organization} /> } */}
           </div>
         </div>
       </div>

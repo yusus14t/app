@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { axiosInstance } from "../../../constants/utils";
+import { axiosInstance } from "../../constants/utils";
 
-import HospitaCard from "../../App/cards/HospitaCard";
-import Container from "../../../layout/Container";
+import HospitaCard from "../App/cards/HospitaCard";
+import Container from "../../layout/Container";
 
 const HospitalGrid = ({ }) => {
   const [hospitals, setHospitals] = useState([]);
@@ -24,7 +24,9 @@ const HospitalGrid = ({ }) => {
     <Container>
       <div className="row mx-0 ">
         {hospitals.length &&
-          hospitals.map((hospital) => <HospitaCard hospital={hospital} />)}
+          hospitals.map((hospital) =>
+            <HospitaCard hospital={hospital} />
+          )}
       </div>
     </Container>
   );

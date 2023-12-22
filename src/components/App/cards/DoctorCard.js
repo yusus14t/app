@@ -6,9 +6,9 @@ import { DOCTOR_DEFAUL_IMG } from '../../../constants/constant'
 
 export default ({doctor = {}, ...props }) => {
     return (
-        <div className="col-lg-4 mxil col-md-6 px-0" {...props} >
+        <div className="col-lg-4 mxil col-md-6 px-0 " {...props} >
             <Link to={`/clinic-detail/${doctor?.organizationId}`}>
-                <div className=" doctor-card">
+                <div className=" doctor-card light-shadow mx-2">
                     <div className="doctor-img-container">
                         <img src={doctor?.photo
                             ? getFullPath(doctor?.photo)

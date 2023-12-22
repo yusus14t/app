@@ -1,9 +1,9 @@
 import { Navigate } from "react-router-dom"
-import ClinicRegistration from '../components/user-component/ClinicRegistartion';
-import HospitalRegistration from '../components/user-component/HospitalRegistration';
+import ClinicRegistration from '../components/common-components/registration/ClinicRegistartion';
+import HospitalRegistration from '../components/common-components/registration/HospitalRegistration';
 import Dashboard from '../components/user-component/mr/Dashboard';
 import Clinics from '../components/user-component/mr/Clinics';
-import Doctors from '../components/user-component/Doctors';
+import Doctors from '../components/common-components/DoctorsList';
 import Support from '../components/common-components/Support/Support';
 import Notification from '../components/common-components/Notification/Notification';
 import Settings from '../components/common-components/Settings/Settings';

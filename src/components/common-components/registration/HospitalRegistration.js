@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import DoctorRegistration from '../common-components/registration/DoctorRegistration';
-import ClinicRegistartion2 from '../common-components/registration/ClinicRegistration2';
-import DealRegistration from '../common-components/registration/DealRegistration';
-import DepartmentRegistration from '../common-components/registration/DepartmentRegistration';
-import useToasty from '../../hooks/toasty';
-import { NumberFormat, axiosInstance, getAuthHeader, userInfo } from '../../constants/utils';
+import DoctorRegistration from './DoctorRegistration';
+import ClinicRegistartion2 from './ClinicRegistration2';
+import DepartmentRegistration from './DepartmentRegistration';
+import useToasty from '../../../hooks/toasty';
+import { NumberFormat, axiosInstance, getAuthHeader, userInfo } from '../../../constants/utils';
 import { useForm } from 'react-hook-form';
 
 const HospitalRegistartion = () => {

@@ -1,55 +1,42 @@
 import React, { useEffect, useRef } from "react";
 import "./Login.css";
-import loginpaoster from "../../../assets/img/logo/logo.jpg";
+import loginpaoster from '../../assets/img/logo/logo.jpg';
 
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEdit,
-  faHospitalUser,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  axiosInstance,
-  getAuthHeader,
-  getFullPath,
-  getImages,
-  NumberFormat,
-} from "../../../constants/utils";
-import useToasty from "../../../hooks/toasty";
+import {  faEdit, faHospitalUser } from "@fortawesome/free-solid-svg-icons";
+
+import { axiosInstance,  getAuthHeader, getFullPath, getImages, NumberFormat } from "../../constants/utils";
+import useToasty from "../../hooks/toasty";
 import { Link, useLocation } from "react-router-dom";
-import { userRoutes } from "../../../constants/constant";
+
+import { userRoutes } from "../../constants/constant"; 
 import { useForm } from "react-hook-form";
-import clinic from "../../../assets/menuIcons/clinic.png";
-import Hospital from "../../../assets/menuIcons/hospital.png";
-import Container from "../../../layout/Container";
+import clinic from "../../assets/menuIcons/clinic.png";
+
+import Hospital from "../../assets/menuIcons/hospital.png";
+import Container from "../../layout/Container";
 
 const Login = () => {
   const { state: LocationState } = useLocation();
-  const {
-    register,
-    reset,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ onChange: true });
+  const { register, handleSubmit } = useForm({ onChange: true });
   const inputRef = useRef(null);
   const otpRef = useRef(null);
   const toasty = useToasty();
   const [otp, setOtp] = useState(false);
   const [user, setUser] = useState({});
-  const [type, setType] = useState({});
+  const [images, setImages] = useState([]);
+  
   const COMPONENTS = {
     1: "SIGNUP_FORM",
     2: "USER_TYPES_FORM",
     3: "PATIENT_FORM",
     4: "ORGANIZATION_FORM",
   };
+  
   const [component, setComponent] = useState(COMPONENTS["1"]);
-  const [images, setImages] = useState([]);
   const [details, setDetails] = useState({
-    name: "",
-    phone: "",
-    age: "",
-    gender: "",
+    name: "",  phone: "", age: "", gender: "",
   });
 
   useEffect(() => {
@@ -63,16 +50,14 @@ const Login = () => {
         return;
       }
 
-      let { data } = await axiosInstance.post("/signup", {
-        ...details,
-        phone: value,
-      });
+      let { data } = await axiosInstance.post("/signup", { ...details, phone: value });
       setUser(data?.user);
       setDetails({ ...details, phone: value });
       setOtp(true);
 
       if (data?.status_code === 411) toasty.error(data?.message);
       else toasty.success(data?.message);
+
     } catch (error) {
       toasty.error(error?.message);
       console.error(error);
@@ -92,38 +77,35 @@ const Login = () => {
 
       localStorage.setItem("user", JSON.stringify(data?.user));
       localStorage.setItem("token", JSON.stringify(data?.token));
-      if (data?.user?.twoFactor?.isVerified && data?.user?.isActive) {
-        if (LocationState?.redirectTo)
-          window.location.replace(LocationState.redirectTo);
-        else window.location.replace(userRoutes[data?.user?.userType]?.path);
-      } else {
-        setComponent(COMPONENTS["2"]);
-      }
 
-      toasty.success(data?.message);
+      if (data?.user?.twoFactor?.isVerified && data?.user?.isActive) {
+
+        if (LocationState?.redirectTo) window.location.replace(LocationState.redirectTo);
+        else window.location.replace(userRoutes[data?.user?.userType]?.path);
+
+      } else {  setComponent(COMPONENTS["2"]) }
+      toasty.success(data?.message)
+
     } catch (error) {
       toasty.error(error?.message);
       console.error(error);
     }
+
   };
 
   const handleTypes = async (type) => {
     try {
-      let { data } = await axiosInstance.post(
-        "/common/set-usertype",
-        { type, userId: user._id, organizationId: user?.organizationId },
-        getAuthHeader()
+      let { data } = await axiosInstance.post("/common/set-usertype",
+        { type, userId: user._id, organizationId: user?.organizationId }, getAuthHeader()
       );
-      setType(type);
+
       localStorage.setItem("user", JSON.stringify(data?.user));
 
       if (type === "patient") setComponent(COMPONENTS["3"]);
-      else if (["hospital", "clinic"].includes(type))
-        setComponent(COMPONENTS["4"]);
+      else if (["hospital", "clinic"].includes(type))  setComponent(COMPONENTS["4"]);
       else window.location.replace(userRoutes[data?.user?.userType]?.path);
-    } catch (error) {
-      console.error(error);
-    }
+
+    } catch (error) {  console.error(error) }
   };
 
   const submit = async (formdata) => {
@@ -170,9 +152,11 @@ const Login = () => {
   return (
     <div className="bg-primary" style={{ height: "100vh" }}>
       <Container className="login-page mb-0 px-2">
+
         <div className="login-img-container">
           <img className="w-100 py-3" src={loginpaoster} />
         </div>
+
         {component === COMPONENTS["1"] && (
           <div className=" d-flex flex-column align-items-center bg-white curved w-100 p-4 parent-div ">
             <h4 className="m-0"> Login/SignUp</h4>
@@ -216,13 +200,9 @@ const Login = () => {
                 <div className="mobile text-dark">
                   <p className="mb-1 text-dark ">Mobile Number</p>
                   <h4 className="text-muted rounded bg-light p-2">
-                    +91 &nbsp;
-                    {`${String(details?.phone || "").slice(0, 3)}-${String(
-                      details?.phone || ""
-                    ).slice(3, 6)}-${String(details?.phone || "").slice(
-                      6,
-                      10
-                    )}`}
+                    
+                    +91 &nbsp; {`${String(details?.phone || "").slice(0, 3)}-${String( details?.phone || "" ).slice(3, 6)}-${String(details?.phone || "").slice(6, 10)}`}
+
                     <span>
                       <FontAwesomeIcon
                         onClick={handleEdit}
@@ -232,6 +212,7 @@ const Login = () => {
                     </span>
                   </h4>
                 </div>
+
                 <div className="mb-2 mt-4 d-flex flex-column">
                   <label className=" ">Enter OTP</label>
                   <input
@@ -243,6 +224,7 @@ const Login = () => {
                     ref={otpRef}
                   />
                 </div>
+
                 <div className="mt-3">
                   <button
                     className="btn btn-primary mt-3"
@@ -251,6 +233,7 @@ const Login = () => {
                     Validate OTP
                   </button>
                 </div>
+
               </>
             )}
           </div>
@@ -304,8 +287,8 @@ const Login = () => {
         <form className="d-flex justify-content-center w-100" onSubmit={handleSubmit(submit)} >
           {/* patient */}
           {component === COMPONENTS["3"] && (
-            <div className=" d-flex flex-column align-items-center bg-white curved  p-4 parent-div "
-            >
+
+            <div className=" d-flex flex-column align-items-center bg-white curved  p-4 parent-div ">
               <h4>Fill your datails</h4>
               <div className="mb-2 w-100">
                 <label htmlFor="">Mobile Number</label>
@@ -314,20 +297,22 @@ const Login = () => {
                   {details?.phone?.slice(3, 6)}-{details?.phone?.slice(-4)} 
                 </h4>
               </div>
+
               <div>
-              <input type="hidden" value={"patient"} {...register("source")} />
-              <div className="w-100 mb-3">
-                <label>
-                  Full Name <span className="text-anger">*</span>
-                </label>{" "}
-                <br />
-                <input
-                  type="text"
-                  className="login-input w-100 rounded border-0 bg-light p-2"
-                  placeholder="Enter full name"
-                  {...register("name", { required: "name is required", })}
-                />
+                <input type="hidden" value={"patient"} {...register("source")} />
+                <div className="w-100 mb-3">
+                  <label>
+                    Full Name <span className="text-anger">*</span>
+                  </label>
+                  <br />
+                  <input
+                    type="text"
+                    className="login-input w-100 rounded border-0 bg-light p-2"
+                    placeholder="Enter full name"
+                    {...register("name", { required: "name is required", })}
+                  />
               </div>
+
               <div className="d-flex mb-3">
                 <div className="" >
                   <label>
@@ -338,19 +323,22 @@ const Login = () => {
                   {...register("age", {required: "age is required",})}
                    className="login-input rounded border-0 w-100  bg-light p-2 " />
                 </div>
+
                 <div>
                   <label>
                     Gender <span>*</span>
                   </label>{" "}
                   <br />
-                  <select className="login-input rounded border-0 ms-1 bg-light p-2 "
-                  {...register("gender", { required: "Gender is required" })}
-                  style={{width:"105px", height:"39px"}} >
-                    <option value="Female">Female</option>
-                    <option value=" Male">Male</option>
-                    <option value="other">Other</option>
-                  </select>
+                    <select className="login-input rounded border-0 ms-1 bg-light p-2 "
+                      {...register("gender", { required: "Gender is required" })} style={{ width: "105px", height: "39px" }} >
+
+                      <option value="Female">Female</option>
+                      <option value=" Male">Male</option>
+                      <option value="other">Other</option>
+
+                    </select>
                 </div>
+
               </div>
               <div className="w-100 mb-3">
                 <label>

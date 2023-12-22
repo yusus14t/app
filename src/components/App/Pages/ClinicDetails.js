@@ -9,7 +9,7 @@ import {
 } from "../../../constants/utils";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Appointment from "../../common-components/Appointment/Appointment";
+import Appointment from "../../common-components/Appointment";
 import events from "../../../events";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -43,9 +43,6 @@ export default () => {
     getNotices();
     getUnreachedList();
 
-    events.addEventListener("re-appointment", (event) =>
-      reAppointmentHandler(JSON.parse(event.data))
-    );
     events.addEventListener("new-appointment", (event) =>
       newAppointmentHandler(JSON.parse(event.data))
     );
@@ -60,8 +57,6 @@ export default () => {
   let newAppointmentHandler = (event) => {
     getWaitingList();
   };
-
-  let reAppointmentHandler = (event) => {};
 
   const statusEventHandler = (event) => {
     getClinicDetail();
@@ -139,11 +134,11 @@ export default () => {
     }
   };
 
-  const getTiming = (short, full, source) => {
+  const getTiming = (short, full, source, key ) => {
     let day = timing.find((time) => time.day === short);
     if (source === "Clinic") {
       return (
-        <tr>
+        <tr key={key}>
           <td>{full}</td>
           <td>{convertTo12HourFormat(day?.morning?.open)}</td>
           <td>{convertTo12HourFormat(day?.morning?.close)}</td>
@@ -153,7 +148,7 @@ export default () => {
       );
     } else {
       return (
-        <tr>
+        <tr key={key}>
           <td>{full}</td>
           <td>{convertTo12HourFormat(day?.open)}</td>
           <td>{convertTo12HourFormat(day?.close)}</td>
@@ -199,8 +194,8 @@ export default () => {
           <h6 className="my-3">Specialization</h6>
           <div  className="curved bg-white p-3 light-shadow">
             <div className="d-flex flex-wrap mb-2">
-              {clinicDetail?.specialization?.map((spe) => (
-                <div className="service-tube m-1 text-success bg-light ">
+              {clinicDetail?.specialization?.map(( spe, key ) => (
+                <div className="service-tube m-1 text-success bg-light " key={key}>
                   {spe.name}
                 </div>
               )) || "Specialization"}
@@ -210,21 +205,21 @@ export default () => {
           
           <h6 className="my-3">Services</h6>
           <div  className="curved bg-white p-3 light-shadow">
-            <div class="d-flex flex-wrap">
+            <div className="d-flex flex-wrap">
               {clinicDetail?.services?.length > 0
-                ? clinicDetail?.services?.map((serv) => (
-                    <div class="service-tube m-1 bg-light ">{serv?.name}</div>
+                ? clinicDetail?.services?.map((serv, key) => (
+                    <div className="service-tube m-1 bg-light " key={key}>{serv?.name}</div>
                   ))
-                : clinicDetail?.hospital?.services?.map((serv) => (
-                    <div class="service-tube m-1 bg-light ">{serv?.name}</div>
+                : clinicDetail?.hospital?.services?.map((serv, key) => (
+                    <div className="service-tube m-1 bg-light " key={key}>{serv?.name}</div>
                   ))}
             </div>
           </div>
           <h6 className="mt-3">Important Notice</h6>
           <div className="bg-white light-shadow curved p-3 mt-2">
             {notices?.length > 0 ? (
-              notices.map((notice) => (
-                <div className="notice my-2">
+              notices.map(( notice, key ) => (
+                <div className="notice my-2" key={key}>
                   <h6>{notice.title}</h6>
                   <p className="mb-0 text-danger">{notice.description}</p>
                 </div>
@@ -239,26 +234,28 @@ export default () => {
       </section>
 
       <section className="waiting-section  mt-5">
-        <h5 className="px-3">Token List</h5>
-        <div className="d-flex mt-3 bg-primary p-2 text-light">
-          <h6
-            onClick={() => handleTabClick(0)}
-            className={
-              "w-50 text-center py-2 mb-0 curved " +
-              (activeTab === 0 && "waiting-list-active shadow text-dark")
-            }
-          >
-            Waiting List
-          </h6>
-          <h6
-            onClick={() => handleTabClick(1)}
-            className={
-              "w-50 text-center py-2 mb-0 curved " +
-              (activeTab === 1 && "waiting-list-active text-dark")
-            }
-          >
-            Unreached List
-          </h6>
+        <div className="bg-primary text-light">
+          <h5 className="p-2">Token List</h5>
+          <div className="d-flex  p-2 text-light">
+            <h6
+              onClick={() => handleTabClick(0)}
+              className={
+                "w-50 text-center py-2 mb-0 curved " +
+                (activeTab === 0 && "waiting-list-active shadow text-dark")
+              }
+            >
+              Waiting List
+            </h6>
+            <h6
+              onClick={() => handleTabClick(1)}
+              className={
+                "w-50 text-center py-2 mb-0 curved " +
+                (activeTab === 1 && "waiting-list-active text-dark")
+              }
+            >
+              Unreached List
+            </h6>
+          </div>
         </div>
         <div className="overflow-auto mx-2" style={{ height: "60vh" }}>
           {activeTab === 0 ? (
@@ -315,16 +312,10 @@ export default () => {
       </section>
       <section className="mx-2 my-3">
         <h5>Doctors</h5>
-        {Array(3)
-          .fill(0)
-          .map((a) => (
-            <DoctorCard
-              doctor={{
-                name: "Dr. Smriti Sharma",
-                address: "Hamdard Nagar B Jamalpur Aligarh",
-              }}
-            />
-          ))}
+        { clinicDetail?.doctors?.length && clinicDetail?.doctors.map(( doc ) => (
+            <DoctorCard doctor={ doc }/>
+        ))}
+         
       </section>
       <section className="text-center m-2">
         <div className="pr-2 m-text">
@@ -347,8 +338,8 @@ export default () => {
               )}
             </thead>
             <tbody>
-              {Object.entries(FULLDAY).map(([short, day]) =>
-                getTiming(short, day, clinicDetail?.organizationType)
+              {Object.entries(FULLDAY).map(([short, day], key ) =>
+                getTiming(short, day, clinicDetail?.organizationType, key )
               )}
             </tbody>
           </table>

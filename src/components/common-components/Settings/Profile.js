@@ -293,9 +293,9 @@ const Profile = ({ source, setIsOpen = () => {}, refresh = () => {} }) => {
                                 </select>
                             </div>
                             <div className="evening row mt-3">
-                                <div className='d-flex flex-column col-md-6'>
+                                <div className='d-flex flex-column col-md-6 my-2'>
                                     <div>Morning</div>
-                                    <div className='d-flex flex-row justify-content-around'>
+                                    <div className='d-flex flex-row justify-content-between'>
                                         <div className="col-sm-6 mx-2">
                                             <label htmlFor="#open">Open</label>
                                             <input
@@ -320,9 +320,9 @@ const Profile = ({ source, setIsOpen = () => {}, refresh = () => {} }) => {
 
                                 </div>
                                 {/* <label htmlFor="">Evening</label> */}
-                                <div className='d-flex flex-column col-md-6 '>
+                                <div className='d-flex flex-column col-md-6 my-2 '>
                                     <div>Evening</div>
-                                    <div className='d-flex flex-row justify-content-around'>
+                                    <div className='d-flex flex-row justify-content-between'>
                                         <div className="col-sm-6 mx-2">
                                             <label htmlFor="#open">Open</label>
                                             <input
@@ -348,10 +348,10 @@ const Profile = ({ source, setIsOpen = () => {}, refresh = () => {} }) => {
                                 </div>
                             </div>
 
-                            <div className="col-1">
+                            <div className="col-3">
                                 <button
                                     type="button"
-                                    style={{ minWidth: "60px" }}
+                                    style={{ minWidth: "120px" }}
                                     className="btn btn-1 btn-primary mt-4 p-1 px-1 shadow-none"
                                     onClick={() => { userInfo?.organizationId?.organizationType === 'Clinic' ? handleClinicTime() : handleTime() }}
                                 >
@@ -395,7 +395,7 @@ const Profile = ({ source, setIsOpen = () => {}, refresh = () => {} }) => {
                                         {...register("timing.close")}
                                     />
                                 </div>
-                                <div className="col-1">
+                                <div className="col-3">
                                     <button
                                         type="button"
                                         style={{ minWidth: "60px" }}

@@ -84,7 +84,7 @@ const Payment = () => {
 
     return(
         <div>
-            <div className="user-payment-card mb-3 ">
+            <div className="user-payment-card mx-2 mb-3 ">
                 <div className="">
                     <h4>Patient</h4>
                 </div>
@@ -102,7 +102,7 @@ const Payment = () => {
                 </div>
             </div>
             <form onSubmit={handleSubmit(submit)}>
-                <div className="user-payment-card mb-3 ">
+                <div className="user-payment-card mx-2 mb-3 ">
                     <div className="d-flex justify-content-between">
                         <div>
                             <h4>Clinic</h4>
@@ -147,7 +147,7 @@ const Payment = () => {
                         <button type="submit" className="btn btn-info shadow-none">Save</button>
                     </div>
                 </div>
-                <div className="user-payment-card mb-3 ">
+                <div className="user-payment-card mx-2 mb-5 ">
                 <div className="d-flex justify-content-between">
                         <div>
                             <h4>Hospital</h4>

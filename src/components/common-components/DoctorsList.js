@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { axiosInstance, getAuthHeader, getFullPath } from "../../constants/utils";
-import Modal from "../common-components/Modal";
+import Modal from "./Modal";
 import { Controller, useForm } from "react-hook-form";
 import useToasty from '../../hooks/toasty';
-import DoctorRegistration from "../common-components/registration/DoctorRegistration";
-import ImgUpload from "../common-components/Imgupload";
+import DoctorRegistration from "./registration/DoctorRegistration";
+import ImgUpload from "./Imgupload";
 import Select from "react-select";
 import Container from "../../layout/Container";
 

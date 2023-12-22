@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { axiosInstance, getAuthHeader } from "../../../constants/utils";
-import Appointment from "../../common-components/Appointment/Appointment";
+import Appointment from "../../common-components/Appointment";
 import UserModal from "../../common-components/UserModal";
 import { DoughnutChart } from "../../common-components/Chart";
 import useToasty from "../../../hooks/toasty";
@@ -258,7 +258,7 @@ const Dashbaord = () => {
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-md-6">
+          <div class="col-xl-6 col-md-6 my-4">
             <div class="ms-panel ms-widget">
               <div class="ms-panel-header ms-panel-custome d-flex justify-space-between">
                 <div>

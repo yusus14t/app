@@ -196,7 +196,7 @@ const Dashbaord = () => {
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-md-6 h-100 mb-4">
+                <div class="col-xl-6 col-md-6 h-100">
                     <div class="ms-panel ms-panel-fh ms-widget">
                         <div class="ms-panel-header ms-panel-custome d-flex justify-space-between">
                             <div>

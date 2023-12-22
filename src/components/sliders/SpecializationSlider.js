@@ -6,9 +6,6 @@ import './specializationSlider.css'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import m from "../../assets/images/1920x1280-1.jpg"
-
-// import './styles.css';
 
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -45,18 +42,14 @@ export default function SpecializationSlider() {
         modules={[Pagination,Autoplay]}
         className="mySwiper"
       >
-        {specializations.map((specialisation)=> <SwiperSlide>
+        {specializations.map((specialisation, key )=> <SwiperSlide key={key}>
           <Link to={`/specialization/${specialisation?.id}`}>
           <div className='spicialization-card'>
             <div className='specialization-icon'>
-              <img className='spe-icon' 
-              
-              src={specialisation?.icon || m}
-              // src={m}
-              />
+              <img className='spe-icon' src={ specialisation?.icon } />
             </div>
             <div className='pb-2'>
-                  <strong className='mb-1 fs-12 text-center'>{specialisation.name.slice(0,specialisation.name.indexOf("(") > 0 ? specialisation.name.indexOf("(") : specialisation.name.length )}</strong>
+                  <strong className='mb-1 fs-12 text-center'>{ specialisation.name.slice(0,specialisation.name.indexOf("(") > 0 ? specialisation.name.indexOf("(") : specialisation.name.length )}</strong>
                   <p className='mb-0 fs-12 toh text-center'>{truncate(specialisation.name.slice(specialisation.name.indexOf("(") > 0 ?  specialisation.name.indexOf("(") : '' ),10)}</p>
             </div>
 

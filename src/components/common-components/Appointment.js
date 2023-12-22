@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Modal from '../Modal';
+import Modal from './Modal';
 import { Controller, useForm } from 'react-hook-form';
 import Select from "react-select"
-import useToasty from '../../../hooks/toasty';
-import { axiosInstance, getAuthHeader, NumberFormat } from '../../../constants/utils';
+import useToasty from '../../hooks/toasty';
+import { axiosInstance, getAuthHeader, NumberFormat } from '../../constants/utils';
 import { useParams } from 'react-router-dom';
 
 const Appointment = ({ isOpen, setIsOpen, departmentId = null, refresh = () => { } }) => {

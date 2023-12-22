@@ -22,8 +22,8 @@ const Navbar = ({ items = [], popItems= [] , source }) => {
         {isMenuActive && (
           <div className="tab-popup ">
             {
-                popItems.filter((item)=> item.access?.includes(userInfo?.userType) || !item.access?.length).map( item => 
-                    <NavLink className="pop-items" to={ userPath && source === 'dashboard' ? `${userPath}${item.path}` : item.path } onClick={() => setIsMenuActive(false)} >
+                popItems.filter((item)=> item.access?.includes(userInfo?.userType) || !item.access?.length).map(( item, key ) => 
+                    <NavLink className="pop-items" to={ userPath && source === 'dashboard' ? `${userPath}${item.path}` : item.path } onClick={() => setIsMenuActive(false)}  key={key}>
                         <div className="menu-items">
                             <img className="imgh text-center" src={item.icon} />
                         </div>
@@ -37,8 +37,8 @@ const Navbar = ({ items = [], popItems= [] , source }) => {
 
 
             { 
-                items.map((item) => 
-                    <NavLink to={userPath && source === 'dashboard' ? `${userPath}${item.path}` :  item.path} className={({ isActive }) => isActive ? "menu-active tab" : "tab" }  onClick={() => setIsMenuActive(false)} >
+                items.map((item, key) => 
+                    <NavLink to={userPath && source === 'dashboard' ? `${userPath}${item.path}` :  item.path} className={({ isActive }) => isActive ? "menu-active tab" : "tab" }  onClick={() => setIsMenuActive(false)}  key={key}>
                         <div className="fs-5 text-center  ">{item.icon}  </div>
                         <p className="text-center mb-0 fs-12">{item.title}</p>
                         

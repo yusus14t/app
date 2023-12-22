@@ -4,7 +4,7 @@ import events from "../../../events";
 import useToasty from "../../../hooks/toasty";
 import { axiosInstance, getAuthHeader } from "../../../constants/utils";
 import UserModal from "../../common-components/UserModal";
-import Appointment from "../../common-components/Appointment/Appointment";
+import Appointment from "../../common-components/Appointment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,9 +22,7 @@ export default () => {
 
 
     useEffect(() => {
-        getAppointments('waiting')
-        analytics();
-        getAppointments('unreached')
+        initialFun()
 
         events.addEventListener('new-appointment', (event) => eventHandler(event))
         events.addEventListener('re-appointment', (event) => eventHandler(event))
@@ -36,6 +34,11 @@ export default () => {
         })
     }, [])
 
+    const initialFun = async () => {
+        getAppointments('waiting')
+        analytics();
+        getAppointments('unreached')
+    }
 
     const eventHandler = (event) => {
         toasty.success('New appointment added')
@@ -170,10 +173,7 @@ export default () => {
                 <Appointment
                     isOpen={isModalOpen}
                     setIsOpen={setIsModalOpen}
-                    refresh={() => {
-                        getAppointments('waiting')
-                        getAppointments('unreached')
-                    }}
+                    refresh={() => initialFun()}
                 />
             }
 
@@ -182,11 +182,7 @@ export default () => {
                     isOpen={isUserModalOpen}
                     setIsOpen={setIsUserModalOpen}
                     appointmentId={appointmentData?._id}
-                    refresh={() => {
-                        getAppointments('waiting')
-                        getAppointments('unreached')
-
-                    }}
+                    refresh={() => initialFun()}
                 />
             }
         </Container>

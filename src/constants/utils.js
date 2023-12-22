@@ -51,7 +51,7 @@ export const updateUser = async () => {
     try{
         let { data } = await axiosInstance.post('/session-info', getAuthHeader() )
         localStorage.setItem('user', JSON.stringify(data.user) )
-    } catch(error){ console.error(error) }
+    } catch(error){  }
 }
 
 updateUser()
@@ -72,8 +72,8 @@ export const  convertTo12HourFormat = ( time24 ) => {
   }
 
 export const truncate = (str,length)=>{
-    if(str.length <= length) return str
-    return str.substring(0,length) + "..."
+    if(str?.length <= length) return str
+    return str?.substring(0,length) + "..."
 }
 
 

@@ -74,25 +74,12 @@ getAllClinics()
           ))}
         </ul>
       </div>
-      {/* <div className="px-2 pt-0 ">
-        <div
-          className="hero-banner"
-          style={{
-            backgroundColor: "blue",
-            backgroundImage: `url(${findImage(
-              WEBSITE_IMAGE.ULTRASOUND_BANNER
-            )})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        ></div>
-      </div> */}
+
       <div className="container mt-5">
         <div className="row">
           {clinics?.length > 0 &&
             clinics.map((clinic, key) => (
               <div className="col-lg-4 col-md-6  mcard" key={key}>
-                {console.log(clinic)}
                 <Link
                   to={
                     clinic.organizationType === "Clinic"

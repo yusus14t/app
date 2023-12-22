@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import DepartmentCard from "../../webcomponents/Hospital/DepartmentCard";
+import React, {  useEffect,  useState } from "react";
+import DepartmentCard from "../cards/DepartmentCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { axiosInstance, convertTo12HourFormat, formatPhone, getFullPath, userInfo } from "../../../constants/utils";
@@ -9,47 +9,44 @@ import './ClinicDetails.css'
 import Container from "../../../layout/Container";
 
 const HospitalDetails = () => {
-    const [ hospital, setHospital] = useState({});
-    const [ departments, setDepartments] = useState([]);
+    const [hospital, setHospital] = useState({});
+    const [departments, setDepartments] = useState([]);
     const [notices, setNotices] = useState([])
-  
-  
     const params = useParams();
-  
+
     useEffect(() => {
-      getHospital();
-      getNotices();
-    }, [params.id, ])
-  
+        getHospital();
+        getNotices();
+    }, [params.id,])
+
     const getNotices = async () => {
-      try {
-        let { data } = await axiosInstance.get(`/notice/${params.id}`)
-        setNotices(data?.notices)
-      } catch (error) { console.error(error) }
+        try {
+            let { data } = await axiosInstance.get(`/notice/${params.id}`)
+            setNotices(data?.notices)
+        } catch (error) { console.error(error) }
     }
-  
+
     const getHospital = async () => {
-      try{
-        let { data } = await axiosInstance.get(`/hospital-details/${params.id}`)
-        console.log(data?.details)
-        setHospital(data?.details)
-        setDepartments(data?.departments)
-      } catch(error) { console.error(error) }
+        try {
+            let { data } = await axiosInstance.get(`/hospital-details/${params.id}`)
+            setHospital(data?.details)
+            setDepartments(data?.departments)
+        } catch (error) { console.error(error) }
     }
-  
-    const getTiming = ( short, fullday ) => {
-      let day = hospital?.timing?.find( time => time.day === short )
-      return (
-        <tr>
-          <td>{fullday}</td>
-          <td>{ convertTo12HourFormat(day?.open) }</td>
-          <td>{ convertTo12HourFormat(day?.close) }</td>
-        </tr>
-      )
+
+    const getTiming =  (short, fullday, key) => {
+        let day = hospital?.timing?.find(time => time.day === short)
+        return (
+            <tr key={key}>
+                <td>{fullday}</td>
+                <td>{convertTo12HourFormat(day?.open)}</td>
+                <td>{convertTo12HourFormat(day?.close)}</td>
+            </tr>
+        )
     }
-  
-  return (
-    <Container className={'mt-35vh bg-white curved-top '}>
+
+    return (
+        <Container className={'mt-35vh bg-white curved-top '}>
             <div className='clinic-image w-100' >
                 <img src={hospital?.photo ? getFullPath(hospital?.photo) : NO_PHOTO} width={'100%'} height={'100%'} />
             </div>
@@ -62,27 +59,27 @@ const HospitalDetails = () => {
                     <div className='bg-white curved light-shadow mb-3'>
                         <div className="d-flex flex-wrap p-2">
 
-                            {hospital?.specialization?.map((spe) => <div className="service-tube m-1 text-success bg-light">{spe.name}</div>) || "Specialization"}
+                            {hospital?.specialization?.map((spe, key) => <div className="service-tube m-1 text-success bg-light" key={key}>{spe.name}</div>) || "Specialization"}
                         </div>
                     </div>
-                    
+
                     <h6 className="my-3">Services</h6>
                     <div className='bg-white curved light-shadow mb-3 p-3'>
-                       <div class="d-flex flex-wrap ">
+                        <div className="d-flex flex-wrap ">
                             {hospital?.services?.length > 0
-                                ? hospital?.services?.map((serv) => (
-                                    <div class="service-tube m-1 bg-white">{serv?.name}</div>
+                                ? hospital?.services?.map((serv, key) => (
+                                    <div className="service-tube m-1 bg-white" key={key}>{serv?.name}</div>
                                 ))
                                 : <div><h6 className='text-muted'>No Services</h6></div>
-                                
+
                             }
                         </div>
                     </div>
                     <h6 className='my-3'>Important Notice</h6>
                     <div className='bg-white curved light-shadow p-3'>
                         {notices?.length > 0 ?
-                            notices.map((notice) => (
-                                <div className='notice my-2'>
+                            notices.map((notice, key) => (
+                                <div className='notice my-2' key={key}>
                                     <h6>{notice.title}</h6>
                                     <p className='mb-0 text-danger'>{notice.description}</p>
                                 </div>
@@ -99,22 +96,22 @@ const HospitalDetails = () => {
                     {departments.length > 0 && <DepartmentCard departments={departments} />}
                 </div>
             </section>
-            
+
             <section className="text-center m-2">
                 <div className="pr-2 m-text">
                     <table className="table  table-bordered">
                         <thead className="thead-light">
-                           
-                                <tr>
-                                    <th>Session</th>
-                                    <th>Open</th>
-                                    <th>Close</th>
-                                </tr>
+
+                            <tr>
+                                <th>Session</th>
+                                <th>Open</th>
+                                <th>Close</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        {Object.entries(FULLDAY).map(([short, day]) => (
-                        getTiming(short, day)
-                      ))}
+                            {Object.entries(FULLDAY).map(([short, day], key) => (
+                                getTiming(short, day, key)
+                            ))}
                         </tbody>
                     </table>
                 </div>
@@ -145,7 +142,7 @@ const HospitalDetails = () => {
             </section>
 
         </Container>
-  )
+    )
 }
 
 export default HospitalDetails

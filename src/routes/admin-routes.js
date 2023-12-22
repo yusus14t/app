@@ -5,7 +5,7 @@ import Support from '../components/common-components/Support/Support';
 import Settings from '../components/common-components/Settings/Settings';
 import MR from "../components/user-component/superAdmin/MR";
 import Contacts from "../components/user-component/superAdmin/Contacts";
-import Doctors from "../components/user-component/Doctors";
+import Doctors from "../components/common-components/DoctorsList";
 import Departments from "../components/user-component/Hospital/Departments";
 import Clinics from "../components/user-component/superAdmin/Clinics";
 

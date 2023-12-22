@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
-import Patients from "../components/user-component/doctor/Patients";
-import Dashbaord from "../components/user-component/doctor/Dashboard";
-import Doctors from "../components/user-component/Doctors";
+import Patients from "../components/user-component/Clinic/Patients";
+import Dashbaord from "../components/user-component/Clinic/Dashboard";
+import Doctors from "../components/common-components/DoctorsList";
 import Notification from "../components/common-components/Notification/Notification";
 import Support from "../components/common-components/Support/Support";
 import Appointments from "../components/App//Dashboard/Appointments";

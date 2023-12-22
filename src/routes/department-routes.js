@@ -1,10 +1,9 @@
 import { Navigate } from "react-router-dom";
-import Patients from "../components/user-component/doctor/Patients";
-import Dashbaord from "../components/user-component/doctor/Dashboard";
-import Doctors from "../components/user-component/Doctors";
+import Patients from "../components/user-component/Clinic/Patients";
+import Dashbaord from "../components/user-component/Clinic/Dashboard";
+import Doctors from "../components/common-components/DoctorsList";
 import Notification from "../components/common-components/Notification/Notification";
 import Support from "../components/common-components/Support/Support";
-import AppointmentList from "../components/common-components/Appointment/AppointmentList";
 import Settings from "../components/common-components/Settings/Settings";
 
 const DEPARTMENT = [
@@ -12,7 +11,6 @@ const DEPARTMENT = [
   { path: "/department/dashboard", element: <Dashbaord /> },
   { path: "/department/profile", element: <h1>Profile</h1> },
   { path: "/department/patients", element: <Patients /> },
-  { path: "/department/appointment", element: <AppointmentList /> },
   { path: "/department/notification", element: <Notification /> },
   { path: "/department/doctors", element: <Doctors /> },
   { path: "/department/support", element: <Support /> },

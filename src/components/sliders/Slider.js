@@ -18,8 +18,8 @@ export default ({ slides = [], view = 1 }) => {
             className="mySwiper"
         >
             {
-                slides.map(slide =>
-                    <SwiperSlide> {slide} </SwiperSlide>
+                slides.map((slide, key) =>
+                    <SwiperSlide key={key}> {slide} </SwiperSlide>
                 )
             }
         </Swiper>
