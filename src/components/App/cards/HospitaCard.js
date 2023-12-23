@@ -16,7 +16,7 @@ const HospitaCard = ( { hospital = {}}) => {
                     <p className='head-hos  text-dark'>HOSPITAL</p>
                     <div className='d-flex overflow-hidden'>
                         <div className="clinic-img-container">
-                            <img src={ hospital?.photo ? getFullPath(hospital?.photo): HOSPITAL_DEFAUL_IMG } className="clinic-app-img" />
+                            <img src={ hospital?.photo ? getFullPath(hospital?.photo): HOSPITAL_DEFAUL_IMG } className="clinic-app-img image-cover curved light-shadow" />
                         </div>
                         <div className="clinic-info">
                             <div className="px-1 truncate1"><p className='mb-0 fs-5 font-weight-bold dr-name'>{hospital?.name}</p></div>

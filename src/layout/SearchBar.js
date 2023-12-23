@@ -70,7 +70,7 @@ const Search = () => {
             <div className="d-flex align-items-center p-3 m-0">
                 <div className="w-100 me-2 d-flex justify-content-between align-items-center" style={{ backgroundColor: '#efefef', borderRadius:'8px' }}>
                     <div className="w-100" onClick={() => setIsOpenSearch(true)}>
-                        <input className=" border-0 search-input p-2 w-100" type="text" placeholder="Search" style={{ backgroundColor: '#efefef', borderRadius: '8px'}} />
+                        <input className=" border-0-input p-2 w-100" type="text" placeholder="Search" style={{ backgroundColor: '#efefef', borderRadius: '8px'}} />
                     </div>
                     <FontAwesomeIcon className="mx-3" icon={faSearch} />
                 </div>

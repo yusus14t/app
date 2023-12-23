@@ -23,7 +23,7 @@ export default ({ clinic = {} , ...props }) => {
                 src={
                   clinic?.photo ? getFullPath(clinic?.photo) : CLINIC_DEFAUL_IMG
                 }
-                className="clinic-app-img"
+                className={"clinic-app-img curved light-shadow " + (clinic?.photo && ' image-cover')}
               />
             </div>
             <div className="clinic-info">

@@ -14,6 +14,7 @@ import AllSpecialization from '../components/App/Pages/AllSpecialization.js'
 
 import ClinicDetail from'../components/App/Pages/ClinicDetails'
 import Home from "../components/App/Pages/Home"
+import Search from "../components/App/Pages/Search"
 
 
 const Doctors = lazy(() => import( '../components/webcomponents/Doctors'))
@@ -32,6 +33,7 @@ const getUserType = () => userInfo?.userType;
 
 const COMMON_ROUTE = [
   { path: "/", element: <AddHead seoContent={SEO.HOMEPAGE} > <Home /></AddHead> },
+  { path: "/search", element: <Search />},
   { path: "/doctors", element: <AddHead seoContent={SEO.DOCTORS}><Doctors /></AddHead> },
   { path: "/about", element: <About /> },
   { path: "/clinic-detail/:id", element: <ClinicDetail /> },
