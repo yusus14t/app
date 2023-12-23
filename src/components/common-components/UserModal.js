@@ -78,7 +78,7 @@ const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
         </section>
 
         <section className='my-4' >
-          <Link to={'https://wa.me/+919557897890'}>
+          <Link  to={'https://wa.me/+919557897890'}>
             <img src={ErahamBanner} width={'100%'} height={'100%'} alt='section-image' />
           </Link>
         </section>
