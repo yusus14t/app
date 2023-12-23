@@ -3,6 +3,9 @@ import Modal from './Modal';
 import { axiosInstance, dateFormat, formatPhone } from '../../constants/utils';
 import { useEffect, useState } from 'react';
 import useToasty from '../../hooks/toasty';
+import ErahamBanner from '../../assets/images/promo/erahamtech.png'
+import { Link } from 'react-router-dom';
+
 
 const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
     const [appointment, setAppointment] = useState({});
@@ -72,6 +75,12 @@ const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
           <p> Age: {appointment?.userId?.age || " - "} </p>
           <p> Gender: {appointment?.userId?.gender || " - " } </p>
           <p> Address: { appointment?.userId?.address || '-'} </p>
+        </section>
+
+        <section className='my-4' >
+          <Link to={'https://wa.me/+919557897890'}>
+            <img src={ErahamBanner} width={'100%'} height={'100%'} alt='section-image' />
+          </Link>
         </section>
 
         <section className='my-3 pb-3 d-flex justify-content-between align-items-center'>

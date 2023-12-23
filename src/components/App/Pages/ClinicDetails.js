@@ -7,7 +7,7 @@ import {
   getAuthHeader,
   getFullPath,
 } from "../../../constants/utils";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Appointment from "../../common-components/Appointment";
 import events from "../../../events";
@@ -21,6 +21,7 @@ import {
 import { FULLDAY, NO_PHOTO } from "../../../constants/constant";
 import DoctorCard from "../cards/DoctorCard";
 import Container from "../../../layout/Container";
+import ErahamBanner from '../../../assets/images/promo/erahamtech.png'
 
 export default () => {
   const params = useParams();
@@ -233,7 +234,13 @@ export default () => {
         </div>
       </section>
 
-      <section className="waiting-section  mt-5">
+      <section className='my-4' >
+        <Link to={'https://wa.me/+919557897890'}>
+          <img src={ErahamBanner} width={'100%'} height={'100%'} alt='section-image' />
+        </Link>
+      </section>
+
+      <section className="waiting-section">
         <div className="bg-primary text-light">
           <h5 className="p-2">Token List</h5>
           <div className="d-flex  p-2 text-light">
