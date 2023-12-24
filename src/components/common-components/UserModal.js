@@ -71,11 +71,11 @@ const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
               <h3 className='bg-primary text-light p-3 curved text-center' style={{ minWidth: '4rem' }}>{appointment?.token}</h3>
             </div>
         </section>
-        <section className=' border-bottom py-3'>
+        { appointment?.userId?.name !== "Anonymous" && <section className=' border-bottom py-3'>
           <p> Age: {appointment?.userId?.age || " - "} </p>
           <p> Gender: {appointment?.userId?.gender || " - " } </p>
           <p> Address: { appointment?.userId?.address || '-'} </p>
-        </section>
+        </section>}
 
         <section className='my-4' >
           <Link  to={'https://wa.me/+919557897890'}>

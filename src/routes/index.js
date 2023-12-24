@@ -42,20 +42,11 @@ const expireRoute = [
 const expireCondition = () => {
   if( !userInfo ) return []
 
-  // For Department check parent hospital billin
-  if( userInfo.userType === 'DP' ){
-    if( !userInfo?.organizationId?.billing?.isPaid || userInfo?.organizationId?.billing?.hasExpire ) return expireRoute
-    return userRoute.id
-  }
+  const hasExpire = new Date(userInfo?.organizationId?.billing?.expire) <= new Date()
 
-  if ( !userInfo?.organizationId?.billing?.isPaid || userInfo?.organizationId?.billing?.hasExpire ) {
-
-    if( ['SA', 'AD', 'MR', 'PT'].includes(userInfo?.userType) ) return userRoute.id
-    return expireRoute
-
-  } else {
-    return userRoute.id
-  } 
+  if( ['SA', 'AD', 'MR', 'PT'].includes(userInfo?.userType) ) return userRoute.id
+  else if ( userInfo?.organizationId?.billing?.isPaid && !hasExpire ) return userRoute.id
+  else return expireRoute
 }
 
 

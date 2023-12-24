@@ -59,12 +59,12 @@ export const APP_MENU_ITEM = {
     { title: 'Clinics', path: '/clinics', icon: clinic , access:['AD', 'SA', 'MR'] },
     { title: 'Hospitals', path: '/hospitals', icon: hospital, access:['MR']  },
     { title: 'Depatments', path: '/departments', icon: department ,access:['AD', 'SA', 'HL'] },
-    { title: 'Doctors', path: '/doctors', icon: doctors, access:['AD', 'SA', 'MR', "CL"] },
+    { title: 'Doctors', path: '/doctors', icon: doctors, access:['AD', 'SA', 'MR', "CL", "DP"] },
     { title: 'Patients', path: '/patients', icon: patients ,access:['AD', 'SA', 'HL', "DP", "CL"] },
     { title: 'MR', path: '/mr', icon: mr , access:['SA', 'AD']},
     { title: 'Contacts', path: '/contacts', icon: contact, access:['SA',"AD"] },
-    { title: 'Notification', path: '/notification', icon: notification, access:['PT','SA',"AD","MR","HL", "CL"] },
-    { title: 'Support', path: '/support', icon: doctors, access:['PT','SA',"AD","MR","HL", "CL"] },
+    { title: 'Notification', path: '/notification', icon: notification, access:['PT','SA',"AD","MR","HL", "CL", "DP"] },
+    { title: 'Support', path: '/support', icon: doctors, access:['PT','SA',"AD","MR","HL", "CL", "DP"] },
   ]
 }
 

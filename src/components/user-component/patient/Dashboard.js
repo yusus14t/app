@@ -88,7 +88,7 @@ const Dashbaord = () => {
           </div>
           <div className="">
             <h3> {userInfo?.name} </h3>
-            <h6 className="my-1">+91{formatPhone(userInfo?.phone)}</h6>
+            <h6 className="my-1">{formatPhone(userInfo?.phone)}</h6>
           </div>
         </div>
         <hr />

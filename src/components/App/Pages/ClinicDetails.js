@@ -6,6 +6,7 @@ import {
   formatPhone,
   getAuthHeader,
   getFullPath,
+  userInfo,
 } from "../../../constants/utils";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -16,6 +17,7 @@ import {
   faCalendarPlus,
   faEnvelope,
   faLocationDot,
+  faLock,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FULLDAY, NO_PHOTO } from "../../../constants/constant";
@@ -32,7 +34,7 @@ export default () => {
   const [isOpen, setIsOpen] = useState(false);
   const [timing, setTiming] = useState([]);
   const [isBookingStatus, setIsBookingStatus] = useState(false);
-  const userInfo = JSON.parse(localStorage.getItem("user"));
+  const jwt_token = JSON.parse(localStorage.getItem("token"));
   const [notices, setNotices] = useState([]);
   const [activeTab, setActiveTab] = useState(0);
 
@@ -183,7 +185,7 @@ export default () => {
               
             </div>
             <div className="clinic-token">
-              <h4 className="my-1">{token}</h4>
+              <h4 className="my-1">{ jwt_token ? token : <FontAwesomeIcon icon={faLock} /> }</h4>
             </div>
           </div>
           <h6 className="my-3">
@@ -242,7 +244,7 @@ export default () => {
 
       <section className="waiting-section">
         <div className="bg-primary text-light">
-          <h5 className="p-2">Token List</h5>
+          <h5 className="p-2 mx-3">Appointments</h5>
           <div className="d-flex  p-2 text-light">
             <h6
               onClick={() => handleTabClick(0)}
@@ -265,17 +267,42 @@ export default () => {
           </div>
         </div>
         <div className="overflow-auto mx-2" style={{ height: "60vh" }}>
-          {activeTab === 0 ? (
-            waitingList.length ? (
-              waitingList.map((list, key) => (
+          { jwt_token ? 
+          <>
+            {activeTab === 0 ? (
+              waitingList.length ? (
+                waitingList.map((list, key) => (
+                  <div
+                    className={
+                      "d-flex align-items-center m-2 curved light-shadow " +
+                      (list.token === token ? "token-active-app" : "bg-light")
+                    }
+                    key={key}
+                  >
+                    <div className="p-3 m-2 bg-white curved text-center light-shadow" style={{ width: '4rem' }}>
+                      <h4 className="mb-0">{list?.token}</h4>
+                    </div>
+                    <div className="ms-2">
+                      <h6>{list?.name}</h6>
+                      <p className="mb-0">
+                        {list?.phone && `xxx-xxx-${list?.phone.slice(-4)}`}
+                      </p>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="d-flex justify-content-center align-items-center h-100">
+                  {" "}
+                  <h6 className="text-muted">No Appointments </h6>
+                </div>
+              )
+            ) : unreachedList.length ? (
+              unreachedList.map((list, key) => (
                 <div
-                  className={
-                    "d-flex align-items-center m-2 curved light-shadow " +
-                    (list.token === token ? "token-active-app" : "bg-light")
-                  }
+                  className="bg-light d-flex align-items-center light-shadow m-2 curved"
                   key={key}
                 >
-                  <div className="p-3 m-2 bg-white curved text-center light-shadow" style={{ width: '4rem' }}>
+                  <div className="p-3 m-2 c-token bg-white curved">
                     <h4 className="mb-0">{list?.token}</h4>
                   </div>
                   <div className="ms-2">
@@ -291,39 +318,28 @@ export default () => {
                 {" "}
                 <h6 className="text-muted">No Appointments </h6>
               </div>
-            )
-          ) : unreachedList.length ? (
-            unreachedList.map((list, key) => (
-              <div
-                className="bg-light d-flex align-items-center light-shadow m-2 curved"
-                key={key}
-              >
-                <div className="p-3 m-2 c-token bg-white curved">
-                  <h4 className="mb-0">{list?.token}</h4>
-                </div>
-                <div className="ms-2">
-                  <h6>{list?.name}</h6>
-                  <p className="mb-0">
-                    {list?.phone && `xxx-xxx-${list?.phone.slice(-4)}`}
-                  </p>
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="d-flex justify-content-center align-items-center h-100">
-              {" "}
-              <h6 className="text-muted">No Appointments </h6>
-            </div>
-          )}
+            )}
+          </>
+          :   
+          <div className="d-flex justify-content-center align-items-center flex-column h-100">
+              <h4 className="text-muted">
+                <FontAwesomeIcon icon={faLock} /> Not Authenticated
+              </h4>
+              <p className="my-2">Login first to check all the appointments. </p>
+              <Link to={'/login'} className="bg-primary text-light rounded w-50 m-3 py-2 text-center">
+                  LogIn
+              </Link>
+          </div>
+          }
         </div>
       </section>
-      <section className="mx-2 my-3">
+      {clinicDetail?.doctors?.length > 0 && <section className="mx-2 my-3">
         <h5>Doctors</h5>
-        { clinicDetail?.doctors?.length && clinicDetail?.doctors.map(( doc ) => (
+        { clinicDetail?.doctors.map(( doc ) => (
             <DoctorCard doctor={ doc }/>
         ))}
          
-      </section>
+      </section>}
       <section className="text-center m-2">
         <div className="pr-2 m-text">
           <table className="table  table-bordered">
@@ -353,8 +369,8 @@ export default () => {
         </div>
       </section>
 
-      <section className=" bg-primary curved p-2 m-2 ">
-        <div className="d-flex my-2 bg-white p-2 curved align-items-center">
+      <section className=" bg-primary curved p-2 m-2 mb-5 ">
+        <div className="d-flex my-2 bg-white curved align-items-center">
           <FontAwesomeIcon className="mx-3" icon={faLocationDot} />
           <div>
             <p className="mb-0">Our Address</p>
@@ -386,7 +402,7 @@ export default () => {
           <div className="d-flex align-items-center justify-content-center">
             <FontAwesomeIcon icon={faCalendarPlus} className="me-2" />
             <h5 className="m-0">
-              {isBookingStatus ? "Book Appointment" : "Booking Closed"}
+              {isBookingStatus ? "Book Appointment" : "Appointments Closed"}
             </h5>
           </div>
         </section>
