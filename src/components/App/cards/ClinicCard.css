@@ -14,16 +14,16 @@
     width: 80px;
     height: 90px;
     margin: 5px;
-    min-width: 70px;
-    border-radius: 5px;
-    border: 1px solid black;
+    min-width: 80px;
+    /* border-radius: 5px; */
+    /* border: 1px solid black; */
     background-color: #fff;
 }
 .clinic-app-img{
     width: 100%;
     height: 100%;
-    border-radius: 8px;
-    object-fit: contain;
+    /* border-radius: 8px; */
+    /* object-fit: contain; */
 
 }
 hr{
@@ -85,9 +85,11 @@ hr{
     overflow-x: auto;
     margin-top: 5px;
     text-wrap: nowrap;
+    width: max-content;
 }
 .truncate1{
     white-space: nowrap;
     text-wrap: nowrap;
+    width: max-content;
     text-overflow: ellipsis;
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Dashboard from '../../assets/images/Dashboard.jpg'
 import { PLAN } from '../../constants/constant';
-import { axiosInstance, getAuthHeader } from '../../constants/utils';
+import { Logout, axiosInstance, getAuthHeader } from '../../constants/utils';
 import { userInfo } from '../../constants/utils';
 
 const Expire = () => {
@@ -54,8 +54,9 @@ const Expire = () => {
                                 </div>
                             </div>
                              :
-                             <div>
-                                Please contact to your hospital
+                             <div className='d-flex flex-column align-items-center'>
+                                <h5>Please contact to your hospital</h5>
+                                <button className='btn btn1 btn-primary shadow-none mt-4' onClick={() => Logout() }>Log out</button>
                              </div>   
                             }
                         </div>

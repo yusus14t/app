@@ -8,7 +8,7 @@ import Eraham from '../../../assets/images/Borcelle.png'
 import FeaturesImg from '../../../assets/images/features.png'
 import JNMC from '../../../assets/images/promo/JNMC Aligarh.png'
 import SpecializationSlider from '../../sliders/SpecializationSlider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Slider from '../../sliders/Slider';
 import DoctorCard from '../cards/DoctorCard';
 import { axiosInstance, getAuthHeader, getFullPath } from '../../../constants/utils';
@@ -23,7 +23,7 @@ export default () => {
     const [clinics, setClinics] = useState([]);
     const [hospitals, setHospitals] = useState([]);
     const [promo, setPromo] = useState({});
-
+    const navigate = useNavigate()
 
     useEffect(() => {
         getAllDoctors();
@@ -65,10 +65,10 @@ export default () => {
 
     return (
         <Container>
-            <section className='bg-light p-3 shadow sticky'>
+            <section className='bg-light p-2 shadow sticky'>
                 <div className=" shadow d-flex justify-content-between align-items-center my-1 bg-white curved " >
                     <div className="w-100" >
-                        <input className=" curved border-0 search-input p-3 w-100 bg-white" type="text" placeholder="Search Doctors, Clinics & Hospitals" />
+                        <input className=" curved border-0 search-input p-3 w-100 bg-white" type="text" placeholder="Search Doctors, Clinics & Hospitals" onClick={() => navigate('/search')}  />
                     </div>
                     <FontAwesomeIcon className="mx-3" icon={faSearch} />
                 </div>
@@ -132,7 +132,7 @@ export default () => {
                 <div className='promo-card p-3'>
                     <div className='d-flex justify-content-start py-3'>
                         <div className='promo-card-img me-3 '>
-                            <img src={promo?.photo ? getFullPath(promo.photo) : HOSPITAL_DEFAUL_IMG} className='curved' width={'100%'} height={'100%'} alt='promo-img' />
+                            <img src={promo?.photo ? getFullPath(promo.photo) : HOSPITAL_DEFAUL_IMG} className='curved image-cover' width={'100%'} height={'100%'} alt='promo-img' />
                         </div>
                         <div>
                             <h5>{promo?.name}</h5>

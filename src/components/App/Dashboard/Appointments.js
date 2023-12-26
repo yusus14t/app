@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import Container from "../../../layout/Container";
 import events from "../../../events";
 import useToasty from "../../../hooks/toasty";
-import { axiosInstance, getAuthHeader } from "../../../constants/utils";
+import { axiosInstance, getAuthHeader, updateUser, userInfo } from "../../../constants/utils";
 import UserModal from "../../common-components/UserModal";
 import Appointment from "../../common-components/Appointment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarPlus, faLock, faLockOpen } from "@fortawesome/free-solid-svg-icons";
 
 
 export default () => {
@@ -18,7 +18,7 @@ export default () => {
     const toasty = useToasty()
     const [activeTab, setActiveTab] = useState(0);
     const [analyticsData, setAnalyticsData] = useState({})
-
+    const [ isBookingStatus, setIsBookingStatus ] = useState(userInfo.organizationId?.bookingStatus || false)
 
 
     useEffect(() => {
@@ -63,6 +63,16 @@ export default () => {
 
         } catch (error) { console.log(error) }
     }
+
+    const bookingStatus = async ( status ) => {
+        try{
+            await axiosInstance.post('/doctor/booking-status', { bookingStatus: status }, getAuthHeader() )
+            setIsBookingStatus(status)
+            updateUser()
+        } catch(error){ console.log(error) }
+    }
+
+
     return (
         <Container>
             <section className="waiting-section">
@@ -84,7 +94,7 @@ export default () => {
                         <p className="text-light" >Remaining</p>
                     </div>
                 </div>
-                <div className="d-flex bg-primary p-2 text-light">
+                <div className="d-flex align-items-center bg-primary p-2 text-light">
                     <h6
                         onClick={() => setActiveTab(0)}
                         className={
@@ -103,6 +113,9 @@ export default () => {
                     >
                         Unreached List
                     </h6>
+                    <div className={`py-2 px-3 rounded ms-2 ${ isBookingStatus ? " bg-success" : " bg-danger" }`} onClick={() => bookingStatus( !isBookingStatus )}>
+                        <h5 className="m-0"> <FontAwesomeIcon icon={ isBookingStatus ? faLockOpen : faLock} /> </h5>
+                    </div>
                 </div>
 
                 <div className="overflow-auto bg-white pb-5" style={{ height: "70vh" }}>

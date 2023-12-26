@@ -40,7 +40,7 @@ const Navbar = ({ items = [], popItems= [] , source }) => {
                 items.map((item, key) => 
                     <NavLink to={userPath && source === 'dashboard' ? `${userPath}${item.path}` :  item.path} className={({ isActive }) => isActive ? "menu-active tab" : "tab" }  onClick={() => setIsMenuActive(false)}  key={key}>
                         <div className="fs-5 text-center  ">{item.icon}  </div>
-                        <p className="text-center mb-0 fs-12">{item.title}</p>
+                        {/* <p className="text-center mb-0 fs-12">{item.title}</p> */}
                         
                     </NavLink>
                 )
@@ -50,7 +50,7 @@ const Navbar = ({ items = [], popItems= [] , source }) => {
                 <div className="fs-5 text-center">
                 <FontAwesomeIcon icon={isMenuActive ? faXmark : faBars} />
                 </div>
-                <p className="text-center mb-0 fs-12">Menu</p>
+                {/* <p className="text-center mb-0 fs-12">Menu</p> */}
             </div>
         </div>
       </div>
