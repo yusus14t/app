@@ -87,6 +87,7 @@ hr{
     text-wrap: nowrap;
 }
 .truncate1{
+    white-space: nowrap;
     text-wrap: nowrap;
     text-overflow: ellipsis;
 }

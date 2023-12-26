@@ -12,8 +12,9 @@
   position: relative;
 }
   .mini-menu{
-    position: absolute;
-    top: 115px;
+    position: fixed;
+    top: 0;
+    z-index: 6;
   }
   .department-card{
 
@@ -990,6 +991,7 @@
     font-size: 10px;
   }
   .mini-menu {
+    display: flex;
     justify-content: center;
   }
   .mbgl {

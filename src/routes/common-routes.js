@@ -24,7 +24,7 @@ const Gynae = lazy(() => import("../components/App/Pages/Gynaeclogist"))
 const HospitalDetails = lazy(() => import("../components/App/Pages/HospitalDetails.js"))
 
 const LogIn = lazy(() => import("../components/Authentication/Login"));
-const Radiologist = lazy(() => import("../components/webcomponents/Radiologist"));
+const Radiologist = lazy(() => import("../components/App/Pages/Radiologist.js"));
 const SpecializationDetails = lazy(() => import('../components/App/Pages/SpecializationDeatils'))
 const Homeopathy =lazy(()=> import('../components/App/Pages/Homeopathy'));
 
