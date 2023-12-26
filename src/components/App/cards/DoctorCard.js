@@ -18,7 +18,7 @@ export default ({doctor = {}, ...props }) => {
                     <div className="dr-info">
 
                         <div className="mb-0 fs-5 font-weight-bold dr-name px-1">{truncate(doctor?.name, 20)}</div>
-                        <div className="mb-1 fs-8 px-2 specialization">{truncate(doctor?.specialization?.name ||
+                        <div className="mb-1 fs-12 px-2 specialization">{truncate(doctor?.specialization?.name ||
                             (doctor?.specialization?.length ? doctor?.specialization[0]?.name : '-'), 21)} </div>
                         <div className="mb-1 address fs-12"> {truncate(doctor?.address || '-', 40)}</div>
 
