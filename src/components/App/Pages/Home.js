@@ -24,6 +24,7 @@ export default () => {
     const [hospitals, setHospitals] = useState([]);
     const [promo, setPromo] = useState({});
     const navigate = useNavigate()
+    const isTab = window.screen.availWidth > 600
 
     useEffect(() => {
         getAllDoctors();
@@ -87,7 +88,7 @@ export default () => {
                         <img src={Homeimg3} width={'100%'} height={'100%'} alt='home-slider' />
                     </div>
 
-                ]} />
+                ]}  />
             </section>
 
             <section className='my-4 mx-2'>
@@ -107,12 +108,12 @@ export default () => {
                         <span>View All <FontAwesomeIcon icon={faAngleRight} /></span>
                     </Link >
                 </div>
-                <Slider slides={doctors.filter((d, i) => i <= 6).map(doctor => <DoctorCard doctor={doctor} />)} />
+                <Slider view={isTab ? 2 : 1}  slides={doctors.filter((d, i) => i <= 6).map(doctor => <DoctorCard className={'a'} doctor={doctor} />)} />
             </section>
 
-            <section className='my-4' >
+            {/* <section className='my-4' >
                 <img src={Eraham} width={'100%'} height={'100%'} alt='section-image' />
-            </section>
+            </section> */}
 
             <section className='px-2 my-4 py-3 clinic-gradient' >
                 <div className='d-flex justify-content-between align-items-center'>
@@ -121,14 +122,14 @@ export default () => {
                         <span>View All <FontAwesomeIcon icon={faAngleRight} /></span>
                     </Link >
                 </div>
-                <Slider slides={clinics.filter((d, i) => i <= 6).map(( clinic, key ) => <ClinicCard clinic={clinic} key={key}/> )} />
+                <Slider view={isTab ? 2 : 1}  slides={clinics.filter((d, i) => i <= 6).map(( clinic, key ) => <ClinicCard className={'a'} clinic={clinic} key={key}/> )} />
             </section>
 
             {/* JNMC ALIGARH */}
             {promo._id && <section>
-                <div className=''>
+                {/* <div className=''>
                     <img src={JNMC} width={'100%'} height={'100%'} alt='promo-image' />
-                </div>
+                </div> */}
                 <div className='promo-card p-3'>
                     <div className='d-flex justify-content-start py-3'>
                         <div className='promo-card-img me-3 '>
@@ -152,7 +153,7 @@ export default () => {
                         <span>View All <FontAwesomeIcon icon={faAngleRight} /></span>
                     </Link >
                 </div>
-                <Slider slides={hospitals.filter((d, i) => i <= 6).map(( hospital, key ) => <HospitaCard hospital={hospital} key={key}/> )} />
+                <Slider  view={isTab ? 2 : 1} slides={hospitals.filter((d, i) => i <= 6).map(( hospital, key ) => <HospitaCard className={'a'} hospital={hospital} key={key}/> )} />
             </section>
 
             <section className='my-4' >

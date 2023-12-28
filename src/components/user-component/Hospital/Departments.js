@@ -61,7 +61,7 @@ const Departments = () => {
           <div className="row mx-0">
             {departments?.length > 0 &&
               departments.map((department, index) => (
-                <div key={index} className="col-lg-4 col-md-3  col-sm-6 px-0">
+                <div key={index} className="col-lg-4  col-sm-6 px-0">
                   <div className="ms-card my-2 light-shadow">
                     <div
                       className="ms-card-body"

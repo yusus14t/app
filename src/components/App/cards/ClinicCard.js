@@ -11,9 +11,9 @@ import {
   faSquarePhone,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default ({ clinic = {} , ...props }) => {
+export default ({ clinic = {}, className = 'mxil col-lg-6 col-md-6', ...props }) => {
   return (
-    <div className="col-lg-4 mxil col-md-6 mx-0 px-2 " { ...props }>
+    <div className={"mx-0 px-2 " + className } { ...props }>
       <Link to={`/clinic-detail/${clinic?._id}`}>
         <div className=" clinic-app-card bg-white">
           <p className="head-clinic  text-dark">CLINIC</p>

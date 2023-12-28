@@ -51,7 +51,7 @@ const MR = () => {
             </div>
             <div className="row">
                 { MRs?.length > 0 && MRs.map((mr, index) => (
-                    <div key={index} className="col-lg-4 col-md-3  col-sm-6">
+                    <div key={index} className="col-lg-4   col-sm-6">
                         <div className="ms-card">
                             <div className="ms-card-body" style={{ borderLeft: '5px solid #112c2f'}}>
                                 <div className="media mb-0 fs-14">

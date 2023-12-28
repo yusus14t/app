@@ -38,11 +38,13 @@ const AllSpecialization = () => {
                   <p className="mb-0 fs-12 toh text-center">
                     {truncate(
                       specialisation.name.slice(
-                        specialisation.name.indexOf("(")
+                        specialisation.name.indexOf("(") >= 0 ? specialisation.name.indexOf("(") : specialisation.name.length
                       ),
                       50
                     )}
                   </p>
+
+                  {console.log('specialisation.name.indexOf("(")', specialisation.name, specialisation.name.indexOf("("))}
                 </div>
               </div>
             </Link>

@@ -76,12 +76,12 @@ const UserModal = ({isOpen, setIsOpen, appointmentId, refresh = () => {}}) => {
           <p> Gender: {appointment?.userId?.gender || " - " } </p>
           <p> Address: { appointment?.userId?.address || '-'} </p>
         </section>}
-
+{/* 
         <section className='my-4' >
           <Link  to={'https://wa.me/+919557897890'}>
             <img src={ErahamBanner} width={'100%'} height={'100%'} alt='section-image' />
           </Link>
-        </section>
+        </section> */}
 
         <section className='my-3 pb-3 d-flex justify-content-between align-items-center'>
           {appointment.status !== 'unreached' ? <>
