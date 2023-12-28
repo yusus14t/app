@@ -11,6 +11,7 @@ import {
   RADIOLOGIST_DEPARTMENT,
   WEBSITE_IMAGE,
 } from "../../constants/constant";
+import Container from "../../layout/Container";
 
 const Ultrasound = () => {
   const [clinics, setClinics] = useState([]);
@@ -52,8 +53,7 @@ getAllClinics()
   };
 
   return (
-    <>
-      <div className="box bg-light"></div>
+    <Container className="mb-0">
       <div
         
         className=" mini-menu  w-100 bg-light  "
@@ -141,7 +141,7 @@ getAllClinics()
             ))}
         </div>
       </div>
-    </>
+    </Container>
   );
 };
 

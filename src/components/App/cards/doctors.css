@@ -46,3 +46,6 @@
     overflow: hidden;
 
 }
+.dr-name{
+    white-space: nowrap;
+}

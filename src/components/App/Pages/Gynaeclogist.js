@@ -14,6 +14,7 @@ import {
   getAuthHeader,
   getFullPath,
   getImages,
+  truncate,
 } from "../../../constants/utils";
 import { Link } from "react-router-dom";
 import Modal from "../../common-components/Modal";
@@ -92,23 +93,7 @@ const Gynaeclogist = () => {
           </div>,
         ]}
       />
-      {/* <Slider
-        slides={[
-
-            WEBSITE_IMAGE.GYNAE_SLIDER_1,
-            WEBSITE_IMAGE.GYNAE_SLIDER_2,
-            WEBSITE_IMAGE.GYNAE_SLIDER_3,
-            WEBSITE_IMAGE.GYNAE_SLIDER_4
-
-          ].map( slide =>
-
-            <div className="w-100 banner-height" >
-              <img src={findImage(slide)} width={"100%"} height={"100%"} alt={slide} />
-            </div>
-
-          )
-        }
-      /> */}
+      
       <div className=" d-flex flex-wrap  mx-0">
         <div className=" w-50 p-1  my-1">
           <div className="gynae-services-cards mx-2">
@@ -117,7 +102,7 @@ const Gynaeclogist = () => {
             </div>
             <strong className=" pb-0 ">Gynaecology Process</strong>
             <p className=" m-2 text-center">
-              A gynecologist plays a crucial role in the care of pregnant women.
+              {truncate("A gynecologist plays a crucial role in the care of pregnant women.",20)}
             </p>
             <span
               onClick={() => setIsOpen3(true)}
@@ -134,8 +119,7 @@ const Gynaeclogist = () => {
             </div>
             <strong className=" pb-0">Surrogacy</strong>
             <p className="m-2 text-center">
-              Surrogacy is a complex and sensitive topic that raises many
-              ethical and legal questions.
+              {truncate("Surrogacy is a complex and sensitive topic that raises many ethical and legal questions." , 20)}
             </p>
             <span
               onClick={() => setIsOpen(true)}
@@ -152,7 +136,7 @@ const Gynaeclogist = () => {
             </div>
             <strong className="pb-0">Text Tube</strong>
             <p className=" m-2 text-center">
-              Test tube baby, also known as in vitro fertilization (IVF).
+              {truncate("Test tube baby, also known as in vitro fertilization (IVF).",20)}
             </p>
             <span
               onClick={() => setIsOpen1(true)}
@@ -169,8 +153,7 @@ const Gynaeclogist = () => {
             </div>
             <strong className="pb-0">IVF</strong>
             <p className=" m-2 text-center">
-              In vitro fertilization (IVF) is a type of assisted reproductive
-              technology
+              {truncate("In vitro fertilization (IVF) is a type of assisted reproductive technology", 20)}
             </p>
             <span
               onClick={() => setIsOpen2(true)}
