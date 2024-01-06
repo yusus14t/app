@@ -165,7 +165,7 @@ const Login = () => {
                 <div className="mb-2 mt-4 d-flex flex-column">
                   <label className=" ">Enter Mobile Number</label>
                   <input
-                    className="login-input rounded border-0 ls8 text-center bg-light p-2"
+                    className="login-input rounded border-0 text-center bg-light p-2"
                     placeholder="8218397850"
                     type="text"
                     maxLength={10}

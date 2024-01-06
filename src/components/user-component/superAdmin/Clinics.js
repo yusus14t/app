@@ -43,7 +43,7 @@ const Clinics = () => {
             <div className="overflow-auto" style={{ height: '80vh' }}>
                 <div className="row mx-0">
                     { departments?.length > 0 && departments.map((department, index) => (
-                        <div key={index} className="col-lg-4 col-md-3 col-sm-6 px-0">
+                        <div key={index} className="col-lg-4 col-sm-6 px-0">
                             <div className="ms-card mb-3 shadow">
                                 <div className="ms-card-body" style={{ borderLeft: '5px solid #112c2f'}}>
                                     <div className="media mb-0 fs-14">

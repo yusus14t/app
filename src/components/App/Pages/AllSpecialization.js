@@ -32,17 +32,18 @@ const AllSpecialization = () => {
                   <strong className="mb-1 fs-12 text-center">
                     {specialisation.name.slice(
                       0,
-                      specialisation.name.indexOf("(")
+                      specialisation.name.indexOf("(") >= 0 ? specialisation.name.indexOf("(") : specialisation.name.length
                     )}
                   </strong>
                   <p className="mb-0 fs-12 toh text-center">
                     {truncate(
                       specialisation.name.slice(
-                        specialisation.name.indexOf("(")
+                        specialisation.name.indexOf("(") >= 0 ? specialisation.name.indexOf("(") : specialisation.name.length
                       ),
                       50
                     )}
                   </p>
+
                 </div>
               </div>
             </Link>

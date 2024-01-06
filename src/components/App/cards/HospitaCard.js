@@ -8,9 +8,9 @@ import FontAwesome from 'react-fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faIndianRupeeSign, faLocationDot, faSquarePhone } from '@fortawesome/free-solid-svg-icons'
 
-const HospitaCard = ( { hospital = {}}) => {
+const HospitaCard = ( { hospital = {}, className = 'mxil col-lg-6 col-md-6'}) => {
   return (
-    <div className="col-lg-4 col-md-6 mxil mx-0 px-1 " >
+    <div className={" mx-0 px-1 " + className } >
             <Link to={`/hospital-detail/${hospital?._id}`}>
                 <div className=" clinic-app-card bg-white ">
                     <p className='head-hos font-weight-bold  text-dark'>HOSPITAL</p>
