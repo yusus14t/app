@@ -217,7 +217,7 @@ const Login = () => {
                   <label className=" ">Enter OTP</label>
                   <input
                     className="login-input text-center ls8 rounded border-0 bg-light p-2"
-                    placeholder="XXXX"
+                    placeholder="XXXX"          
                     type="text"
                     maxLength={4}
                     inputMode="numeric"

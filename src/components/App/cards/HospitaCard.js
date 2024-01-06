@@ -13,7 +13,7 @@ const HospitaCard = ( { hospital = {}}) => {
     <div className="col-lg-4 col-md-6 mxil mx-0 px-1 " >
             <Link to={`/hospital-detail/${hospital?._id}`}>
                 <div className=" clinic-app-card bg-white ">
-                    <p className='head-hos  text-dark'>HOSPITAL</p>
+                    <p className='head-hos font-weight-bold  text-dark'>HOSPITAL</p>
                     <div className='d-flex overflow-hidden'>
                         <div className="clinic-img-container">
                             <img src={ hospital?.photo ? getFullPath(hospital?.photo): HOSPITAL_DEFAUL_IMG } className="clinic-app-img image-cover curved light-shadow" />

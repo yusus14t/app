@@ -16,7 +16,7 @@ export default ({ clinic = {} , ...props }) => {
     <div className="col-lg-4 mxil col-md-6 mx-0 px-2 " { ...props }>
       <Link to={`/clinic-detail/${clinic?._id}`}>
         <div className=" clinic-app-card bg-white">
-          <p className="head-clinic  text-dark">CLINIC</p>
+          <p className="head-clinic font-weight-bold  text-dark">CLINIC</p>
           <div className="d-flex overflow-hidden">
             <div className="clinic-img-container">
               <img
