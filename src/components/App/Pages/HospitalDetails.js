@@ -68,7 +68,7 @@ const HospitalDetails = () => {
                         <div className="d-flex flex-wrap ">
                             {hospital?.services?.length > 0
                                 ? hospital?.services?.map((serv, key) => (
-                                    <div className="service-tube m-1 bg-white" key={key}>{serv?.name}</div>
+                                    <div className="service-tube  m-1 bg-light" key={key}>{serv?.name}</div>
                                 ))
                                 : <div><h6 className='text-muted'>No Services</h6></div>
 

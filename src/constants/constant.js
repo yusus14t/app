@@ -40,8 +40,8 @@ export const APP_MENU_ITEM = {
 
   APP_POPUP: [
     { title: 'Doctors', path: '/doctors', icon: doctors },
-    { title: 'Pvt. Hospitals', path: '/hospitals', icon: hospital },
-    { title: 'Govt. Hospitals', path: '/hospitals', icon: hospital },
+    { title: 'Pvt. Hospitals', path: '/private-hospitals', icon: hospital },
+    { title: 'Govt. Hospitals', path: '/government-hospitals', icon: hospital },
     { title: 'Clinics', path: '/clinics', icon: clinic },
     { title: 'Gynaeclogist', path: '/gynae', icon: gynae },
     { title: 'Radiologist', path: '/radiologist', icon: radiologist },
