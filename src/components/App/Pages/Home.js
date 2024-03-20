@@ -149,7 +149,7 @@ export default () => {
             <section className='px-2 my-4 py-3 hospital-gradient' >
                 <div className='d-flex justify-content-between align-items-center'>
                     <h4>Hospitals</h4>
-                    <Link to={'/hospitals'} >
+                    <Link to={'/private-hospitals'} >
                         <span>View All <FontAwesomeIcon icon={faAngleRight} /></span>
                     </Link >
                 </div>

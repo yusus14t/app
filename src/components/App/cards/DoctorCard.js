@@ -1,10 +1,26 @@
 import './doctors.css'
 import React from 'react'
-import { getFullPath, truncate } from '../../../constants/utils'
+import { convertTo12HourFormat, getFullPath, truncate } from '../../../constants/utils'
 import { Link } from 'react-router-dom'
-import { DOCTOR_DEFAUL_IMG } from '../../../constants/constant'
+import { DOCTOR_DEFAUL_IMG, NUMBER_TO_DAY } from '../../../constants/constant'
 
 export default ({doctor = {}, className = 'mxil col-lg-6 col-md-6', ...props }) => {
+    const getTodayTiming = ( timing ) => {
+
+        let time = timing?.find( t => t.day === NUMBER_TO_DAY[new Date().getDay()] )
+        if( time ){
+          return (
+            <div className=''>
+                <span>Open: { convertTo12HourFormat(time?.open) } </span>&nbsp;&nbsp;
+                <span>Close: { convertTo12HourFormat(time?.close) } </span>
+            </div>
+          );
+        } else {
+          return(<>
+            Today Not Available
+          </>)
+        }
+      }
     return (
         <div className={" px-0 " + className } {...props} >
             <Link to={`/clinic-detail/${doctor?.organizationId}`}>
@@ -20,7 +36,8 @@ export default ({doctor = {}, className = 'mxil col-lg-6 col-md-6', ...props }) 
                         <div className="mb-0 fs-5 font-weight-bold dr-name px-1">{truncate(doctor?.name, 20)}</div>
                         <div className="mb-1 fs-12 px-2 specialization">{truncate(doctor?.specialization?.name ||
                             (doctor?.specialization?.length ? doctor?.specialization[0]?.name : '-'), 21)} </div>
-                        <div className="mb-1 address fs-12"> {truncate(doctor?.address || '-', 40)}</div>
+                        {/* <div className="mb-1 address fs-12"> {truncate(doctor?.address || '-', 40)}</div> */}
+                        <div className="mb-1 address fs-12"> {getTodayTiming(doctor?.timing)}</div>
 
                     </div>
                 </div>
