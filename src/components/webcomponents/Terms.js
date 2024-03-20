@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Terms_and_conditions = () => {
   return (
-    <>
+    <div className="" style={{marginBottom:"100px"}}>
       <div className="box"></div>
-      <div className="container">
+      <div className="container ">
         <h3 className="text-center text-light bg-success">
           Terms and Conditions
         </h3>
@@ -477,7 +477,7 @@ const Terms_and_conditions = () => {
           </li>
         </ol>
       </div>
-    </>
+    </div>
   );
 };
 
